@@ -132,6 +132,11 @@ private slots:
 
     void on_pushButton_77_pressed();
 
+
+    void on_pushButton_clicked(bool checked);
+
+    void on_pushButton_released();
+
 private:
     Ui::MainWindow *ui;
 };

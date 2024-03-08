@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "classcreateuser.h"
+#include <QMessageBox>
+
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,7 +19,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_pressed()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    classcreateuser crearuser;
+    //login
+    QString cuentauser=ui->cuenta->text();
+    QString passworduser=ui->password->text();
+    ui->ver->text()=crearuser.BuscarUser(cuentauser,passworduser);
+    /*if (crearuser.BuscarUser(cuentauser,passworduser))
+    {
+        ui->stackedWidget->setCurrentIndex(2);
+    }else
+    {
+        QMessageBox::information(this, "Error", QString("User o password incorrectos."));
+    }*/
+
 }
 
 
@@ -353,5 +369,17 @@ void MainWindow::on_pushButton_75_pressed()
 void MainWindow::on_pushButton_77_pressed()
 {
     ui->stackedWidget->setCurrentIndex(27);
+}
+
+
+void MainWindow::on_pushButton_clicked(bool checked)
+{
+
+}
+
+
+void MainWindow::on_pushButton_released()
+{
+
 }
 
