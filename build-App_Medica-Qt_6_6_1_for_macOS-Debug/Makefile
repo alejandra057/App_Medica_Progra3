@@ -53,10 +53,12 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../App_Medica/adminexpedientes.cpp \
+		../App_Medica/adminroles.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp moc_mainwindow.cpp
 OBJECTS       = adminexpedientes.o \
+		adminroles.o \
 		classcreateuser.o \
 		main.o \
 		mainwindow.o \
@@ -226,8 +228,10 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/yacc.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/lex.prf \
 		../App_Medica/App_Medica.pro ../App_Medica/adminexpedientes.h \
+		../App_Medica/adminroles.h \
 		../App_Medica/classcreateuser.h \
 		../App_Medica/mainwindow.h ../App_Medica/adminexpedientes.cpp \
+		../App_Medica/adminroles.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp
@@ -616,8 +620,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.h ../App_Medica/adminroles.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.cpp ../App_Medica/adminroles.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../App_Medica/mainwindow.ui $(DISTDIR)/
 
 
@@ -679,8 +683,31 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-adminexpedientes.o: ../App_Medica/adminexpedientes.cpp ../App_Medica/adminexpedientes.h
+adminexpedientes.o: ../App_Medica/adminexpedientes.cpp ../App_Medica/adminexpedientes.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminexpedientes.o ../App_Medica/adminexpedientes.cpp
+
+adminroles.o: ../App_Medica/adminroles.cpp ../App_Medica/adminroles.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminroles.o ../App_Medica/adminroles.cpp
 
 classcreateuser.o: ../App_Medica/classcreateuser.cpp ../App_Medica/classcreateuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
@@ -709,6 +736,11 @@ mainwindow.o: ../App_Medica/mainwindow.cpp ../App_Medica/mainwindow.h \
 		../App_Medica/classcreateuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../App_Medica/adminexpedientes.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../App_Medica/mainwindow.cpp

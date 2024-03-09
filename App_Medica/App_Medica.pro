@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     adminexpedientes.cpp \
+    adminroles.cpp \
     classcreateuser.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     adminexpedientes.h \
+    adminroles.h \
     classcreateuser.h \
     mainwindow.h
 

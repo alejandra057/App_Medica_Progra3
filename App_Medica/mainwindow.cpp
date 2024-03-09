@@ -2,8 +2,10 @@
 #include "ui_mainwindow.h"
 #include "classcreateuser.h"
 #include "adminexpedientes.h"
+#include "adminroles.h"
 #include <QMessageBox>
 
+adminRoles roles;
 classcreateuser crearuser;
 AdminExpedientes expedientes;
 MainWindow::MainWindow(QWidget *parent)
@@ -434,5 +436,29 @@ void MainWindow::on_pushButton_34_pressed()
             QMessageBox::information(this, "Error", QString("No ha llenado todos los datos."));
         }
 
+}
+
+
+void MainWindow::on_pushButton_36_pressed()
+{
+
+}
+
+
+void MainWindow::on_pushButton_79_pressed()
+{
+     ui->stackedWidget->setCurrentIndex(30);
+}
+
+
+void MainWindow::on_pushButton_80_pressed()
+{
+    QString Role = ui->otroRole->text();
+    if(roles.addRole(Role)){
+    QMessageBox::information(this, "listo", QString("Se ha creado correctamente el rol."));
+        ui->stackedWidget->setCurrentIndex(3);
+    }else{
+        QMessageBox::information(this, "Error", QString("No se ha creado el rol."));
+    }
 }
 

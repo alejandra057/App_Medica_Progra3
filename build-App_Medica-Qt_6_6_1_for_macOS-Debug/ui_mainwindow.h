@@ -66,6 +66,7 @@ public:
     QPushButton *pushButton_13;
     QPushButton *pushButton_14;
     QPushButton *pushButton_15;
+    QPushButton *pushButton_79;
     QWidget *page_5;
     QLabel *label_10;
     QLabel *label_11;
@@ -313,6 +314,11 @@ public:
     QPushButton *pushButton_76;
     QTextBrowser *textBrowser_4;
     QPushButton *pushButton_77;
+    QWidget *page_31;
+    QLabel *label_103;
+    QLabel *label_104;
+    QLineEdit *otroRole;
+    QPushButton *pushButton_80;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -435,7 +441,10 @@ public:
         pushButton_14->setGeometry(QRect(290, 150, 191, 41));
         pushButton_15 = new QPushButton(page_4);
         pushButton_15->setObjectName("pushButton_15");
-        pushButton_15->setGeometry(QRect(290, 220, 191, 41));
+        pushButton_15->setGeometry(QRect(300, 300, 191, 41));
+        pushButton_79 = new QPushButton(page_4);
+        pushButton_79->setObjectName("pushButton_79");
+        pushButton_79->setGeometry(QRect(290, 220, 201, 41));
         stackedWidget->addWidget(page_4);
         page_5 = new QWidget();
         page_5->setObjectName("page_5");
@@ -771,7 +780,7 @@ public:
         lineEdit_27->setGeometry(QRect(210, 220, 211, 21));
         pushButton_36 = new QPushButton(page_13);
         pushButton_36->setObjectName("pushButton_36");
-        pushButton_36->setGeometry(QRect(370, 350, 80, 24));
+        pushButton_36->setGeometry(QRect(370, 460, 80, 24));
         pushButton_37 = new QPushButton(page_13);
         pushButton_37->setObjectName("pushButton_37");
         pushButton_37->setGeometry(QRect(50, 510, 80, 24));
@@ -1216,6 +1225,21 @@ public:
         pushButton_77->setObjectName("pushButton_77");
         pushButton_77->setGeometry(QRect(70, 480, 80, 24));
         stackedWidget->addWidget(page_30);
+        page_31 = new QWidget();
+        page_31->setObjectName("page_31");
+        label_103 = new QLabel(page_31);
+        label_103->setObjectName("label_103");
+        label_103->setGeometry(QRect(350, 40, 201, 41));
+        label_104 = new QLabel(page_31);
+        label_104->setObjectName("label_104");
+        label_104->setGeometry(QRect(250, 140, 131, 16));
+        otroRole = new QLineEdit(page_31);
+        otroRole->setObjectName("otroRole");
+        otroRole->setGeometry(QRect(400, 140, 191, 21));
+        pushButton_80 = new QPushButton(page_31);
+        pushButton_80->setObjectName("pushButton_80");
+        pushButton_80->setGeometry(QRect(340, 230, 111, 41));
+        stackedWidget->addWidget(page_31);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -1227,7 +1251,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(12);
+        stackedWidget->setCurrentIndex(30);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1260,6 +1284,7 @@ public:
         pushButton_13->setText(QCoreApplication::translate("MainWindow", "Crear nuevo usuario", nullptr));
         pushButton_14->setText(QCoreApplication::translate("MainWindow", "Dar baja a un usuario", nullptr));
         pushButton_15->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        pushButton_79->setText(QCoreApplication::translate("MainWindow", "Agregar rol", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Crear Nuevo Usuario", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Nombre:", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Cuenta:", nullptr));
@@ -1428,6 +1453,9 @@ public:
         label_101->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
         pushButton_76->setText(QCoreApplication::translate("MainWindow", "Ver", nullptr));
         pushButton_77->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        label_103->setText(QCoreApplication::translate("MainWindow", "Agregar rol", nullptr));
+        label_104->setText(QCoreApplication::translate("MainWindow", "Ingrese el nuevo rol:", nullptr));
+        pushButton_80->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
     } // retranslateUi
 
 };
