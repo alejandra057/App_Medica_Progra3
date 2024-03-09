@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "classcreateuser.h"
+#include "adminexpedientes.h"
 #include <QMessageBox>
 
 classcreateuser crearuser;
-
+AdminExpedientes expedientes;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -404,6 +405,34 @@ void MainWindow::on_pushButton_19_pressed()
     }else{
          QMessageBox::information(this, "Error", QString("El usuario no existe."));
     }
+
+}
+
+
+void MainWindow::on_pushButton_34_pressed()
+{
+    //expedientes
+    QString encabezado= ui->EncabezadoCrear->text();
+    QString namePaciente= ui->NamePacienteCrear->text();
+    QString identidad = ui->IdentidadCrear->text();
+    QDate fechaNacimiento = ui->calendarFechaNacimiento->selectedDate();
+    QString strFechaNacimiento = fechaNacimiento.toString("yyyy-MM-dd");
+    QString Telefono = ui->Telefonocrear->text();
+    QString Email = ui->EmailCrear->text();
+    QString nameadicional= ui->contacadiocionalCrear->text();
+    QString TelefonoAdional = ui->TelefonoadiocionalCrear->text();
+    QString EmailAdional = ui->EmailadionalCrear->text();
+    QString tiposangre = ui->TipodeSangreCrear->currentData().toString();
+    QString Alergias = ui->AlergiasCrear->text();
+    QString Enfermedades = ui->EnfermedadesCrear->text();
+
+        if(encabezado!=" " && namePaciente!=" " && identidad!=" " && strFechaNacimiento!=" " && Telefono!=" " && Email!=" " && nameadicional!=" " && TelefonoAdional!=" " && EmailAdional!=" " && tiposangre!=" " && Alergias!=" "&& Enfermedades!=" "){
+            //expedientes.addToExpediente(encabezado,namePaciente,identidad,strFechaNacimiento,Telefono,Email,nameadicional,TelefonoAdional,EmailAdional,tiposangre,Alergias,Enfermedades);
+            expedientes.createNewExpediente(encabezado,namePaciente,identidad,strFechaNacimiento,Telefono,Email,nameadicional,TelefonoAdional, EmailAdional,Alergias,tiposangre,Enfermedades);
+             QMessageBox::information(this, "listo", QString("Se ha creado correctamente el expediente."));
+        }else{
+            QMessageBox::information(this, "Error", QString("No ha llenado todos los datos."));
+        }
 
 }
 

@@ -140,6 +140,8 @@ private slots:
 
     void on_pushButton_19_pressed();
 
+    void on_pushButton_34_pressed();
+
 private:
     Ui::MainWindow *ui;
 };
