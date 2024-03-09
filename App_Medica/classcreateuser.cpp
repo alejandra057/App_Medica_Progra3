@@ -5,7 +5,6 @@
 #include <QDataStream>
 #include <QDate>
 #include <QTextStream>
-#include <iostream>
 
 QFile UserAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/User.itn");
 QDataStream writeandwrite (&UserAdmin);
@@ -15,25 +14,18 @@ classcreateuser::classcreateuser() {
     UserAdmin.open(QIODevice::ReadWrite);
 
     if (UserAdmin.size()==0){
-        UserAdmin.seek(0);
-        writeandwrite <<"admin"<<"admin"<<"admin"<<"admin"<<boleano;
-        UserAdmin.flush();
+        classcreateuser::CreateUserFun("admin", "admin", "admin", "admin", boleano);
     }
     if(!UserAdmin.isOpen()){
         exit(0);
     }
 }
 
-QString classcreateuser::readuser(QString password, QString cuenta)
-{
-    return password+" "+cuenta;
-}
-
 bool classcreateuser::CreateUserFun(QString nombre, QString password, QString cuenta, QString rol, bool status)
 {
     CrearUserFormat create;
     create.nombre = nombre;
-    create.password = password;
+    create.password = "admin";
     create.cuenta = cuenta;
     create.rol = rol;
     create.status = status;
@@ -50,7 +42,7 @@ bool classcreateuser::EditUser(QString nombre, QString cuenta)
     while (!UserAdmin.atEnd()) {
         CrearUserFormat create;
         create.nombre = nombre;
-        create.password = "password";
+        create.password = "admin";
         create.cuenta = cuenta;
         create.rol = "rol";
         create.status = false;
@@ -58,7 +50,6 @@ bool classcreateuser::EditUser(QString nombre, QString cuenta)
         writeandwrite >> create.nombre >> create.password >> create.cuenta >> create.rol >> create.status;
         if (create.nombre == nombre && create.cuenta == cuenta) {
             UserAdmin.seek(save);
-
             writeandwrite << create.nombre << create.password << create.cuenta << create.rol << create.status;
             return true;
         }
@@ -66,22 +57,38 @@ bool classcreateuser::EditUser(QString nombre, QString cuenta)
     return false;
 }
 
-QString classcreateuser::BuscarUser(QString cuenta, QString password)
+bool classcreateuser::BuscarUser(QString cuenta, QString password, QString name)
 {
     CrearUserFormat create;
     QString Usercuenta;
     QString UserPassword;
     UserAdmin.seek(0);
     while (!UserAdmin.atEnd()) {
-    writeandwrite >> create.nombre >> UserPassword >> Usercuenta >> create.rol >> create.status;
-        readuser(Usercuenta,UserPassword);
-        if (Usercuenta == cuenta && UserPassword == password) {
-            UserAdmin.seek(0);
-            return UserPassword+" "+Usercuenta;
+        writeandwrite >> create.nombre >> UserPassword >> Usercuenta >> create.rol >> create.status;
+        if (Usercuenta == cuenta) {
+            if(UserPassword == password || create.nombre==name){
+                return true;
+            }
         }
-        return UserPassword+" "+Usercuenta;
     }
-    return UserPassword+" "+Usercuenta;
+    return false;
 }
 
-
+bool classcreateuser::CambiarStatus(QString name, QString cuenta)
+{
+    long save = 0;
+    UserAdmin.seek(0);
+    while (!UserAdmin.atEnd()) {
+        CrearUserFormat create;
+        create.status = true;
+        save = UserAdmin.pos();
+        writeandwrite >> create.nombre >> create.password >> create.cuenta >> create.rol >> create.status;
+        if (create.nombre == name && create.cuenta == cuenta) {
+            UserAdmin.seek(save);
+            create.status = true;
+            writeandwrite << create.nombre << create.password << create.cuenta << create.rol << create.status;
+            return true;
+        }
+    }
+    return false;
+}

@@ -20,7 +20,6 @@ public:
 private slots:
     void on_pushButton_pressed();
 
-    void on_pushButton_79_pressed();
 
     void on_pushButton_3_pressed();
 
@@ -136,6 +135,10 @@ private slots:
     void on_pushButton_clicked(bool checked);
 
     void on_pushButton_released();
+
+    void on_pushButton_16_pressed();
+
+    void on_pushButton_19_pressed();
 
 private:
     Ui::MainWindow *ui;

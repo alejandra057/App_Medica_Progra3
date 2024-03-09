@@ -52,10 +52,12 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../App_Medica/classcreateuser.cpp \
+SOURCES       = ../App_Medica/adminexpedientes.cpp \
+		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp moc_mainwindow.cpp
-OBJECTS       = classcreateuser.o \
+OBJECTS       = adminexpedientes.o \
+		classcreateuser.o \
 		main.o \
 		mainwindow.o \
 		moc_mainwindow.o
@@ -223,8 +225,10 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/exceptions.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/yacc.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/lex.prf \
-		../App_Medica/App_Medica.pro ../App_Medica/classcreateuser.h \
-		../App_Medica/mainwindow.h ../App_Medica/classcreateuser.cpp \
+		../App_Medica/App_Medica.pro ../App_Medica/adminexpedientes.h \
+		../App_Medica/classcreateuser.h \
+		../App_Medica/mainwindow.h ../App_Medica/adminexpedientes.cpp \
+		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp
 QMAKE_TARGET  = App_Medica
@@ -612,8 +616,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../App_Medica/mainwindow.ui $(DISTDIR)/
 
 
@@ -675,6 +679,9 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
+adminexpedientes.o: ../App_Medica/adminexpedientes.cpp ../App_Medica/adminexpedientes.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminexpedientes.o ../App_Medica/adminexpedientes.cpp
+
 classcreateuser.o: ../App_Medica/classcreateuser.cpp ../App_Medica/classcreateuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
@@ -698,7 +705,12 @@ main.o: ../App_Medica/main.cpp ../App_Medica/mainwindow.h \
 mainwindow.o: ../App_Medica/mainwindow.cpp ../App_Medica/mainwindow.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		../App_Medica/classcreateuser.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../App_Medica/mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 

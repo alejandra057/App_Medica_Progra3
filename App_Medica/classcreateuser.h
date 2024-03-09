@@ -21,7 +21,8 @@ public:
     QString readuser(QString password, QString cuenta);
     bool CreateUserFun(QString nombre,QString password,QString cuenta,QString rol,bool status);
     bool EditUser(QString nombre,QString cuenta);
-    QString BuscarUser(QString cuenta,QString password);
+    bool BuscarUser(QString cuenta,QString password,QString name);
+    bool CambiarStatus(QString name,QString cuenta);
 };
 
 #endif // CLASSCREATEUSER_H

@@ -3,7 +3,7 @@
 #include "classcreateuser.h"
 #include <QMessageBox>
 
-
+classcreateuser crearuser;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,25 +19,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_pressed()
 {
-    classcreateuser crearuser;
+
     //login
     QString cuentauser=ui->cuenta->text();
     QString passworduser=ui->password->text();
-    ui->ver->text()=crearuser.BuscarUser(cuentauser,passworduser);
-    /*if (crearuser.BuscarUser(cuentauser,passworduser))
+    //ui->ver->text()=crearuser.BuscarUser(cuentauser,passworduser);
+    if (crearuser.BuscarUser(cuentauser,passworduser," "))
     {
         ui->stackedWidget->setCurrentIndex(2);
     }else
     {
         QMessageBox::information(this, "Error", QString("User o password incorrectos."));
-    }*/
+    }
 
-}
-
-
-void MainWindow::on_pushButton_79_pressed()
-{
-    ui->stackedWidget->setCurrentIndex(1);
 }
 
 
@@ -380,6 +374,36 @@ void MainWindow::on_pushButton_clicked(bool checked)
 
 void MainWindow::on_pushButton_released()
 {
+
+}
+
+
+void MainWindow::on_pushButton_16_pressed()
+{
+    QString crearnombre = ui->NombreCrear->text();
+    QString crearcuenta= ui->CrearCuenta->text();
+    QString Rol= ui->crearRol->text();
+    bool status= true;
+    if( crearuser.BuscarUser(crearcuenta,"",crearnombre)){
+        QMessageBox::information(this, "Error", QString("El usuario ya existe."));
+    }else{
+        if (crearuser.CreateUserFun(crearnombre,"admin",crearcuenta,Rol,status)){
+            QMessageBox::information(this, "Listo", QString("El usuario fue creado con exito."));
+        }
+    }
+}
+
+
+void MainWindow::on_pushButton_19_pressed()
+{
+    QString nombre= ui->NombreEdit->text();
+    QString cuenta=ui->UsuarioEdit->text();
+    if(crearuser.CambiarStatus(nombre,cuenta))
+    {
+        QMessageBox::information(this, "Listo", QString("El usuario "+cuenta+"se ha marcado como inactivo"));
+    }else{
+         QMessageBox::information(this, "Error", QString("El usuario no existe."));
+    }
 
 }
 
