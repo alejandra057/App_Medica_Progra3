@@ -46,7 +46,24 @@ bool AdminExpedientes::createNewExpediente(QString encabezado, QString nombrePac
     return true;
 }
 
-bool AdminExpedientes::addToExpediente(QString FechaCita, QString Sintomas, QString Observaciones, QString diagnostico, QString Recomendaciones, QString newCita, QString adicionalComents)
+bool AdminExpedientes::addToExpediente(QString Nombrepaciente , QString identidad,QString FechaCita, QString Sintomas, QString Observaciones, QString diagnostico, QString Recomendaciones, QString newCita, QString adicionalComents)
 {
+    ExpedientesAdmin.seek(0);
+    while (!ExpedientesAdmin.atEnd()) {
+        NewExpediente expe;
+        expe.FechaCita=FechaCita;
+        expe.Sintomas=Sintomas;
+        expe.Observaciones=Observaciones;
+        expe.diagnostico=diagnostico;
+        expe.Recomendaciones=Recomendaciones;
+        expe.newCita=newCita;
+        expe.adicionalComents=adicionalComents;
+        write>>expe.Encabezado>>expe.NombrePaciente>>expe.identidad>>expe.FechaNacimiento>>expe.numero1>>expe.mail1>>expe.AdiconalContact>>expe.AdiocionalPhone>>expe.Adicionalmail>>expe.tipoSangre>>expe.Alegias>>expe.enfermedadesBase>>expe.FechaCita>>expe.Sintomas>>expe.Observaciones>>expe.diagnostico>>expe.Recomendaciones>>expe.newCita>>expe.adicionalComents;
+        if (expe.NombrePaciente == Nombrepaciente && expe.identidad == identidad) {
+            write<<expe.Encabezado<<expe.NombrePaciente<<expe.identidad<<expe.FechaNacimiento<<expe.numero1<<expe.mail1<<expe.AdiconalContact<<expe.AdiocionalPhone<<expe.Adicionalmail<<expe.tipoSangre<<expe.Alegias<<expe.enfermedadesBase<<expe.FechaCita<<expe.Sintomas<<expe.Observaciones<<expe.diagnostico<<expe.Recomendaciones<<expe.newCita<<expe.adicionalComents;
+            return true;
+        }
+    }
     return false;
 }
+

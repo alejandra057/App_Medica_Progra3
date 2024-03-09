@@ -428,11 +428,14 @@ void MainWindow::on_pushButton_34_pressed()
     QString Alergias = ui->AlergiasCrear->text();
     QString Enfermedades = ui->EnfermedadesCrear->text();
 
-        if(encabezado!=" " && namePaciente!=" " && identidad!=" " && strFechaNacimiento!=" " && Telefono!=" " && Email!=" " && nameadicional!=" " && TelefonoAdional!=" " && EmailAdional!=" " && tiposangre!=" " && Alergias!=" "&& Enfermedades!=" "){
+        if(encabezado!=" " && namePaciente!=" " && identidad!=" " && strFechaNacimiento!=" " && Telefono!=" " && Email!=" " && nameadicional!=" " && TelefonoAdional!=" " && EmailAdional!=" " && tiposangre!=" " && Alergias!=" "&& Enfermedades!=" ")
+        {
             //expedientes.addToExpediente(encabezado,namePaciente,identidad,strFechaNacimiento,Telefono,Email,nameadicional,TelefonoAdional,EmailAdional,tiposangre,Alergias,Enfermedades);
             expedientes.createNewExpediente(encabezado,namePaciente,identidad,strFechaNacimiento,Telefono,Email,nameadicional,TelefonoAdional, EmailAdional,Alergias,tiposangre,Enfermedades);
              QMessageBox::information(this, "listo", QString("Se ha creado correctamente el expediente."));
-        }else{
+        }
+        else
+        {
             QMessageBox::information(this, "Error", QString("No ha llenado todos los datos."));
         }
 
@@ -441,6 +444,31 @@ void MainWindow::on_pushButton_34_pressed()
 
 void MainWindow::on_pushButton_36_pressed()
 {
+//adjuntar datos
+    QString name = ui->NamePaciente->text();
+    QString identidad =ui->IdentidadPaciente->text();
+    QString sintomas = ui->Sintomaspresen->text();
+    QString observaciones = ui->Observacionepaci->text();
+    QString Recomendaciones = ui->Observacionepaci->text();
+    QString adicional = ui->AdicionalComents->text();
+    QString diagnostico= ui->labelDiagnostico->text();
+
+    QDate fecha = ui->feachaDeCita->selectedDate();
+    QString strFecha = fecha.toString("yyyy-MM-dd");
+
+    QDate fechacita = ui->ProximaCita->selectedDate();
+    QString strFechaSiguienteCita= fechacita.toString("yyyy-MM-dd");
+
+
+    if (expedientes.addToExpediente(name,identidad,strFecha,sintomas,observaciones,diagnostico,Recomendaciones,strFechaSiguienteCita,adicional))
+    {
+         QMessageBox::information(this, "listo", QString("Se ha adicionado correctamente el expediente."));
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No existe dicho expediente."));
+    }
+
 
 }
 
