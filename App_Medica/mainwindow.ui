@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>12</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
@@ -785,8 +785,8 @@
      <widget class="QLabel" name="label_23">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>110</y>
+        <x>40</x>
+        <y>130</y>
         <width>91</width>
         <height>16</height>
        </rect>
@@ -798,8 +798,8 @@
      <widget class="QLabel" name="label_24">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>110</y>
+        <x>480</x>
+        <y>130</y>
         <width>121</width>
         <height>16</height>
        </rect>
@@ -808,21 +808,21 @@
        <string>Fin de Disponibilidad:</string>
       </property>
      </widget>
-     <widget class="QCalendarWidget" name="calendarWidget">
+     <widget class="QCalendarWidget" name="FechaStart">
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>140</y>
+        <y>160</y>
         <width>291</width>
         <height>211</height>
        </rect>
       </property>
      </widget>
-     <widget class="QCalendarWidget" name="calendarWidget_2">
+     <widget class="QCalendarWidget" name="FechaEnd">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>140</y>
+        <x>480</x>
+        <y>160</y>
         <width>301</width>
         <height>201</height>
        </rect>
@@ -852,6 +852,26 @@
       </property>
       <property name="text">
        <string>Regresar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DescripcionSala">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>60</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
       </property>
      </widget>
     </widget>
@@ -893,7 +913,7 @@
        <rect>
         <x>270</x>
         <y>70</y>
-        <width>71</width>
+        <width>81</width>
         <height>16</height>
        </rect>
       </property>
@@ -914,10 +934,10 @@
        <string>Status:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_12">
+     <widget class="QLineEdit" name="DescripcioModificar">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>350</x>
         <y>70</y>
         <width>171</width>
         <height>31</height>
@@ -934,7 +954,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QCalendarWidget" name="calendarWidget_3">
+     <widget class="QCalendarWidget" name="fechaStarModi">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -944,7 +964,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QCalendarWidget" name="calendarWidget_4">
+     <widget class="QCalendarWidget" name="fechaFinalDisponibilidad">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -1006,6 +1026,16 @@
        <string>Regresar</string>
       </property>
      </widget>
+     <widget class="QLineEdit" name="CodeModificar">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>70</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_10">
      <widget class="QLabel" name="label_31">
@@ -1040,7 +1070,7 @@
        <string>Código de Sala:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_14">
+     <widget class="QLineEdit" name="codeDelete">
       <property name="geometry">
        <rect>
         <x>140</x>
@@ -1053,8 +1083,8 @@
      <widget class="QPushButton" name="pushButton_28">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>70</y>
+        <x>720</x>
+        <y>450</y>
         <width>80</width>
         <height>24</height>
        </rect>
@@ -1086,7 +1116,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_29">
+     <widget class="QPushButton" name="EliminarSala">
       <property name="geometry">
        <rect>
         <x>350</x>

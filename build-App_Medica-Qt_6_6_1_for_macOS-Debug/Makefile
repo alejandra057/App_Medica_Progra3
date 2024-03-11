@@ -54,11 +54,13 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../App_Medica/adminexpedientes.cpp \
 		../App_Medica/adminroles.cpp \
+		../App_Medica/adminsalas.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp moc_mainwindow.cpp
 OBJECTS       = adminexpedientes.o \
 		adminroles.o \
+		adminsalas.o \
 		classcreateuser.o \
 		main.o \
 		mainwindow.o \
@@ -229,9 +231,11 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/lex.prf \
 		../App_Medica/App_Medica.pro ../App_Medica/adminexpedientes.h \
 		../App_Medica/adminroles.h \
+		../App_Medica/adminsalas.h \
 		../App_Medica/classcreateuser.h \
 		../App_Medica/mainwindow.h ../App_Medica/adminexpedientes.cpp \
 		../App_Medica/adminroles.cpp \
+		../App_Medica/adminsalas.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp
@@ -620,8 +624,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.h ../App_Medica/adminroles.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.cpp ../App_Medica/adminroles.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.h ../App_Medica/adminroles.h ../App_Medica/adminsalas.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.cpp ../App_Medica/adminroles.cpp ../App_Medica/adminsalas.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../App_Medica/mainwindow.ui $(DISTDIR)/
 
 
@@ -709,6 +713,11 @@ adminroles.o: ../App_Medica/adminroles.cpp ../App_Medica/adminroles.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminroles.o ../App_Medica/adminroles.cpp
 
+adminsalas.o: ../App_Medica/adminsalas.cpp ../App_Medica/adminsalas.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminsalas.o ../App_Medica/adminsalas.cpp
+
 classcreateuser.o: ../App_Medica/classcreateuser.cpp ../App_Medica/classcreateuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
@@ -741,6 +750,7 @@ mainwindow.o: ../App_Medica/mainwindow.cpp ../App_Medica/mainwindow.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../App_Medica/adminroles.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../App_Medica/mainwindow.cpp

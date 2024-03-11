@@ -148,6 +148,12 @@ private slots:
 
     void on_pushButton_80_pressed();
 
+    void on_pushButton_24_pressed();
+
+    void on_pushButton_26_pressed();
+
+    void on_EliminarSala_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

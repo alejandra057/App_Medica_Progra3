@@ -4,12 +4,18 @@
 #include <QDate>
 #include <QTextStream>
 
-QFile AdminRoles("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Roles.itn");
+QFile AdminRoles("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/RolesAdmin.itn");
+QFile Privilegio("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/PrivilegiosRoles.itn");
 QDataStream Roles (&AdminRoles);
-
+QDataStream privilegios(&Privilegio);
 adminRoles::adminRoles() {
     AdminRoles.open(QIODevice::ReadWrite);
+    Privilegio.open(QIODevice::ReadWrite);
 
+    if(!Privilegio.isOpen())
+    {
+        exit(0);
+    }
     if (AdminRoles.size()==0){
         adminRoles::addRole("admin");
         AdminRoles.flush();

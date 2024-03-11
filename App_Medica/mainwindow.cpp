@@ -3,11 +3,13 @@
 #include "classcreateuser.h"
 #include "adminexpedientes.h"
 #include "adminroles.h"
+#include "adminsalas.h"
 #include <QMessageBox>
 
 adminRoles roles;
 classcreateuser crearuser;
 AdminExpedientes expedientes;
+adminSalas salas;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -387,10 +389,14 @@ void MainWindow::on_pushButton_16_pressed()
     QString crearcuenta= ui->CrearCuenta->text();
     QString Rol= ui->crearRol->text();
     bool status= true;
-    if( crearuser.BuscarUser(crearcuenta,"",crearnombre)){
+    if( crearuser.BuscarUser(crearcuenta,"",crearnombre))
+    {
         QMessageBox::information(this, "Error", QString("El usuario ya existe."));
-    }else{
-        if (crearuser.CreateUserFun(crearnombre,"admin",crearcuenta,Rol,status)){
+    }
+    else
+    {
+        if (crearuser.CreateUserFun(crearnombre,"admin",crearcuenta,Rol,status))
+        {
             QMessageBox::information(this, "Listo", QString("El usuario fue creado con exito."));
         }
     }
@@ -482,11 +488,62 @@ void MainWindow::on_pushButton_79_pressed()
 void MainWindow::on_pushButton_80_pressed()
 {
     QString Role = ui->otroRole->text();
-    if(roles.addRole(Role)){
+    if(roles.addRole(Role))
+    {
     QMessageBox::information(this, "listo", QString("Se ha creado correctamente el rol."));
         ui->stackedWidget->setCurrentIndex(3);
-    }else{
+    }
+    else
+    {
         QMessageBox::information(this, "Error", QString("No se ha creado el rol."));
+    }
+}
+
+
+void MainWindow::on_pushButton_24_pressed()
+{
+
+    string Status="true";
+    string descripcion = ui->DescripcionSala->text().toStdString();
+    QDate fechaInicio = ui->FechaStart->selectedDate();
+
+    QDate fechaEnd = ui->FechaEnd->selectedDate();
+
+    if(salas.addSala(descripcion,Status,fechaInicio,fechaEnd))
+    {
+         QMessageBox::information(this, "listo", QString("Se ha creado correctamente la sala."));
+    }else
+    {
+         QMessageBox::information(this, "Error", QString("No ha creado correctamente la sala."));
+    }
+
+}
+
+
+void MainWindow::on_pushButton_26_pressed()
+{
+    int code= ui->CodeModificar->text().toInt();
+    string descripcion = ui->DescripcioModificar->text().toStdString();
+    QDate fechainit= ui->fechaStarModi->selectedDate();
+    QDate fechaFinal = ui->fechaFinalDisponibilidad->selectedDate();
+    if (salas.modificarSala(code,descripcion,"true",fechainit,fechaFinal))
+    {
+        QMessageBox::information(this, "listo", QString("Se ha modificado correctamente la sala."));
+    }else{
+        QMessageBox::information(this, "listo", QString("No se ha encontrado la sala."));
+    }
+}
+
+
+void MainWindow::on_EliminarSala_pressed()
+{
+    int code= ui->codeDelete->text().toInt();
+    if (salas.eliminarSala(code)){
+       QMessageBox::information(this, "listo", QString("Se ha eliminado correctamente la sala."));
+    }
+    else
+    {
+        QMessageBox::information(this, "listo", QString("No se ha podido eliminar correctamente la sala."));
     }
 }
 
