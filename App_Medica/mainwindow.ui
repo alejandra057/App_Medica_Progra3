@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>17</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
@@ -908,7 +908,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </rect>
       </property>
       <property name="text">
-       <string/>
+       <string>0</string>
       </property>
      </widget>
     </widget>

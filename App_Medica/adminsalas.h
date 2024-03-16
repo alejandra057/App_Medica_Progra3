@@ -7,7 +7,7 @@ class  AdminSalas
 {
     struct newSala
     {
-        QString Code=0;
+        QString Code="";
         QString Descripcion ="";
         QString Status="";
         QString FechaInicio="";

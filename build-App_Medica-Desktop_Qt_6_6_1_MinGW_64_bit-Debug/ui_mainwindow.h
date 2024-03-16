@@ -1400,7 +1400,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(17);
+        stackedWidget->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1458,7 +1458,7 @@ public:
         label_24->setText(QCoreApplication::translate("MainWindow", "Fin de Disponibilidad:", nullptr));
         pushButton_24->setText(QCoreApplication::translate("MainWindow", "Crear", nullptr));
         pushButton_25->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
-        lbcodesala->setText(QString());
+        lbcodesala->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_25->setText(QCoreApplication::translate("MainWindow", "Modificar Sala", nullptr));
         label_26->setText(QCoreApplication::translate("MainWindow", "Codigo:", nullptr));
         label_27->setText(QCoreApplication::translate("MainWindow", "Descripci\303\263n:", nullptr));
