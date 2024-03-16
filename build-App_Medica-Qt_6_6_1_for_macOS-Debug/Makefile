@@ -52,18 +52,22 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../App_Medica/adminexpedientes.cpp \
+SOURCES       = ../App_Medica/admincodes.cpp \
+		../App_Medica/adminexpedientes.cpp \
 		../App_Medica/adminroles.cpp \
 		../App_Medica/adminsalas.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
-		../App_Medica/mainwindow.cpp moc_mainwindow.cpp
-OBJECTS       = adminexpedientes.o \
+		../App_Medica/mainwindow.cpp \
+		../App_Medica/recetas.cpp moc_mainwindow.cpp
+OBJECTS       = admincodes.o \
+		adminexpedientes.o \
 		adminroles.o \
 		adminsalas.o \
 		classcreateuser.o \
 		main.o \
 		mainwindow.o \
+		recetas.o \
 		moc_mainwindow.o
 DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/device_config.prf \
@@ -229,16 +233,20 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/exceptions.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/yacc.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/lex.prf \
-		../App_Medica/App_Medica.pro ../App_Medica/adminexpedientes.h \
+		../App_Medica/App_Medica.pro ../App_Medica/admincodes.h \
+		../App_Medica/adminexpedientes.h \
 		../App_Medica/adminroles.h \
 		../App_Medica/adminsalas.h \
 		../App_Medica/classcreateuser.h \
-		../App_Medica/mainwindow.h ../App_Medica/adminexpedientes.cpp \
+		../App_Medica/mainwindow.h \
+		../App_Medica/recetas.h ../App_Medica/admincodes.cpp \
+		../App_Medica/adminexpedientes.cpp \
 		../App_Medica/adminroles.cpp \
 		../App_Medica/adminsalas.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
-		../App_Medica/mainwindow.cpp
+		../App_Medica/mainwindow.cpp \
+		../App_Medica/recetas.cpp
 QMAKE_TARGET  = App_Medica
 DESTDIR       = 
 TARGET        = App_Medica.app/Contents/MacOS/App_Medica
@@ -624,8 +632,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.h ../App_Medica/adminroles.h ../App_Medica/adminsalas.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/adminexpedientes.cpp ../App_Medica/adminroles.cpp ../App_Medica/adminsalas.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/admincodes.h ../App_Medica/adminexpedientes.h ../App_Medica/adminroles.h ../App_Medica/adminsalas.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h ../App_Medica/recetas.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/admincodes.cpp ../App_Medica/adminexpedientes.cpp ../App_Medica/adminroles.cpp ../App_Medica/adminsalas.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp ../App_Medica/recetas.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../App_Medica/mainwindow.ui $(DISTDIR)/
 
 
@@ -687,6 +695,9 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
+admincodes.o: ../App_Medica/admincodes.cpp ../App_Medica/admincodes.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o admincodes.o ../App_Medica/admincodes.cpp
+
 adminexpedientes.o: ../App_Medica/adminexpedientes.cpp ../App_Medica/adminexpedientes.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
@@ -714,8 +725,16 @@ adminroles.o: ../App_Medica/adminroles.cpp ../App_Medica/adminroles.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminroles.o ../App_Medica/adminroles.cpp
 
 adminsalas.o: ../App_Medica/adminsalas.cpp ../App_Medica/adminsalas.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
-		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminsalas.o ../App_Medica/adminsalas.cpp
 
 classcreateuser.o: ../App_Medica/classcreateuser.cpp ../App_Medica/classcreateuser.h \
@@ -751,9 +770,24 @@ mainwindow.o: ../App_Medica/mainwindow.cpp ../App_Medica/mainwindow.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
 		../App_Medica/adminroles.h \
+		../App_Medica/adminsalas.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../App_Medica/mainwindow.cpp
+
+recetas.o: ../App_Medica/recetas.cpp ../App_Medica/recetas.h \
+		../App_Medica/adminexpedientes.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDateTime \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o recetas.o ../App_Medica/recetas.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

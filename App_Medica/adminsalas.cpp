@@ -3,8 +3,10 @@
 #include <QDataStream>
 #include <QDate>
 #include <QTextStream>
-
-QFile Room("Salas.arc");
+//pa windows
+//QFile Room("Salas.arc");
+//pa kenny
+QFile Room("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Salas.itn");
 QDataStream escribir(&Room);
 QDataStream read(&Room);
 

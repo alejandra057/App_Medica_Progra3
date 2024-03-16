@@ -5,8 +5,10 @@
 #include <QDataStream>
 #include <QDate>
 #include <QTextStream>
-
-QFile UserAdmin("User.itn");
+//pa windows
+//QFile UserAdmin("User.itn");
+//pa kenny
+QFile UserAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/User.itn");
 QDataStream writeandwrite (&UserAdmin);
 bool boleano=true;
 
