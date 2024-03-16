@@ -20,7 +20,6 @@ public:
 private slots:
     void on_pushButton_pressed();
 
-    void on_pushButton_79_pressed();
 
     void on_pushButton_3_pressed();
 
@@ -131,6 +130,31 @@ private slots:
     void on_pushButton_75_pressed();
 
     void on_pushButton_77_pressed();
+
+
+    void on_pushButton_clicked(bool checked);
+
+    void on_pushButton_released();
+
+    void on_pushButton_16_pressed();
+
+    void on_pushButton_19_pressed();
+
+    void on_pushButton_34_pressed();
+
+    void on_pushButton_36_pressed();
+
+    void on_pushButton_79_pressed();
+
+    void on_pushButton_80_pressed();
+
+    void on_pushButton_24_pressed();
+
+    void on_pushButton_26_pressed();
+
+    void on_EliminarSala_pressed();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
