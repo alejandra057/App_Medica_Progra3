@@ -13,19 +13,23 @@ SOURCES += \
     adminexpedientes.cpp \
     adminroles.cpp \
     adminsalas.cpp \
+    citas.cpp \
     classcreateuser.cpp \
     main.cpp \
     mainwindow.cpp \
-    recetas.cpp
+    recetas.cpp \
+    reservas.cpp
 
 HEADERS += \
     admincodes.h \
     adminexpedientes.h \
     adminroles.h \
     adminsalas.h \
+    citas.h \
     classcreateuser.h \
     mainwindow.h \
-    recetas.h
+    recetas.h \
+    reservas.h
 
 FORMS += \
     mainwindow.ui

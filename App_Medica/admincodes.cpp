@@ -10,9 +10,9 @@
     //long codigoSala;
     //long codigoPaciente;
 //pa windows
-//QFile AdministradorCodigos("AdministradorCodigos.itn");
+QFile AdministradorCodigos("AdministradorCodigos.itn");
 //pa kenny
-QFile AdministradorCodigos("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/AdministradorCodigos.itn");
+//QFile AdministradorCodigos("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/AdministradorCodigos.itn");
 QDataStream administrador (&AdministradorCodigos);
 
 AdminCodes::AdminCodes() {
@@ -24,11 +24,15 @@ AdminCodes::AdminCodes() {
          codes.codigoExpedientes=0;
          codes.codigoSala=0;
          codes.codigoPaciente=0;
+         codes.codigoReservaciones=0;
+         codes.codigoCitas=0;
          AdministradorCodigos.seek(0);
          administrador << static_cast<qint64>(codes.codigoUser)
                        << static_cast<qint64>(codes.codigoExpedientes)
                        << static_cast<qint64>(codes.codigoSala)
-                       << static_cast<qint64>(codes.codigoPaciente);
+                       << static_cast<qint64>(codes.codigoPaciente)
+                       << static_cast<qint64>(codes.codigoReservaciones)
+                       << static_cast<qint64>(codes.codigoCitas);
          AdministradorCodigos.flush();
     }
     if(!AdministradorCodigos.isOpen())
@@ -40,8 +44,8 @@ AdminCodes::AdminCodes() {
 long AdminCodes::NextCodigoUser()
 {
     AdministradorCodigos.seek(0);
-    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente;
-    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente;
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
 
     long codigoUserLong = static_cast<long>(codigoUser);
 
@@ -49,12 +53,15 @@ long AdminCodes::NextCodigoUser()
     long codigoExpedientesLong = static_cast<long>(codigoExpedientes);
     long codigoSalaLong = static_cast<long>(codigoSala);
     long codigoPacienteLong = static_cast<long>(codigoPaciente);
-
+    long codigoReservasLong = static_cast<long>(codigoReservaciones);
+    long codigoCitasLong = static_cast<long>(codigoCitas);
     AdministradorCodigos.seek(0);
     administrador << static_cast<qint64>(nuevocodigoUserLong)
                   << static_cast<qint64>(codigoExpedientesLong)
                   << static_cast<qint64>(codigoSalaLong)
-                  << static_cast<qint64>(codigoPacienteLong);
+                  << static_cast<qint64>(codigoPacienteLong)
+                  << static_cast<qint64>(codigoReservasLong)
+                  << static_cast<qint64>(codigoCitasLong);
     AdministradorCodigos.flush();
     return codigoUserLong;
 }
@@ -62,9 +69,8 @@ long AdminCodes::NextCodigoUser()
 long AdminCodes::NextcodigoExpedientes()
 {
     AdministradorCodigos.seek(0);
-    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente;
-
-    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente;
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
 
 
     long codigoExpedientesLong = static_cast<long>(codigoExpedientes);
@@ -73,10 +79,14 @@ long AdminCodes::NextcodigoExpedientes()
     long codigoUserLong = static_cast<long>(codigoUser);
     long codigoSalaLong = static_cast<long>(codigoSala);
     long codigoPacienteLong = static_cast<long>(codigoPaciente);
+    long codigoReservasLong = static_cast<long>(codigoReservaciones);
+    long codigoCitasLong = static_cast<long>(codigoCitas);
     administrador << static_cast<qint64>(codigoUserLong)
                   << static_cast<qint64>(nuevocodigoExpedientesLong)
                   << static_cast<qint64>(codigoSalaLong)
-                  << static_cast<qint64>(codigoPacienteLong);
+                  << static_cast<qint64>(codigoPacienteLong)
+                  << static_cast<qint64>(codigoReservasLong)
+                  << static_cast<qint64>(codigoCitasLong);
     AdministradorCodigos.flush();
     return codigoExpedientesLong;
 }
@@ -84,9 +94,9 @@ long AdminCodes::NextcodigoExpedientes()
 long AdminCodes::NextcodigoSala()
 {
     AdministradorCodigos.seek(0);
-    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente;
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
 
-    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente;
 
     long codigoSalaLong = static_cast<long>(codigoSala);
 
@@ -96,10 +106,14 @@ long AdminCodes::NextcodigoSala()
     long codigoUserLong = static_cast<long>(codigoUser);
     long codigoExpedientesLong = static_cast<long>(codigoExpedientes);
     long codigoPacienteLong = static_cast<long>(codigoPaciente);
+    long codigoReservasLong = static_cast<long>(codigoReservaciones);
+    long codigoCitasLong = static_cast<long>(codigoCitas);
     administrador << static_cast<qint64>(codigoUserLong)
                   << static_cast<qint64>(codigoExpedientesLong)
                   << static_cast<qint64>(nuevocodigoSalaLong)
-                  << static_cast<qint64>(codigoPacienteLong);
+                  << static_cast<qint64>(codigoPacienteLong)
+                  << static_cast<qint64>(codigoReservasLong)
+                  << static_cast<qint64>(codigoCitasLong);
     AdministradorCodigos.flush();
     return codigoSalaLong;
 }
@@ -107,8 +121,8 @@ long AdminCodes::NextcodigoSala()
 long AdminCodes::NextcodigoPaciente()
 {
     AdministradorCodigos.seek(0);
-    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente;
-    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente;
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
 
     AdministradorCodigos.seek(0);
 
@@ -118,11 +132,68 @@ long AdminCodes::NextcodigoPaciente()
     long codigoUserLong = static_cast<long>(codigoUser);
     long codigoExpedientesLong = static_cast<long>(codigoExpedientes);
     long codigoSalaLong = static_cast<long>(codigoSala);
-
+    long codigoReservasLong = static_cast<long>(codigoReservaciones);
+    long codigoCitasLong = static_cast<long>(codigoCitas);
     administrador << static_cast<qint64>(codigoUserLong)
                   << static_cast<qint64>(codigoExpedientesLong)
                   << static_cast<qint64>(codigoSalaLong)
-                  << static_cast<qint64>(nuevocodigoPacienteLong);
+                  << static_cast<qint64>(nuevocodigoPacienteLong)
+                  << static_cast<qint64>(codigoReservasLong)
+                  << static_cast<qint64>(codigoCitasLong);
     AdministradorCodigos.flush();
     return codigoPacienteLong;
+}
+
+long AdminCodes::NextcodigoReservas()
+{
+    AdministradorCodigos.seek(0);
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
+
+    AdministradorCodigos.seek(0);
+
+    long codigoReservasLong = static_cast<long>(codigoReservaciones);
+    long nuevocodigoreservasLong=codigoReservasLong+1;
+
+    long codigoUserLong = static_cast<long>(codigoUser);
+    long codigoExpedientesLong = static_cast<long>(codigoExpedientes);
+    long codigoSalaLong = static_cast<long>(codigoSala);
+    long codigoPacienteLong = static_cast<long>(codigoPaciente);
+    long codigoCitasLong = static_cast<long>(codigoCitas);
+    administrador << static_cast<qint64>(codigoUserLong)
+                  << static_cast<qint64>(codigoExpedientesLong)
+                  << static_cast<qint64>(codigoSalaLong)
+                  << static_cast<qint64>(codigoPacienteLong)
+                  << static_cast<qint64>(nuevocodigoreservasLong)
+                  << static_cast<qint64>(codigoCitasLong);
+
+    AdministradorCodigos.flush();
+    return nuevocodigoreservasLong;
+}
+
+long AdminCodes::NextcodigoCitas()
+{
+    AdministradorCodigos.seek(0);
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
+
+    AdministradorCodigos.seek(0);
+
+    long codigoCitasLong = static_cast<long>(codigoCitas);
+    long nuevocodigocitasLong=codigoCitasLong+1;
+
+    long codigoUserLong = static_cast<long>(codigoUser);
+    long codigoExpedientesLong = static_cast<long>(codigoExpedientes);
+    long codigoSalaLong = static_cast<long>(codigoSala);
+    long codigoPacienteLong = static_cast<long>(codigoPaciente);
+    long codigoReservasLong = static_cast<long>(codigoReservaciones);
+    administrador << static_cast<qint64>(codigoUserLong)
+                  << static_cast<qint64>(codigoExpedientesLong)
+                  << static_cast<qint64>(codigoSalaLong)
+                  << static_cast<qint64>(codigoPacienteLong)
+                  << static_cast<qint64>(codigoReservasLong)
+                  << static_cast<qint64>(nuevocodigocitasLong);
+
+    AdministradorCodigos.flush();
+    return nuevocodigocitasLong;
 }

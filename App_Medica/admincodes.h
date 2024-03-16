@@ -8,6 +8,8 @@ class AdminCodes
         long codigoExpedientes;
         long codigoSala;
         long codigoPaciente;
+        long codigoReservaciones;
+        long codigoCitas;
     };
 public:
     AdminCodes();
@@ -19,6 +21,10 @@ public:
     long NextcodigoSala();
 
     long NextcodigoPaciente();
+
+    long NextcodigoReservas();
+
+    long NextcodigoCitas();
 };
 
 #endif // ADMINCODES_H

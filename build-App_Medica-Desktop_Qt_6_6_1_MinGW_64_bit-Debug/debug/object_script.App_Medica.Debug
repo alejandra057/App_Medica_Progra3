@@ -1,0 +1,11 @@
+debug/admincodes.o
+debug/adminexpedientes.o
+debug/adminroles.o
+debug/adminsalas.o
+debug/citas.o
+debug/classcreateuser.o
+debug/main.o
+debug/mainwindow.o
+debug/recetas.o
+debug/reservas.o
+debug/moc_mainwindow.o

@@ -4,6 +4,7 @@
 #include "adminexpedientes.h"
 #include "adminroles.h"
 #include "adminsalas.h"
+#include "admincodes.h"
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -68,7 +69,7 @@ void MainWindow::on_pushButton_7_pressed()
 
 void MainWindow::on_pushButton_8_pressed()
 {
-    ui->stackedWidget->setCurrentIndex(13);
+    ui->stackedWidget->setCurrentIndex(16);
 }
 
 
@@ -506,6 +507,10 @@ void MainWindow::on_pushButton_24_pressed()
 {
 
     AdminSalas Salas;
+    AdminCodes codes;
+    long codigo=codes.NextcodigoSala();
+    QString codetext = QString::number(codigo);
+    ui->lbcodesala->setText(codetext);
     QString status="Disponible";
     QString descripcion = ui->DescripcionSala->text();
     QDate fechainicio = ui->FechaStart->selectedDate();
@@ -558,6 +563,17 @@ void MainWindow::on_EliminarSala_pressed()
 
 void MainWindow::on_pushButton_clicked()
 {
+
+}
+
+
+void MainWindow::on_btNewCita_pressed()
+{
+    QString name = ui->txtnombrecita->text();
+    QDate fecha=ui->dateCita->date();
+    QTime hora=ui->TimeCita->time();
+
+
 
 }
 

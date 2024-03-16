@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>875</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,21 +19,21 @@
      <rect>
       <x>-20</x>
       <y>0</y>
-      <width>801</width>
+      <width>891</width>
       <height>581</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>13</number>
+     <number>17</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>360</x>
         <y>0</y>
-        <width>61</width>
-        <height>31</height>
+        <width>131</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="font">
@@ -50,11 +50,15 @@
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>320</x>
         <y>80</y>
-        <width>131</width>
-        <height>21</height>
+        <width>191</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Ingrese su cuenta:</string>
@@ -63,9 +67,9 @@
      <widget class="QLineEdit" name="cuenta">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>100</y>
-        <width>161</width>
+        <x>290</x>
+        <y>110</y>
+        <width>211</width>
         <height>31</height>
        </rect>
       </property>
@@ -73,9 +77,9 @@
      <widget class="QLineEdit" name="password">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>170</y>
-        <width>161</width>
+        <x>290</x>
+        <y>180</y>
+        <width>211</width>
         <height>31</height>
        </rect>
       </property>
@@ -83,11 +87,15 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>140</y>
-        <width>141</width>
-        <height>16</height>
+        <x>310</x>
+        <y>150</y>
+        <width>181</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Ingrese su password:</string>
@@ -96,11 +104,15 @@
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>260</y>
+        <x>340</x>
+        <y>230</y>
         <width>111</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Login</string>
@@ -113,7 +125,7 @@
        <rect>
         <x>360</x>
         <y>10</y>
-        <width>91</width>
+        <width>141</width>
         <height>31</height>
        </rect>
       </property>
@@ -133,9 +145,13 @@
        <rect>
         <x>370</x>
         <y>70</y>
-        <width>49</width>
-        <height>16</height>
+        <width>91</width>
+        <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre:</string>
@@ -144,10 +160,10 @@
      <widget class="QLineEdit" name="lineEdit_4">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>320</x>
         <y>170</y>
-        <width>131</width>
-        <height>21</height>
+        <width>181</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
@@ -159,6 +175,10 @@
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Rol:</string>
@@ -173,6 +193,10 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
       <property name="text">
        <string>User:</string>
       </property>
@@ -180,20 +204,20 @@
      <widget class="QLineEdit" name="lineEdit_5">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>320</x>
         <y>100</y>
-        <width>131</width>
-        <height>21</height>
+        <width>181</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_6">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>320</x>
         <y>240</y>
-        <width>131</width>
-        <height>21</height>
+        <width>181</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
@@ -202,8 +226,8 @@
        <rect>
         <x>360</x>
         <y>290</y>
-        <width>80</width>
-        <height>24</height>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -214,9 +238,9 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>500</y>
-        <width>80</width>
-        <height>24</height>
+        <y>493</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
@@ -228,7 +252,7 @@
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>100</y>
         <width>191</width>
         <height>41</height>
@@ -241,7 +265,7 @@
      <widget class="QPushButton" name="pushButton_5">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>150</y>
         <width>191</width>
         <height>41</height>
@@ -254,7 +278,7 @@
      <widget class="QPushButton" name="pushButton_6">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>200</y>
         <width>191</width>
         <height>41</height>
@@ -267,7 +291,7 @@
      <widget class="QPushButton" name="pushButton_7">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>250</y>
         <width>191</width>
         <height>41</height>
@@ -280,7 +304,7 @@
      <widget class="QPushButton" name="pushButton_8">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>300</y>
         <width>191</width>
         <height>41</height>
@@ -293,7 +317,7 @@
      <widget class="QPushButton" name="pushButton_9">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>350</y>
         <width>191</width>
         <height>41</height>
@@ -306,7 +330,7 @@
      <widget class="QPushButton" name="pushButton_10">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>400</y>
         <width>191</width>
         <height>41</height>
@@ -319,7 +343,7 @@
      <widget class="QPushButton" name="pushButton_11">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>350</x>
         <y>450</y>
         <width>191</width>
         <height>41</height>
@@ -345,9 +369,9 @@
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>20</y>
-        <width>181</width>
+        <x>330</x>
+        <y>30</y>
+        <width>241</width>
         <height>31</height>
        </rect>
       </property>
@@ -874,6 +898,19 @@
        </rect>
       </property>
      </widget>
+     <widget class="QLabel" name="lbcodesala">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>63</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_9">
      <widget class="QLabel" name="label_25">
@@ -1149,7 +1186,7 @@
        <rect>
         <x>320</x>
         <y>10</y>
-        <width>131</width>
+        <width>231</width>
         <height>41</height>
        </rect>
       </property>
@@ -1209,7 +1246,7 @@
        <rect>
         <x>290</x>
         <y>10</y>
-        <width>191</width>
+        <width>281</width>
         <height>41</height>
        </rect>
       </property>
@@ -1226,11 +1263,15 @@
      <widget class="QLabel" name="label_36">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>60</x>
         <y>90</y>
-        <width>131</width>
-        <height>16</height>
+        <width>201</width>
+        <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre del paciente:</string>
@@ -1239,11 +1280,15 @@
      <widget class="QLabel" name="label_37">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>120</y>
+        <x>60</x>
+        <y>130</y>
         <width>121</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Identidad:</string>
@@ -1252,11 +1297,15 @@
      <widget class="QLabel" name="label_38">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>60</x>
         <y>60</y>
         <width>121</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Código:</string>
@@ -1265,11 +1314,15 @@
      <widget class="QLabel" name="label_39">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>150</y>
-        <width>121</width>
-        <height>16</height>
+        <x>60</x>
+        <y>160</y>
+        <width>211</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Fecha de nacimiento:</string>
@@ -1278,11 +1331,15 @@
      <widget class="QLabel" name="label_40">
       <property name="geometry">
        <rect>
-        <x>440</x>
+        <x>500</x>
         <y>90</y>
-        <width>61</width>
-        <height>16</height>
+        <width>101</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Telefono 1:</string>
@@ -1291,11 +1348,15 @@
      <widget class="QLabel" name="label_41">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>360</y>
-        <width>191</width>
+        <x>60</x>
+        <y>370</y>
+        <width>291</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre del contacto adicional:</string>
@@ -1304,11 +1365,15 @@
      <widget class="QLabel" name="label_42">
       <property name="geometry">
        <rect>
-        <x>440</x>
+        <x>500</x>
         <y>130</y>
-        <width>41</width>
-        <height>16</height>
+        <width>91</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Email:</string>
@@ -1317,11 +1382,15 @@
      <widget class="QLabel" name="label_43">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>390</y>
-        <width>171</width>
+        <x>60</x>
+        <y>410</y>
+        <width>271</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Telefono contacto adicional:</string>
@@ -1330,11 +1399,15 @@
      <widget class="QLabel" name="label_44">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>180</y>
-        <width>91</width>
-        <height>16</height>
+        <x>500</x>
+        <y>175</y>
+        <width>141</width>
+        <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Tipo de sangre:</string>
@@ -1343,11 +1416,15 @@
      <widget class="QLabel" name="label_45">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>220</y>
-        <width>121</width>
-        <height>21</height>
+        <x>500</x>
+        <y>210</y>
+        <width>171</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Alegrias conocidas:</string>
@@ -1356,11 +1433,15 @@
      <widget class="QLabel" name="label_46">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>270</y>
-        <width>131</width>
+        <x>500</x>
+        <y>260</y>
+        <width>191</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Enfermedades base:</string>
@@ -1369,10 +1450,10 @@
      <widget class="QPushButton" name="pushButton_34">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>460</y>
-        <width>80</width>
-        <height>24</height>
+        <x>400</x>
+        <y>500</y>
+        <width>91</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -1382,10 +1463,10 @@
      <widget class="QPushButton" name="pushButton_35">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>520</y>
-        <width>80</width>
-        <height>24</height>
+        <x>759</x>
+        <y>503</y>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -1395,11 +1476,15 @@
      <widget class="QLabel" name="label_47">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>130</x>
         <y>60</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>00</string>
@@ -1408,58 +1493,61 @@
      <widget class="QLineEdit" name="NamePacienteCrear">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>250</x>
         <y>90</y>
-        <width>171</width>
-        <height>21</height>
+        <width>191</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="IdentidadCrear">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>120</y>
-        <width>171</width>
-        <height>21</height>
+        <x>250</x>
+        <y>130</y>
+        <width>191</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="Telefonocrear">
       <property name="geometry">
        <rect>
-        <x>510</x>
+        <x>620</x>
         <y>90</y>
-        <width>171</width>
-        <height>21</height>
+        <width>181</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="EmailCrear">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>620</x>
         <y>130</y>
-        <width>171</width>
-        <height>21</height>
+        <width>191</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="contacadiocionalCrear">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>360</y>
-        <width>171</width>
-        <height>21</height>
+        <x>350</x>
+        <y>370</y>
+        <width>211</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QCalendarWidget" name="calendarFechaNacimiento">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>170</y>
+        <x>60</x>
+        <y>190</y>
         <width>280</width>
         <height>163</height>
        </rect>
@@ -1468,40 +1556,40 @@
      <widget class="QLineEdit" name="TelefonoadiocionalCrear">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>390</y>
-        <width>171</width>
-        <height>21</height>
+        <x>350</x>
+        <y>410</y>
+        <width>211</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="AlergiasCrear">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>220</y>
-        <width>171</width>
-        <height>21</height>
+        <x>670</x>
+        <y>210</y>
+        <width>201</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="EnfermedadesCrear">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>270</y>
-        <width>171</width>
-        <height>21</height>
+        <x>680</x>
+        <y>250</y>
+        <width>191</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QComboBox" name="TipodeSangreCrear">
       <property name="geometry">
        <rect>
-        <x>540</x>
-        <y>180</y>
-        <width>141</width>
-        <height>21</height>
+        <x>640</x>
+        <y>170</y>
+        <width>171</width>
+        <height>31</height>
        </rect>
       </property>
       <item>
@@ -1553,11 +1641,15 @@
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>310</y>
-        <width>91</width>
+        <x>500</x>
+        <y>300</y>
+        <width>131</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Encabezado:</string>
@@ -1566,21 +1658,25 @@
      <widget class="QLineEdit" name="EncabezadoCrear">
       <property name="geometry">
        <rect>
-        <x>540</x>
-        <y>310</y>
-        <width>211</width>
-        <height>21</height>
+        <x>630</x>
+        <y>290</y>
+        <width>241</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_102">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>420</y>
-        <width>181</width>
+        <x>60</x>
+        <y>450</y>
+        <width>261</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Email de contacto adicional:</string>
@@ -1589,10 +1685,10 @@
      <widget class="QLineEdit" name="EmailadionalCrear">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>420</y>
-        <width>171</width>
-        <height>21</height>
+        <x>350</x>
+        <y>450</y>
+        <width>211</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
@@ -1601,9 +1697,9 @@
      <widget class="QLabel" name="label_48">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>10</y>
-        <width>311</width>
+        <x>220</x>
+        <y>0</y>
+        <width>391</width>
         <height>41</height>
        </rect>
       </property>
@@ -1620,11 +1716,15 @@
      <widget class="QLabel" name="label_49">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>60</y>
-        <width>49</width>
+        <x>680</x>
+        <y>40</y>
+        <width>71</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Fecha:</string>
@@ -1633,11 +1733,15 @@
      <widget class="QLabel" name="label_50">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>160</y>
-        <width>141</width>
+        <x>60</x>
+        <y>180</y>
+        <width>191</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Sintomas presentados:</string>
@@ -1646,11 +1750,15 @@
      <widget class="QLabel" name="label_51">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>190</y>
-        <width>91</width>
+        <x>60</x>
+        <y>230</y>
+        <width>141</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Observaciones:</string>
@@ -1659,11 +1767,15 @@
      <widget class="QLabel" name="label_52">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>220</y>
-        <width>111</width>
+        <x>60</x>
+        <y>260</y>
+        <width>201</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Recomendaciones:</string>
@@ -1672,11 +1784,15 @@
      <widget class="QLabel" name="label_53">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>590</x>
         <y>270</y>
-        <width>161</width>
+        <width>241</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Proxima cita recomendada:</string>
@@ -1685,11 +1801,15 @@
      <widget class="QLabel" name="label_54">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>250</y>
-        <width>151</width>
+        <x>60</x>
+        <y>300</y>
+        <width>221</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Comentarios adicionales:</string>
@@ -1698,51 +1818,55 @@
      <widget class="QLineEdit" name="Sintomaspresen">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>160</y>
-        <width>211</width>
-        <height>21</height>
+        <x>280</x>
+        <y>180</y>
+        <width>251</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="Observacionepaci">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>190</y>
-        <width>211</width>
-        <height>21</height>
+        <x>280</x>
+        <y>220</y>
+        <width>251</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="RecomendacionesPaci">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>220</y>
-        <width>211</width>
-        <height>21</height>
+        <x>280</x>
+        <y>260</y>
+        <width>251</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="AdicionalComents">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>250</y>
-        <width>211</width>
-        <height>21</height>
+        <x>280</x>
+        <y>300</y>
+        <width>251</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_36">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>460</y>
-        <width>80</width>
-        <height>24</height>
+        <x>330</x>
+        <y>400</y>
+        <width>111</width>
+        <height>51</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Agregar</string>
@@ -1752,43 +1876,27 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>510</y>
-        <width>80</width>
-        <height>24</height>
+        <y>500</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
        <string>Regresar</string>
       </property>
      </widget>
-     <widget class="QCalendarWidget" name="ProximaCita">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>290</y>
-        <width>301</width>
-        <height>181</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QCalendarWidget" name="feachaDeCita">
-      <property name="geometry">
-       <rect>
-        <x>480</x>
-        <y>80</y>
-        <width>304</width>
-        <height>173</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_105">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>80</y>
-        <width>131</width>
+        <x>60</x>
+        <y>100</y>
+        <width>191</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre del Paciente:</string>
@@ -1797,21 +1905,25 @@
      <widget class="QLineEdit" name="NamePaciente">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>80</y>
-        <width>181</width>
-        <height>21</height>
+        <x>280</x>
+        <y>100</y>
+        <width>201</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_106">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>110</y>
-        <width>141</width>
+        <x>60</x>
+        <y>140</y>
+        <width>201</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Identidad del Paciente:</string>
@@ -1820,21 +1932,25 @@
      <widget class="QLineEdit" name="IdentidadPaciente">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>110</y>
-        <width>171</width>
-        <height>21</height>
+        <x>280</x>
+        <y>140</y>
+        <width>201</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_107">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>280</y>
-        <width>81</width>
+        <x>60</x>
+        <y>340</y>
+        <width>141</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Diagnositico:</string>
@@ -1843,10 +1959,30 @@
      <widget class="QLineEdit" name="labelDiagnostico">
       <property name="geometry">
        <rect>
+        <x>280</x>
+        <y>340</y>
+        <width>251</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCalendarWidget" name="feachaDeCita">
+      <property name="geometry">
+       <rect>
         <x>550</x>
-        <y>280</y>
-        <width>211</width>
-        <height>21</height>
+        <y>60</y>
+        <width>304</width>
+        <height>173</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCalendarWidget" name="ProximaCita">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>300</y>
+        <width>311</width>
+        <height>171</height>
        </rect>
       </property>
      </widget>
@@ -2150,9 +2286,9 @@
      <widget class="QLabel" name="label_63">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>290</x>
         <y>10</y>
-        <width>151</width>
+        <width>201</width>
         <height>41</height>
        </rect>
       </property>
@@ -2225,7 +2361,7 @@
        <rect>
         <x>300</x>
         <y>10</y>
-        <width>201</width>
+        <width>271</width>
         <height>31</height>
        </rect>
       </property>
@@ -2242,11 +2378,15 @@
      <widget class="QLabel" name="label_65">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>100</x>
         <y>70</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Sala:</string>
@@ -2255,21 +2395,25 @@
      <widget class="QComboBox" name="comboBox_5">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>70</y>
-        <width>131</width>
-        <height>21</height>
+        <x>160</x>
+        <y>60</y>
+        <width>151</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_66">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>130</y>
-        <width>121</width>
-        <height>21</height>
+        <x>100</x>
+        <y>110</y>
+        <width>191</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre del paciente:</string>
@@ -2278,21 +2422,25 @@
      <widget class="QDateEdit" name="dateEdit_3">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>190</y>
-        <width>110</width>
-        <height>25</height>
+        <x>240</x>
+        <y>150</y>
+        <width>161</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_67">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>200</y>
-        <width>49</width>
-        <height>16</height>
+        <x>100</x>
+        <y>160</y>
+        <width>81</width>
+        <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Fecha:</string>
@@ -2301,11 +2449,15 @@
      <widget class="QLabel" name="label_68">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>250</y>
-        <width>91</width>
-        <height>16</height>
+        <x>100</x>
+        <y>200</y>
+        <width>161</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Hora de Inicio:</string>
@@ -2314,41 +2466,45 @@
      <widget class="QTimeEdit" name="timeEdit">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>250</y>
-        <width>118</width>
-        <height>25</height>
+        <x>240</x>
+        <y>200</y>
+        <width>161</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QTimeEdit" name="timeEdit_2">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>300</y>
-        <width>118</width>
-        <height>25</height>
+        <x>240</x>
+        <y>260</y>
+        <width>161</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_28">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>130</y>
-        <width>131</width>
-        <height>21</height>
+        <x>290</x>
+        <y>110</y>
+        <width>211</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_69">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>300</y>
-        <width>61</width>
-        <height>16</height>
+        <x>100</x>
+        <y>260</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Hora final:</string>
@@ -2357,21 +2513,25 @@
      <widget class="QLineEdit" name="lineEdit_29">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>360</y>
-        <width>131</width>
-        <height>21</height>
+        <x>280</x>
+        <y>320</y>
+        <width>161</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_70">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>360</y>
-        <width>121</width>
+        <x>100</x>
+        <y>320</y>
+        <width>191</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre del doctor:</string>
@@ -2380,10 +2540,10 @@
      <widget class="QPushButton" name="pushButton_49">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>400</y>
-        <width>80</width>
-        <height>24</height>
+        <x>340</x>
+        <y>380</y>
+        <width>91</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2393,10 +2553,10 @@
      <widget class="QPushButton" name="pushButton_50">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>760</x>
         <y>480</y>
-        <width>80</width>
-        <height>24</height>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2427,11 +2587,15 @@
      <widget class="QLabel" name="label_72">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>160</x>
         <y>70</y>
-        <width>121</width>
+        <width>191</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre del paciente:</string>
@@ -2440,21 +2604,25 @@
      <widget class="QLineEdit" name="lineEdit_30">
       <property name="geometry">
        <rect>
-        <x>160</x>
+        <x>350</x>
         <y>70</y>
-        <width>131</width>
-        <height>21</height>
+        <width>191</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_73">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>160</x>
         <y>120</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Fecha:</string>
@@ -2463,21 +2631,25 @@
      <widget class="QDateEdit" name="dateEdit_4">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>120</y>
-        <width>110</width>
-        <height>25</height>
+        <x>350</x>
+        <y>110</y>
+        <width>151</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_74">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>180</y>
-        <width>91</width>
-        <height>16</height>
+        <x>160</x>
+        <y>160</y>
+        <width>141</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Hora de Inicio:</string>
@@ -2486,31 +2658,35 @@
      <widget class="QTimeEdit" name="timeEdit_3">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>180</y>
-        <width>118</width>
-        <height>25</height>
+        <x>350</x>
+        <y>160</y>
+        <width>151</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QTimeEdit" name="timeEdit_4">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>230</y>
-        <width>118</width>
-        <height>25</height>
+        <x>350</x>
+        <y>210</y>
+        <width>151</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_75">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>240</y>
-        <width>61</width>
-        <height>16</height>
+        <x>160</x>
+        <y>210</y>
+        <width>111</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Hora final:</string>
@@ -2519,11 +2695,15 @@
      <widget class="QLabel" name="label_76">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>290</y>
-        <width>121</width>
-        <height>21</height>
+        <x>150</x>
+        <y>250</y>
+        <width>181</width>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre del doctor:</string>
@@ -2532,20 +2712,20 @@
      <widget class="QLineEdit" name="lineEdit_31">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>290</y>
-        <width>131</width>
-        <height>21</height>
+        <x>350</x>
+        <y>260</y>
+        <width>191</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_51">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>380</y>
-        <width>80</width>
-        <height>24</height>
+        <x>360</x>
+        <y>350</y>
+        <width>141</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2555,10 +2735,10 @@
      <widget class="QPushButton" name="pushButton_52">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>500</y>
-        <width>80</width>
-        <height>24</height>
+        <x>730</x>
+        <y>480</y>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2589,11 +2769,15 @@
      <widget class="QLabel" name="label_78">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>210</x>
         <y>100</y>
-        <width>81</width>
-        <height>16</height>
+        <width>141</width>
+        <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Reservaciones:</string>
@@ -2602,7 +2786,7 @@
      <widget class="QComboBox" name="comboBox_6">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>370</x>
         <y>100</y>
         <width>161</width>
         <height>31</height>
@@ -2612,10 +2796,10 @@
      <widget class="QPushButton" name="pushButton_53">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>280</y>
-        <width>80</width>
-        <height>24</height>
+        <x>360</x>
+        <y>200</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2625,10 +2809,10 @@
      <widget class="QPushButton" name="pushButton_54">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>490</y>
-        <width>80</width>
-        <height>24</height>
+        <x>720</x>
+        <y>480</y>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2640,9 +2824,9 @@
      <widget class="QLabel" name="label_79">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>260</x>
         <y>10</y>
-        <width>221</width>
+        <width>281</width>
         <height>41</height>
        </rect>
       </property>
@@ -2728,7 +2912,7 @@
        <rect>
         <x>350</x>
         <y>0</y>
-        <width>121</width>
+        <width>191</width>
         <height>41</height>
        </rect>
       </property>
@@ -2745,11 +2929,15 @@
      <widget class="QLabel" name="label_81">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>60</y>
-        <width>49</width>
-        <height>16</height>
+        <x>90</x>
+        <y>80</y>
+        <width>121</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 16pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nombre:</string>
@@ -2758,11 +2946,15 @@
      <widget class="QLabel" name="label_82">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>110</y>
-        <width>49</width>
-        <height>16</height>
+        <x>90</x>
+        <y>130</y>
+        <width>91</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Segoe UI&quot;;
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>Fecha:</string>
@@ -2771,53 +2963,57 @@
      <widget class="QLabel" name="label_83">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>160</y>
-        <width>49</width>
-        <height>16</height>
+        <x>90</x>
+        <y>180</y>
+        <width>91</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 16pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Hora:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_32">
+     <widget class="QLineEdit" name="txtnombrecita">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>60</y>
-        <width>151</width>
-        <height>21</height>
+        <x>210</x>
+        <y>80</y>
+        <width>181</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
-     <widget class="QDateEdit" name="dateEdit_5">
+     <widget class="QDateEdit" name="dateCita">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>110</y>
-        <width>110</width>
-        <height>25</height>
+        <x>210</x>
+        <y>130</y>
+        <width>181</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
-     <widget class="QTimeEdit" name="timeEdit_5">
+     <widget class="QTimeEdit" name="TimeCita">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>160</y>
-        <width>118</width>
-        <height>25</height>
+        <x>210</x>
+        <y>180</y>
+        <width>181</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_60">
+     <widget class="QPushButton" name="btNewCita">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>240</y>
-        <width>80</width>
-        <height>24</height>
+        <x>360</x>
+        <y>260</y>
+        <width>91</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2827,10 +3023,10 @@
      <widget class="QPushButton" name="pushButton_61">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>660</x>
         <y>490</y>
-        <width>81</width>
-        <height>24</height>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2844,7 +3040,7 @@
        <rect>
         <x>330</x>
         <y>10</y>
-        <width>151</width>
+        <width>231</width>
         <height>41</height>
        </rect>
       </property>
@@ -2861,11 +3057,15 @@
      <widget class="QLabel" name="label_85">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>80</y>
+        <x>300</x>
+        <y>110</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Cita:</string>
@@ -2874,8 +3074,8 @@
      <widget class="QComboBox" name="comboBox_7">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>80</y>
+        <x>390</x>
+        <y>110</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -2884,11 +3084,15 @@
      <widget class="QLabel" name="label_86">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>200</y>
+        <x>300</x>
+        <y>230</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Hora:</string>
@@ -2897,11 +3101,15 @@
      <widget class="QLabel" name="label_87">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>140</y>
+        <x>300</x>
+        <y>170</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Fecha:</string>
@@ -2910,30 +3118,30 @@
      <widget class="QDateEdit" name="dateEdit_6">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>140</y>
-        <width>110</width>
-        <height>25</height>
+        <x>390</x>
+        <y>160</y>
+        <width>181</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QTimeEdit" name="timeEdit_6">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>200</y>
-        <width>118</width>
-        <height>25</height>
+        <x>390</x>
+        <y>220</y>
+        <width>181</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_62">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>350</y>
-        <width>80</width>
-        <height>24</height>
+        <x>390</x>
+        <y>310</y>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2943,10 +3151,10 @@
      <widget class="QPushButton" name="pushButton_63">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>500</y>
-        <width>80</width>
-        <height>24</height>
+        <x>730</x>
+        <y>480</y>
+        <width>141</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2960,8 +3168,8 @@
        <rect>
         <x>330</x>
         <y>10</y>
-        <width>131</width>
-        <height>41</height>
+        <width>211</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="font">
@@ -2977,11 +3185,15 @@
      <widget class="QLabel" name="label_89">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>90</y>
-        <width>49</width>
-        <height>16</height>
+        <x>300</x>
+        <y>140</y>
+        <width>71</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Cita:</string>
@@ -2990,10 +3202,10 @@
      <widget class="QPushButton" name="pushButton_64">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>330</y>
-        <width>80</width>
-        <height>24</height>
+        <x>360</x>
+        <y>250</y>
+        <width>131</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -3003,10 +3215,10 @@
      <widget class="QPushButton" name="pushButton_65">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>740</x>
         <y>480</y>
-        <width>80</width>
-        <height>24</height>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -3016,9 +3228,9 @@
      <widget class="QComboBox" name="comboBox_8">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>90</y>
-        <width>151</width>
+        <x>380</x>
+        <y>140</y>
+        <width>181</width>
         <height>31</height>
        </rect>
       </property>
@@ -3030,8 +3242,8 @@
        <rect>
         <x>340</x>
         <y>10</y>
-        <width>151</width>
-        <height>21</height>
+        <width>211</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -3047,11 +3259,15 @@
      <widget class="QLabel" name="label_91">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>80</y>
-        <width>49</width>
-        <height>16</height>
+        <x>200</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Fecha:</string>
@@ -3060,10 +3276,10 @@
      <widget class="QPushButton" name="pushButton_66">
       <property name="geometry">
        <rect>
-        <x>430</x>
-        <y>80</y>
-        <width>80</width>
-        <height>24</height>
+        <x>490</x>
+        <y>110</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -3073,20 +3289,20 @@
      <widget class="QTextBrowser" name="textBrowser_2">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>140</y>
-        <width>256</width>
-        <height>192</height>
+        <x>200</x>
+        <y>180</y>
+        <width>501</width>
+        <height>211</height>
        </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_67">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>450</y>
-        <width>80</width>
-        <height>24</height>
+        <x>750</x>
+        <y>480</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -3096,10 +3312,10 @@
      <widget class="QDateEdit" name="dateEdit_7">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>80</y>
-        <width>110</width>
-        <height>25</height>
+        <x>280</x>
+        <y>110</y>
+        <width>151</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
@@ -3110,8 +3326,8 @@
        <rect>
         <x>290</x>
         <y>10</y>
-        <width>211</width>
-        <height>31</height>
+        <width>281</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -3127,8 +3343,8 @@
      <widget class="QPushButton" name="pushButton_68">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>80</y>
+        <x>350</x>
+        <y>120</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -3140,8 +3356,8 @@
      <widget class="QPushButton" name="pushButton_69">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>150</y>
+        <x>350</x>
+        <y>190</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -3157,8 +3373,8 @@
        <rect>
         <x>310</x>
         <y>10</y>
-        <width>211</width>
-        <height>41</height>
+        <width>271</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="font">
@@ -3174,11 +3390,15 @@
      <widget class="QLabel" name="label_94">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>80</y>
-        <width>111</width>
+        <x>240</x>
+        <y>110</y>
+        <width>191</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Contraseña Actual:</string>
@@ -3200,11 +3420,15 @@
      <widget class="QLabel" name="label_96">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>120</y>
-        <width>101</width>
+        <x>240</x>
+        <y>150</y>
+        <width>171</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Nueva Contraseña:</string>
@@ -3213,10 +3437,10 @@
      <widget class="QPushButton" name="pushButton_70">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>230</y>
-        <width>80</width>
-        <height>24</height>
+        <x>410</x>
+        <y>240</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -3226,10 +3450,10 @@
      <widget class="QPushButton" name="pushButton_71">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>750</x>
         <y>480</y>
-        <width>80</width>
-        <height>24</height>
+        <width>101</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -3239,20 +3463,20 @@
      <widget class="QLineEdit" name="lineEdit_33">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>80</y>
-        <width>191</width>
-        <height>21</height>
+        <x>420</x>
+        <y>100</y>
+        <width>241</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_34">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>120</y>
-        <width>191</width>
-        <height>21</height>
+        <x>420</x>
+        <y>140</y>
+        <width>241</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
@@ -3263,8 +3487,8 @@
        <rect>
         <x>350</x>
         <y>10</y>
-        <width>101</width>
-        <height>31</height>
+        <width>181</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -3481,11 +3705,15 @@
      <widget class="QLabel" name="label_103">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>360</x>
         <y>40</y>
-        <width>201</width>
-        <height>41</height>
+        <width>251</width>
+        <height>61</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 24pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Agregar rol</string>
@@ -3496,9 +3724,13 @@
        <rect>
         <x>250</x>
         <y>140</y>
-        <width>131</width>
-        <height>16</height>
+        <width>221</width>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Ingrese el nuevo rol:</string>
@@ -3507,10 +3739,10 @@
      <widget class="QLineEdit" name="otroRole">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>440</x>
         <y>140</y>
-        <width>191</width>
-        <height>21</height>
+        <width>231</width>
+        <height>41</height>
        </rect>
       </property>
      </widget>
@@ -3535,8 +3767,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>875</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>

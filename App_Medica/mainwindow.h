@@ -156,6 +156,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_btNewCita_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

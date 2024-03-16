@@ -5,8 +5,8 @@
 #include <QDate>
 #include <QTextStream>
 
-//QFile ExpedientesAdmin("Expedientes.itn");
-QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Expedientes.itn");
+QFile ExpedientesAdmin("Expedientes.itn");
+//QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Expedientes.itn");
 QDataStream write (&ExpedientesAdmin);
 
 AdminExpedientes::AdminExpedientes() {
