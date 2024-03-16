@@ -7,6 +7,7 @@ class  AdminSalas
 {
     struct newSala
     {
+        QString Code=0;
         QString Descripcion ="";
         QString Status="";
         QString FechaInicio="";
@@ -15,7 +16,7 @@ class  AdminSalas
     };
 public:
     AdminSalas();
-    bool createNewSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
+    bool createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
     bool modificateSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
     bool eliminarSala(QString descripcion);
 };

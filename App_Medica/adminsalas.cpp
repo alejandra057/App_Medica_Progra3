@@ -3,6 +3,7 @@
 #include <QDataStream>
 #include <QDate>
 #include <QTextStream>
+#include "admincodes.h"
 //pa windows
 QFile Room("Salas.arc");
 //pa kenny
@@ -18,18 +19,21 @@ AdminSalas::AdminSalas() {
     }
 }
 
-bool AdminSalas::createNewSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad)
+bool AdminSalas::createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad)
 {
     newSala Sala;
     //codigo
     Room.seek(Room.size());
+    AdminCodes codes;
+   long codigo=codes.NextcodigoSala();
+   code= QString::number(codigo);
+    Sala.Code=code;
     Sala.Descripcion = descripcion;
     Sala.Status = status;
     Sala.FechaInicio = fechainicio;
     Sala.FechaFinDisponibilidad = fechafindisponibilidad;
-  //  Sala.Status="Disponible";
     Room.seek(Room.size());
-    escribir<<Sala.Descripcion<<Sala.Status<<Sala.FechaInicio<<Sala.FechaFinDisponibilidad;
+    escribir<<Sala.Code<<Sala.Descripcion<<Sala.Status<<Sala.FechaInicio<<Sala.FechaFinDisponibilidad;
     return true;
 }
 

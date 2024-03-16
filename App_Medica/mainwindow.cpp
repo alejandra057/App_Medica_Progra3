@@ -518,7 +518,7 @@ void MainWindow::on_pushButton_24_pressed()
     QDate fecha_end = ui->FechaEnd->selectedDate();
     QString strfechaend=fecha_end.toString("yyyy-MM-dd");
 
-    if(Salas.createNewSala(descripcion,status,strfechainicio,strfechaend))
+    if(Salas.createNewSala(codetext,descripcion,status,strfechainicio,strfechaend))
     {
          QMessageBox::information(this, "listo", QString("Se ha creado correctamente la sala."));
     }else
