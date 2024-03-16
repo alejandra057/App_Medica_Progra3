@@ -6,10 +6,6 @@
 #include "adminsalas.h"
 #include <QMessageBox>
 
-adminRoles roles;
-classcreateuser crearuser;
-AdminExpedientes expedientes;
-adminSalas salas;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -24,7 +20,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_pressed()
 {
-
+    classcreateuser crearuser;
     //login
     QString cuentauser=ui->cuenta->text();
     QString passworduser=ui->password->text();
@@ -385,6 +381,7 @@ void MainWindow::on_pushButton_released()
 
 void MainWindow::on_pushButton_16_pressed()
 {
+    classcreateuser crearuser;
     QString crearnombre = ui->NombreCrear->text();
     QString crearcuenta= ui->CrearCuenta->text();
     QString Rol= ui->crearRol->text();
@@ -405,6 +402,7 @@ void MainWindow::on_pushButton_16_pressed()
 
 void MainWindow::on_pushButton_19_pressed()
 {
+    classcreateuser crearuser;
     QString nombre= ui->NombreEdit->text();
     QString cuenta=ui->UsuarioEdit->text();
     if(crearuser.CambiarStatus(nombre,cuenta))
@@ -420,6 +418,7 @@ void MainWindow::on_pushButton_19_pressed()
 void MainWindow::on_pushButton_34_pressed()
 {
     //expedientes
+    AdminExpedientes expedientes;
     QString encabezado= ui->EncabezadoCrear->text();
     QString namePaciente= ui->NamePacienteCrear->text();
     QString identidad = ui->IdentidadCrear->text();
@@ -451,6 +450,7 @@ void MainWindow::on_pushButton_34_pressed()
 void MainWindow::on_pushButton_36_pressed()
 {
 //adjuntar datos
+    AdminExpedientes expedientes;
     QString name = ui->NamePaciente->text();
     QString identidad =ui->IdentidadPaciente->text();
     QString sintomas = ui->Sintomaspresen->text();
@@ -487,6 +487,8 @@ void MainWindow::on_pushButton_79_pressed()
 
 void MainWindow::on_pushButton_80_pressed()
 {
+
+    adminRoles roles;
     QString Role = ui->otroRole->text();
     if(roles.addRole(Role))
     {
@@ -503,13 +505,15 @@ void MainWindow::on_pushButton_80_pressed()
 void MainWindow::on_pushButton_24_pressed()
 {
 
-    string Status="true";
-    string descripcion = ui->DescripcionSala->text().toStdString();
-    QDate fechaInicio = ui->FechaStart->selectedDate();
+    AdminSalas Salas;
+    QString status="Disponible";
+    QString descripcion = ui->DescripcionSala->text();
+    QDate fechainicio = ui->FechaStart->selectedDate();
+    QString strfechainicio= fechainicio.toString("yyyy-MM-dd");
+    QDate fecha_end = ui->FechaEnd->selectedDate();
+    QString strfechaend=fecha_end.toString("yyyy-MM-dd");
 
-    QDate fechaEnd = ui->FechaEnd->selectedDate();
-
-    if(salas.addSala(descripcion,Status,fechaInicio,fechaEnd))
+    if(Salas.createNewSala(descripcion,status,strfechainicio,strfechaend))
     {
          QMessageBox::information(this, "listo", QString("Se ha creado correctamente la sala."));
     }else
@@ -522,6 +526,7 @@ void MainWindow::on_pushButton_24_pressed()
 
 void MainWindow::on_pushButton_26_pressed()
 {
+   /* adminSalas salas;
     int code= ui->CodeModificar->text().toInt();
     string descripcion = ui->DescripcioModificar->text().toStdString();
     QDate fechainit= ui->fechaStarModi->selectedDate();
@@ -532,11 +537,13 @@ void MainWindow::on_pushButton_26_pressed()
     }else{
         QMessageBox::information(this, "listo", QString("No se ha encontrado la sala."));
     }
+*/
 }
 
 
 void MainWindow::on_EliminarSala_pressed()
 {
+   /* adminSalas salas;
     int code= ui->codeDelete->text().toInt();
     if (salas.eliminarSala(code)){
        QMessageBox::information(this, "listo", QString("Se ha eliminado correctamente la sala."));
@@ -545,5 +552,12 @@ void MainWindow::on_EliminarSala_pressed()
     {
         QMessageBox::information(this, "listo", QString("No se ha podido eliminar correctamente la sala."));
     }
+*/
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+
 }
 

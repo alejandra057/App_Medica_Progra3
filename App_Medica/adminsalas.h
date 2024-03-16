@@ -1,25 +1,22 @@
 #ifndef ADMINSALAS_H
 #define ADMINSALAS_H
-
-#include <string>
-#include <QDate>
-
-class adminSalas
+#include <QString>
+#include <QFile>
+#include <QDataStream>
+class  AdminSalas
 {
-    struct Sala {
-        int code;
-        QString description;
-        QString status;
-        QDate fechaInicio;
-        QDate fechaDisponibilidad;
+    struct newSala
+    {
+        QString Descripcion ="";
+        QString Status="";
+        QString FechaInicio="";
+        QString FechaFinDisponibilidad="";
+
     };
 public:
-    adminSalas();
-    bool addSala(std::string description, std::string status, QDate fechaInicio, QDate fechaDisponibilidad);
-    bool modificarSala(int codigo, std::string description, std::string status, QDate fechaInicio, QDate fechaDisponibilidad);
-    bool eliminarSala(int codigo);
-private:
-    int getSalaCode(long offset);
+    AdminSalas();
+    bool createNewSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
+    bool modificateSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
+    bool eliminarSala(QString descripcion);
 };
-
-#endif // ADMINSALAS_H
+#endif

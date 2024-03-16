@@ -5,7 +5,7 @@
 #include <QDate>
 #include <QTextStream>
 
-QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Expedientes.itn");
+QFile ExpedientesAdmin("Expedientes.itn");
 QDataStream write (&ExpedientesAdmin);
 
 AdminExpedientes::AdminExpedientes() {
@@ -19,6 +19,7 @@ AdminExpedientes::AdminExpedientes() {
 bool AdminExpedientes::createNewExpediente(QString encabezado, QString nombrePaciente, QString Identidad, QString fechaNacimiento, QString Numero1, QString Mail1, QString adiconalContact, QString adiocionalPhone, QString adicionalmail, QString alegias, QString TipoSangre, QString EnfermedadesBase)
 {
     NewExpediente Expedientes;
+    ExpedientesAdmin.seek(ExpedientesAdmin.size());
     Expedientes.Encabezado = encabezado;
     Expedientes.NombrePaciente = nombrePaciente;
     Expedientes.identidad = Identidad;

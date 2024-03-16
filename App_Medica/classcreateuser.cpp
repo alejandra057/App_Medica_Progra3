@@ -6,7 +6,7 @@
 #include <QDate>
 #include <QTextStream>
 
-QFile UserAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/User.itn");
+QFile UserAdmin("User.itn");
 QDataStream writeandwrite (&UserAdmin);
 bool boleano=true;
 

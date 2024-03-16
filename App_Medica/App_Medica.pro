@@ -14,14 +14,16 @@ SOURCES += \
     adminsalas.cpp \
     classcreateuser.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    recetas.cpp
 
 HEADERS += \
     adminexpedientes.h \
     adminroles.h \
     adminsalas.h \
     classcreateuser.h \
-    mainwindow.h
+    mainwindow.h \
+    recetas.h
 
 FORMS += \
     mainwindow.ui
