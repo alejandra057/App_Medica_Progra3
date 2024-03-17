@@ -175,16 +175,16 @@ void MainWindow::on_pushButton_45_pressed()
 {
     AdminCodes codes;
     long bytes = 0;
-    long cant_codigos = codes.GetActualCodeSalas();
+    long cant_codigos = 0 ;
     AdminSalas salas;
 
-    while (cant_codigos > 0) {
-        long code = salas.getSala_Actal(bytes);
+    while (cant_codigos <= codes.GetActualCodeSalas()) {
+        long code = salas.getSala_Actal();
         if (code != -1) {
             ui->salas_cb->addItem(QString::number(code));
         }
         bytes += 32;
-        cant_codigos--; // Reducir el contador de códigos
+        cant_codigos++;
     }
 
 

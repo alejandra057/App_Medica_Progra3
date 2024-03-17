@@ -12,8 +12,9 @@ QFile Room("Salas.arc");
 
 QDataStream escribir(&Room);
 QDataStream leer(&Room);
-
+long bytes;
 AdminSalas::AdminSalas() {
+     bytes=0;
     Room.open(QIODevice::ReadWrite);
     if(!Room.isOpen())
     {
@@ -23,6 +24,10 @@ AdminSalas::AdminSalas() {
 
 bool AdminSalas::createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad)
 {
+    QFile Room("Salas.arc");
+    if (!Room.open(QIODevice::Append)){
+        return false;
+    }
     newSala Sala;
     Room.seek(Room.size());
     /*AdminCodes codes;
@@ -38,37 +43,26 @@ bool AdminSalas::createNewSala(QString code,QString descripcion, QString status,
     return true;
 }
 
-long AdminSalas::getSala_Actal(long bytes)
+long AdminSalas::getSala_Actal()
 {
-
-    Room.seek(0);
-
-
+    QFile Room("Salas.arc");
+    if (!Room.open(QIODevice::ReadOnly)){
+        return false;
+    }
+    Room.seek(bytes);
     QString Code, Descripcion, Status, Fechainicio, Fechafindisponibilidad;
     leer >> Code >> Descripcion >> Status >> Fechainicio >> Fechafindisponibilidad;
     Room.close();
     if (Status=="Disponible"){
+        bytes=Room.pos();
         return Code.toLong();
     }
+    bytes=Room.pos();
+
     return -1;
 
 }
 
-
-/*List<QString> AdminSalas::getAllCodes() {
-    QList<QString> codesList;
-    Room.seek(0);
-    while (!Room.atEnd()) {
-        QString code, descripcion, status, fechainicio, fechafindisponibilidad;
-
-        leer >> code >> descripcion >> status >> fechainicio >> fechafindisponibilidad;
-
-        codesList.append(code);
-    }
-
-    return codesList;
-}
-*/
 
 
 //faltan reservaciones
