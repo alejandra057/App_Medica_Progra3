@@ -6,7 +6,7 @@
 #include "adminsalas.h"
 #include "admincodes.h"
 #include <QMessageBox>
-
+QString role="admin";
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -29,6 +29,7 @@ void MainWindow::on_pushButton_pressed()
     //ui->ver->text()=crearuser.BuscarUser(cuentauser,passworduser);
     if (crearuser.BuscarUser(cuentauser,passworduser," "))
     {
+        role=cuentauser;
         ui->stackedWidget->setCurrentIndex(2);
     }else
     {
@@ -46,7 +47,15 @@ void MainWindow::on_pushButton_3_pressed()
 
 void MainWindow::on_pushButton_4_pressed()
 {
-      ui->stackedWidget->setCurrentIndex(3);
+    adminRoles roles;
+    if(roles.permisoAdministrarUser(role))
+    {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
@@ -88,12 +97,27 @@ void MainWindow::on_pushButton_10_pressed()
 
 void MainWindow::on_pushButton_11_pressed()
 {
-     ui->stackedWidget->setCurrentIndex(27);
+    adminRoles roles;
+
+    if(roles.permisoVerReportes(role))
+    {
+         ui->stackedWidget->setCurrentIndex(27);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_13_pressed()
 {
+    adminRoles roles;
+    long cantidad = roles.cantRoles();
+    for (long i = 0; i < cantidad; ++i) {
+        QString Role1 = roles.showRoles();
+        ui->RolUserCreate->addItem(Role1);
+    }
     ui->stackedWidget->setCurrentIndex(4);
 }
 
@@ -113,19 +137,40 @@ void MainWindow::on_pushButton_15_pressed()
 
 void MainWindow::on_pushButton_20_pressed()
 {
-    ui->stackedWidget->setCurrentIndex(7);
+    adminRoles roles;
+    if(roles.permisoCrearSala(role)){
+        ui->stackedWidget->setCurrentIndex(7);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_21_pressed()
 {
+    adminRoles roles;
+    if(roles.permisoEditarSala(role)){
     ui->stackedWidget->setCurrentIndex(8);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_22_pressed()
 {
-    ui->stackedWidget->setCurrentIndex(10);
+    adminRoles roles;
+    if(roles.permisoEditarSala(role)){
+        ui->stackedWidget->setCurrentIndex(10);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
@@ -137,13 +182,27 @@ void MainWindow::on_pushButton_23_pressed()
 
 void MainWindow::on_pushButton_31_pressed()
 {
+    adminRoles roles;
+    if(roles.permisoCrearExpedientes(role)){
      ui->stackedWidget->setCurrentIndex(11);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_32_pressed()
 {
-     ui->stackedWidget->setCurrentIndex(12);
+    adminRoles roles;
+    if(roles.permisoEditarExpediente(role)){
+        ui->stackedWidget->setCurrentIndex(12);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
@@ -155,13 +214,27 @@ void MainWindow::on_pushButton_33_pressed()
 
 void MainWindow::on_pushButton_38_pressed()
 {
-     ui->stackedWidget->setCurrentIndex(14);
+    adminRoles roles;
+    if(roles.permisoCrearRecetas(role)){
+        ui->stackedWidget->setCurrentIndex(14);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_39_pressed()
 {
+    adminRoles roles;
+    if(roles.permisoEditarRecetas(role)){
      ui->stackedWidget->setCurrentIndex(15);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
@@ -174,6 +247,8 @@ void MainWindow::on_pushButton_40_pressed()
 void MainWindow::on_pushButton_45_pressed()
 {
     AdminCodes codes;
+    adminRoles roles;
+    if(roles.permisoReservaciones(role)){
     long bytes = 0;
     long cant_codigos = 0 ;
     AdminSalas salas;
@@ -189,7 +264,11 @@ void MainWindow::on_pushButton_45_pressed()
 
 
     ui->stackedWidget->setCurrentIndex(17);
-
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
@@ -213,25 +292,57 @@ void MainWindow::on_pushButton_48_pressed()
 
 void MainWindow::on_pushButton_55_pressed()
 {
+    adminRoles roles;
+    if(roles.permisoCita(role))
+    {
      ui->stackedWidget->setCurrentIndex(21);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_56_pressed()
 {
-     ui->stackedWidget->setCurrentIndex(22);
+    adminRoles roles;
+    if(roles.permisoCita(role))
+    {
+        ui->stackedWidget->setCurrentIndex(22);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_57_pressed()
 {
-     ui->stackedWidget->setCurrentIndex(23);
+    adminRoles roles;
+    if(roles.permisoCita(role))
+    {
+        ui->stackedWidget->setCurrentIndex(23);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
 void MainWindow::on_pushButton_58_pressed()
 {
-     ui->stackedWidget->setCurrentIndex(24);
+    adminRoles roles;
+    if(roles.permisoCita(role))
+    {
+        ui->stackedWidget->setCurrentIndex(24);
+    }
+    else
+    {
+        QMessageBox::information(this, "Error", QString("No tiene permiso para ingresar."));
+    }
 }
 
 
@@ -501,7 +612,7 @@ void MainWindow::on_pushButton_80_pressed()
 
     adminRoles roles;
     QString Role = ui->otroRole->text();
-    if(roles.addRole(Role))
+    if(roles.addRole(Role,true,true,true,true,true,true,true,true,true,true,true,true,true))
     {
     QMessageBox::information(this, "listo", QString("Se ha creado correctamente el rol."));
         ui->stackedWidget->setCurrentIndex(3);
@@ -584,4 +695,10 @@ void MainWindow::on_btNewCita_pressed()
 
 
 
+
+
+void MainWindow::on_pushButton_12_pressed()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
 

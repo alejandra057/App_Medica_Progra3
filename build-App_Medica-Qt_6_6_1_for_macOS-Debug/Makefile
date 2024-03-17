@@ -56,18 +56,22 @@ SOURCES       = ../App_Medica/admincodes.cpp \
 		../App_Medica/adminexpedientes.cpp \
 		../App_Medica/adminroles.cpp \
 		../App_Medica/adminsalas.cpp \
+		../App_Medica/citas.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp \
-		../App_Medica/recetas.cpp moc_mainwindow.cpp
+		../App_Medica/recetas.cpp \
+		../App_Medica/reservas.cpp moc_mainwindow.cpp
 OBJECTS       = admincodes.o \
 		adminexpedientes.o \
 		adminroles.o \
 		adminsalas.o \
+		citas.o \
 		classcreateuser.o \
 		main.o \
 		mainwindow.o \
 		recetas.o \
+		reservas.o \
 		moc_mainwindow.o
 DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/device_config.prf \
@@ -237,16 +241,20 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../App_Medica/adminexpedientes.h \
 		../App_Medica/adminroles.h \
 		../App_Medica/adminsalas.h \
+		../App_Medica/citas.h \
 		../App_Medica/classcreateuser.h \
 		../App_Medica/mainwindow.h \
-		../App_Medica/recetas.h ../App_Medica/admincodes.cpp \
+		../App_Medica/recetas.h \
+		../App_Medica/reservas.h ../App_Medica/admincodes.cpp \
 		../App_Medica/adminexpedientes.cpp \
 		../App_Medica/adminroles.cpp \
 		../App_Medica/adminsalas.cpp \
+		../App_Medica/citas.cpp \
 		../App_Medica/classcreateuser.cpp \
 		../App_Medica/main.cpp \
 		../App_Medica/mainwindow.cpp \
-		../App_Medica/recetas.cpp
+		../App_Medica/recetas.cpp \
+		../App_Medica/reservas.cpp
 QMAKE_TARGET  = App_Medica
 DESTDIR       = 
 TARGET        = App_Medica.app/Contents/MacOS/App_Medica
@@ -632,8 +640,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/admincodes.h ../App_Medica/adminexpedientes.h ../App_Medica/adminroles.h ../App_Medica/adminsalas.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h ../App_Medica/recetas.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../App_Medica/admincodes.cpp ../App_Medica/adminexpedientes.cpp ../App_Medica/adminroles.cpp ../App_Medica/adminsalas.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp ../App_Medica/recetas.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/admincodes.h ../App_Medica/adminexpedientes.h ../App_Medica/adminroles.h ../App_Medica/adminsalas.h ../App_Medica/citas.h ../App_Medica/classcreateuser.h ../App_Medica/mainwindow.h ../App_Medica/recetas.h ../App_Medica/reservas.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../App_Medica/admincodes.cpp ../App_Medica/adminexpedientes.cpp ../App_Medica/adminroles.cpp ../App_Medica/adminsalas.cpp ../App_Medica/citas.cpp ../App_Medica/classcreateuser.cpp ../App_Medica/main.cpp ../App_Medica/mainwindow.cpp ../App_Medica/recetas.cpp ../App_Medica/reservas.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../App_Medica/mainwindow.ui $(DISTDIR)/
 
 
@@ -695,7 +703,15 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-admincodes.o: ../App_Medica/admincodes.cpp ../App_Medica/admincodes.h
+admincodes.o: ../App_Medica/admincodes.cpp ../App_Medica/admincodes.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o admincodes.o ../App_Medica/admincodes.cpp
 
 adminexpedientes.o: ../App_Medica/adminexpedientes.cpp ../App_Medica/adminexpedientes.h \
@@ -734,8 +750,23 @@ adminsalas.o: ../App_Medica/adminsalas.cpp ../App_Medica/adminsalas.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
-		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
+		../App_Medica/admincodes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminsalas.o ../App_Medica/adminsalas.cpp
+
+citas.o: ../App_Medica/citas.cpp ../App_Medica/citas.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTime \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o citas.o ../App_Medica/citas.cpp
 
 classcreateuser.o: ../App_Medica/classcreateuser.cpp ../App_Medica/classcreateuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
@@ -771,6 +802,7 @@ mainwindow.o: ../App_Medica/mainwindow.cpp ../App_Medica/mainwindow.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
 		../App_Medica/adminroles.h \
 		../App_Medica/adminsalas.h \
+		../App_Medica/admincodes.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../App_Medica/mainwindow.cpp
@@ -788,6 +820,18 @@ recetas.o: ../App_Medica/recetas.cpp ../App_Medica/recetas.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o recetas.o ../App_Medica/recetas.cpp
+
+reservas.o: ../App_Medica/reservas.cpp ../App_Medica/reservas.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTime
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o reservas.o ../App_Medica/reservas.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
