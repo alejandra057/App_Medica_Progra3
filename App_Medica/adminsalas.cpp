@@ -8,6 +8,8 @@
 QFile Room("Salas.arc");
 //pa kenny
 //QFile Room("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Salas.itn");
+
+
 QDataStream escribir(&Room);
 QDataStream leer(&Room);
 
@@ -36,8 +38,24 @@ bool AdminSalas::createNewSala(QString code,QString descripcion, QString status,
     return true;
 }
 
+long AdminSalas::getSala_Actal(long bytes)
+{
 
-QList<QString> AdminSalas::getAllCodes() {
+    Room.seek(0);
+
+
+    QString Code, Descripcion, Status, Fechainicio, Fechafindisponibilidad;
+    leer >> Code >> Descripcion >> Status >> Fechainicio >> Fechafindisponibilidad;
+    Room.close();
+    if (Status=="Disponible"){
+        return Code.toLong();
+    }
+    return -1;
+
+}
+
+
+/*List<QString> AdminSalas::getAllCodes() {
     QList<QString> codesList;
     Room.seek(0);
     while (!Room.atEnd()) {
@@ -50,7 +68,7 @@ QList<QString> AdminSalas::getAllCodes() {
 
     return codesList;
 }
-
+*/
 
 
 //faltan reservaciones

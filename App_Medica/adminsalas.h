@@ -19,6 +19,6 @@ public:
     bool createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
     bool modificateSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
     bool eliminarSala(QString descripcion);
-    QList<QString> getAllCodes();
+    long getSala_Actal(long bytes);
 };
 #endif

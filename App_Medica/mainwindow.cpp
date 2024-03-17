@@ -7,7 +7,6 @@
 #include "admincodes.h"
 #include <QMessageBox>
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -174,7 +173,23 @@ void MainWindow::on_pushButton_40_pressed()
 
 void MainWindow::on_pushButton_45_pressed()
 {
-     ui->stackedWidget->setCurrentIndex(17);
+    AdminCodes codes;
+    long bytes = 0;
+    long cant_codigos = codes.GetActualCodeSalas();
+    AdminSalas salas;
+
+    while (cant_codigos > 0) {
+        long code = salas.getSala_Actal(bytes);
+        if (code != -1) {
+            ui->salas_cb->addItem(QString::number(code));
+        }
+        bytes += 32;
+        cant_codigos--; // Reducir el contador de códigos
+    }
+
+
+    ui->stackedWidget->setCurrentIndex(17);
+
 }
 
 
