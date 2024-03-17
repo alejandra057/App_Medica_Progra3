@@ -26,7 +26,7 @@
     <property name="currentIndex">
      <number>2</number>
     </property>
-    <widget class="QWidget" name="page">
+    <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
@@ -119,7 +119,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2">
+    <widget class="QWidget" name="Registro">
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
@@ -248,7 +248,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_3">
+    <widget class="QWidget" name="MenuPrincipal">
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
@@ -387,13 +387,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_4">
+    <widget class="QWidget" name="AdminitracionDeSistema">
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
         <x>240</x>
         <y>10</y>
-        <width>291</width>
+        <width>371</width>
         <height>41</height>
        </rect>
       </property>
@@ -461,13 +461,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_5">
+    <widget class="QWidget" name="CrearUsuario">
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
         <x>290</x>
         <y>10</y>
-        <width>211</width>
+        <width>281</width>
         <height>31</height>
        </rect>
       </property>
@@ -578,7 +578,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_6">
+    <widget class="QWidget" name="DarDeBajaUser">
      <widget class="QPushButton" name="pushButton_18">
       <property name="geometry">
        <rect>
@@ -672,13 +672,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_7">
+    <widget class="QWidget" name="AdminitacionSalas">
      <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>220</x>
         <y>20</y>
-        <width>251</width>
+        <width>321</width>
         <height>31</height>
        </rect>
       </property>
@@ -746,13 +746,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_8">
+    <widget class="QWidget" name="CrearNuevaSala">
      <widget class="QLabel" name="label_19">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>280</x>
         <y>10</y>
-        <width>181</width>
+        <width>241</width>
         <height>31</height>
        </rect>
       </property>
@@ -912,13 +912,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_9">
+    <widget class="QWidget" name="ModificarSala">
      <widget class="QLabel" name="label_25">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>20</y>
-        <width>151</width>
+        <x>300</x>
+        <y>10</y>
+        <width>201</width>
         <height>31</height>
        </rect>
       </property>
@@ -1074,13 +1074,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_10">
+    <widget class="QWidget" name="EliminarSala_2">
      <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
         <x>310</x>
         <y>10</y>
-        <width>141</width>
+        <width>201</width>
         <height>41</height>
        </rect>
       </property>
@@ -1180,7 +1180,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_11">
+    <widget class="QWidget" name="Expedientes">
      <widget class="QLabel" name="label_34">
       <property name="geometry">
        <rect>
@@ -1240,7 +1240,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_12">
+    <widget class="QWidget" name="NuevoExpediente">
      <widget class="QLabel" name="label_35">
       <property name="geometry">
        <rect>
@@ -1693,7 +1693,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_13">
+    <widget class="QWidget" name="AgregardataExp">
      <widget class="QLabel" name="label_48">
       <property name="geometry">
        <rect>
@@ -1987,13 +1987,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_14">
+    <widget class="QWidget" name="Recetas">
      <widget class="QLabel" name="label_55">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>320</x>
         <y>10</y>
-        <width>91</width>
+        <width>111</width>
         <height>31</height>
        </rect>
       </property>
@@ -2047,7 +2047,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_15">
+    <widget class="QWidget" name="NuevaReceta">
      <widget class="QLabel" name="label_56">
       <property name="geometry">
        <rect>
@@ -2166,7 +2166,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_16">
+    <widget class="QWidget" name="BuscarReceta">
      <widget class="QLabel" name="label_61">
       <property name="geometry">
        <rect>
@@ -2282,7 +2282,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_17">
+    <widget class="QWidget" name="Reservaciones">
      <widget class="QLabel" name="label_63">
       <property name="geometry">
        <rect>
@@ -2355,7 +2355,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_18">
+    <widget class="QWidget" name="NuevaReservacion">
      <widget class="QLabel" name="label_64">
       <property name="geometry">
        <rect>
@@ -2564,7 +2564,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_19">
+    <widget class="QWidget" name="ModificarReserva">
      <widget class="QLabel" name="label_71">
       <property name="geometry">
        <rect>
@@ -2746,7 +2746,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_20">
+    <widget class="QWidget" name="EliminarReserva">
      <widget class="QLabel" name="label_77">
       <property name="geometry">
        <rect>
@@ -2820,7 +2820,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_21">
+    <widget class="QWidget" name="AgendaConsulta">
      <widget class="QLabel" name="label_79">
       <property name="geometry">
        <rect>
@@ -2906,7 +2906,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_22">
+    <widget class="QWidget" name="NuevaCita">
      <widget class="QLabel" name="label_80">
       <property name="geometry">
        <rect>
@@ -3034,7 +3034,7 @@ font: 16pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_23">
+    <widget class="QWidget" name="ModificarCita">
      <widget class="QLabel" name="label_84">
       <property name="geometry">
        <rect>
@@ -3162,7 +3162,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_24">
+    <widget class="QWidget" name="EliminarCita">
      <widget class="QLabel" name="label_88">
       <property name="geometry">
        <rect>
@@ -3236,7 +3236,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_25">
+    <widget class="QWidget" name="ConsultarCita">
      <widget class="QLabel" name="label_90">
       <property name="geometry">
        <rect>
@@ -3320,7 +3320,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_26">
+    <widget class="QWidget" name="OpcionesDeUsuario">
      <widget class="QLabel" name="label_92">
       <property name="geometry">
        <rect>
@@ -3367,7 +3367,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_27">
+    <widget class="QWidget" name="CambiarPassword">
      <widget class="QLabel" name="label_93">
       <property name="geometry">
        <rect>
@@ -3481,7 +3481,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_28">
+    <widget class="QWidget" name="Reportes">
      <widget class="QLabel" name="label_97">
       <property name="geometry">
        <rect>
@@ -3541,13 +3541,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_29">
+    <widget class="QWidget" name="ReportePacientes">
      <widget class="QLabel" name="label_98">
       <property name="geometry">
        <rect>
         <x>340</x>
         <y>10</y>
-        <width>101</width>
+        <width>131</width>
         <height>31</height>
        </rect>
       </property>
@@ -3621,13 +3621,13 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_30">
+    <widget class="QWidget" name="ReporteCitas">
      <widget class="QLabel" name="label_100">
       <property name="geometry">
        <rect>
         <x>370</x>
         <y>10</y>
-        <width>61</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -3701,7 +3701,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_31">
+    <widget class="QWidget" name="AgregarRoll">
      <widget class="QLabel" name="label_103">
       <property name="geometry">
        <rect>
@@ -3768,7 +3768,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

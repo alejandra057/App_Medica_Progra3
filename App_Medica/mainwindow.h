@@ -131,11 +131,6 @@ private slots:
 
     void on_pushButton_77_pressed();
 
-
-    void on_pushButton_clicked(bool checked);
-
-    void on_pushButton_released();
-
     void on_pushButton_16_pressed();
 
     void on_pushButton_19_pressed();
@@ -154,12 +149,9 @@ private slots:
 
     void on_EliminarSala_pressed();
 
-    void on_pushButton_clicked();
-
     void on_btNewCita_pressed();
 
 
-    void on_comboBox_5_currentTextChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

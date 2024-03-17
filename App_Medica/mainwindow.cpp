@@ -385,16 +385,9 @@ void MainWindow::on_pushButton_77_pressed()
 }
 
 
-void MainWindow::on_pushButton_clicked(bool checked)
-{
-
-}
 
 
-void MainWindow::on_pushButton_released()
-{
 
-}
 
 
 void MainWindow::on_pushButton_16_pressed()
@@ -586,6 +579,8 @@ void MainWindow::on_btNewCita_pressed()
     QDate fecha=ui->dateCita->date();
     QTime hora=ui->TimeCita->time;*/
 }
+
+
 
 
 
