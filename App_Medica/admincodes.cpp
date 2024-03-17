@@ -20,12 +20,12 @@ AdminCodes::AdminCodes() {
     if (AdministradorCodigos.size()==0)
     {
         AdminDeCode codes;
-         codes.codigoUser=0;
-         codes.codigoExpedientes=0;
-         codes.codigoSala=0;
-         codes.codigoPaciente=0;
-         codes.codigoReservaciones=0;
-         codes.codigoCitas=0;
+         codes.codigoUser=1;
+         codes.codigoExpedientes=1;
+         codes.codigoSala=1;
+         codes.codigoPaciente=1;
+         codes.codigoReservaciones=1;
+         codes.codigoCitas=1;
          AdministradorCodigos.seek(0);
          administrador << static_cast<qint64>(codes.codigoUser)
                        << static_cast<qint64>(codes.codigoExpedientes)
@@ -196,4 +196,13 @@ long AdminCodes::NextcodigoCitas()
 
     AdministradorCodigos.flush();
     return nuevocodigocitasLong;
+}
+long AdminCodes :: GetActualCodeSalas(){
+    AdministradorCodigos.seek(0);
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
+
+    long codigoSalalong = static_cast<long>(codigoSala);
+
+    return codigoSalalong;
 }

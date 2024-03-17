@@ -7,11 +7,13 @@
 #include "admincodes.h"
 #include <QMessageBox>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -561,19 +563,15 @@ void MainWindow::on_EliminarSala_pressed()
 }
 
 
-void MainWindow::on_pushButton_clicked()
-{
-
-}
 
 
 void MainWindow::on_btNewCita_pressed()
 {
-    QString name = ui->txtnombrecita->text();
+   /* QString name = ui->txtnombrecita->text();
     QDate fecha=ui->dateCita->date();
-    QTime hora=ui->TimeCita->time();
-
-
-
+    QTime hora=ui->TimeCita->time;*/
 }
+
+
+
 

@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>17</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label">
@@ -2392,7 +2392,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        <string>Sala:</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_5">
+     <widget class="QComboBox" name="salas_cb">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -3768,7 +3768,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

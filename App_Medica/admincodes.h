@@ -25,6 +25,9 @@ public:
     long NextcodigoReservas();
 
     long NextcodigoCitas();
+
+    long GetActualCodeSalas();
+
 };
 
 #endif // ADMINCODES_H

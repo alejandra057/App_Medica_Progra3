@@ -158,6 +158,9 @@ private slots:
 
     void on_btNewCita_pressed();
 
+
+    void on_comboBox_5_currentTextChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
 };

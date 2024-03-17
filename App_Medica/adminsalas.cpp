@@ -9,7 +9,7 @@ QFile Room("Salas.arc");
 //pa kenny
 //QFile Room("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Salas.itn");
 QDataStream escribir(&Room);
-QDataStream read(&Room);
+QDataStream leer(&Room);
 
 AdminSalas::AdminSalas() {
     Room.open(QIODevice::ReadWrite);
@@ -22,11 +22,10 @@ AdminSalas::AdminSalas() {
 bool AdminSalas::createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad)
 {
     newSala Sala;
-    //codigo
     Room.seek(Room.size());
-    AdminCodes codes;
-   long codigo=codes.NextcodigoSala();
-   code= QString::number(codigo);
+    /*AdminCodes codes;
+    long codigo=codes.NextcodigoSala();
+    code=QString::number(codigo);*/
     Sala.Code=code;
     Sala.Descripcion = descripcion;
     Sala.Status = status;
@@ -38,6 +37,19 @@ bool AdminSalas::createNewSala(QString code,QString descripcion, QString status,
 }
 
 
+QList<QString> AdminSalas::getAllCodes() {
+    QList<QString> codesList;
+    Room.seek(0);
+    while (!Room.atEnd()) {
+        QString code, descripcion, status, fechainicio, fechafindisponibilidad;
+
+        leer >> code >> descripcion >> status >> fechainicio >> fechafindisponibilidad;
+
+        codesList.append(code);
+    }
+
+    return codesList;
+}
 
 
 

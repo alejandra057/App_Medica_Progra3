@@ -219,7 +219,7 @@ public:
     QWidget *page_18;
     QLabel *label_64;
     QLabel *label_65;
-    QComboBox *comboBox_5;
+    QComboBox *salas_cb;
     QLabel *label_66;
     QDateEdit *dateEdit_3;
     QLabel *label_67;
@@ -1000,9 +1000,9 @@ public:
         label_65->setGeometry(QRect(100, 70, 49, 16));
         label_65->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        comboBox_5 = new QComboBox(page_18);
-        comboBox_5->setObjectName("comboBox_5");
-        comboBox_5->setGeometry(QRect(160, 60, 151, 31));
+        salas_cb = new QComboBox(page_18);
+        salas_cb->setObjectName("salas_cb");
+        salas_cb->setGeometry(QRect(160, 60, 151, 31));
         label_66 = new QLabel(page_18);
         label_66->setObjectName("label_66");
         label_66->setGeometry(QRect(100, 110, 191, 31));
@@ -1392,7 +1392,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 875, 25));
+        menubar->setGeometry(QRect(0, 0, 875, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -1400,7 +1400,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(7);
+        stackedWidget->setCurrentIndex(17);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
