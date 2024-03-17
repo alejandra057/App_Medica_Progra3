@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QLabel>
@@ -23,6 +24,7 @@
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QWidget>
 
@@ -77,6 +79,7 @@ public:
     QLineEdit *crearRol;
     QPushButton *pushButton_16;
     QPushButton *pushButton_17;
+    QComboBox *RolUserCreate;
     QWidget *DarDeBajaUser;
     QPushButton *pushButton_18;
     QLabel *label_15;
@@ -221,37 +224,48 @@ public:
     QLabel *label_65;
     QComboBox *salas_cb;
     QLabel *label_66;
-    QDateEdit *dateEdit_3;
+    QDateEdit *date_reserva;
     QLabel *label_67;
     QLabel *label_68;
-    QTimeEdit *timeEdit;
-    QTimeEdit *timeEdit_2;
-    QLineEdit *lineEdit_28;
+    QTimeEdit *Hora_inicio;
+    QTimeEdit *Hora_final;
+    QLineEdit *txt_name;
     QLabel *label_69;
-    QLineEdit *lineEdit_29;
+    QLineEdit *txtnamedoctor;
     QLabel *label_70;
-    QPushButton *pushButton_49;
+    QPushButton *bt_reservar;
     QPushButton *pushButton_50;
+    QLineEdit *txtobservaciones;
+    QLabel *label_108;
+    QLabel *label_109;
+    QLabel *lbcodereservas;
     QWidget *ModificarReserva;
     QLabel *label_71;
     QLabel *label_72;
-    QLineEdit *lineEdit_30;
+    QLineEdit *txtnombreMR;
     QLabel *label_73;
-    QDateEdit *dateEdit_4;
+    QDateEdit *FechaMR;
     QLabel *label_74;
-    QTimeEdit *timeEdit_3;
-    QTimeEdit *timeEdit_4;
+    QTimeEdit *HoraIMR;
+    QTimeEdit *HoraFMR;
     QLabel *label_75;
     QLabel *label_76;
-    QLineEdit *lineEdit_31;
-    QPushButton *pushButton_51;
+    QLineEdit *nameDoctorMR;
+    QPushButton *btmodificarR;
     QPushButton *pushButton_52;
+    QLabel *label_110;
+    QLineEdit *txtcodereserva;
+    QLabel *label_111;
+    QTextEdit *txtobeservacionesMR;
+    QPushButton *bt_buscarMR;
     QWidget *EliminarReserva;
     QLabel *label_77;
     QLabel *label_78;
     QComboBox *comboBox_6;
-    QPushButton *pushButton_53;
+    QPushButton *bt_EliminarR;
     QPushButton *pushButton_54;
+    QLineEdit *txtcodeER;
+    QLabel *label_112;
     QWidget *AgendaConsulta;
     QLabel *label_79;
     QPushButton *pushButton_55;
@@ -329,6 +343,7 @@ public:
     QLabel *label_104;
     QLineEdit *otroRole;
     QPushButton *pushButton_80;
+    QCheckBox *checkBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -491,13 +506,16 @@ public:
         label_13->setGeometry(QRect(40, 180, 49, 16));
         crearRol = new QLineEdit(CrearUsuario);
         crearRol->setObjectName("crearRol");
-        crearRol->setGeometry(QRect(110, 180, 161, 21));
+        crearRol->setGeometry(QRect(100, 240, 161, 21));
         pushButton_16 = new QPushButton(CrearUsuario);
         pushButton_16->setObjectName("pushButton_16");
         pushButton_16->setGeometry(QRect(360, 290, 121, 41));
         pushButton_17 = new QPushButton(CrearUsuario);
         pushButton_17->setObjectName("pushButton_17");
         pushButton_17->setGeometry(QRect(40, 490, 80, 24));
+        RolUserCreate = new QComboBox(CrearUsuario);
+        RolUserCreate->setObjectName("RolUserCreate");
+        RolUserCreate->setGeometry(QRect(100, 170, 181, 32));
         stackedWidget->addWidget(CrearUsuario);
         DarDeBajaUser = new QWidget();
         DarDeBajaUser->setObjectName("DarDeBajaUser");
@@ -1008,9 +1026,9 @@ public:
         label_66->setGeometry(QRect(100, 110, 191, 31));
         label_66->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        dateEdit_3 = new QDateEdit(NuevaReservacion);
-        dateEdit_3->setObjectName("dateEdit_3");
-        dateEdit_3->setGeometry(QRect(240, 150, 161, 41));
+        date_reserva = new QDateEdit(NuevaReservacion);
+        date_reserva->setObjectName("date_reserva");
+        date_reserva->setGeometry(QRect(240, 150, 161, 41));
         label_67 = new QLabel(NuevaReservacion);
         label_67->setObjectName("label_67");
         label_67->setGeometry(QRect(100, 160, 81, 21));
@@ -1021,87 +1039,120 @@ public:
         label_68->setGeometry(QRect(100, 200, 161, 31));
         label_68->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        timeEdit = new QTimeEdit(NuevaReservacion);
-        timeEdit->setObjectName("timeEdit");
-        timeEdit->setGeometry(QRect(240, 200, 161, 41));
-        timeEdit_2 = new QTimeEdit(NuevaReservacion);
-        timeEdit_2->setObjectName("timeEdit_2");
-        timeEdit_2->setGeometry(QRect(240, 260, 161, 41));
-        lineEdit_28 = new QLineEdit(NuevaReservacion);
-        lineEdit_28->setObjectName("lineEdit_28");
-        lineEdit_28->setGeometry(QRect(290, 110, 211, 31));
+        Hora_inicio = new QTimeEdit(NuevaReservacion);
+        Hora_inicio->setObjectName("Hora_inicio");
+        Hora_inicio->setGeometry(QRect(240, 200, 161, 41));
+        Hora_final = new QTimeEdit(NuevaReservacion);
+        Hora_final->setObjectName("Hora_final");
+        Hora_final->setGeometry(QRect(240, 260, 161, 41));
+        txt_name = new QLineEdit(NuevaReservacion);
+        txt_name->setObjectName("txt_name");
+        txt_name->setGeometry(QRect(290, 110, 211, 31));
         label_69 = new QLabel(NuevaReservacion);
         label_69->setObjectName("label_69");
         label_69->setGeometry(QRect(100, 260, 101, 31));
         label_69->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        lineEdit_29 = new QLineEdit(NuevaReservacion);
-        lineEdit_29->setObjectName("lineEdit_29");
-        lineEdit_29->setGeometry(QRect(280, 320, 161, 31));
+        txtnamedoctor = new QLineEdit(NuevaReservacion);
+        txtnamedoctor->setObjectName("txtnamedoctor");
+        txtnamedoctor->setGeometry(QRect(280, 320, 161, 31));
         label_70 = new QLabel(NuevaReservacion);
         label_70->setObjectName("label_70");
         label_70->setGeometry(QRect(100, 320, 191, 21));
         label_70->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        pushButton_49 = new QPushButton(NuevaReservacion);
-        pushButton_49->setObjectName("pushButton_49");
-        pushButton_49->setGeometry(QRect(340, 380, 91, 41));
+        bt_reservar = new QPushButton(NuevaReservacion);
+        bt_reservar->setObjectName("bt_reservar");
+        bt_reservar->setGeometry(QRect(350, 450, 91, 41));
         pushButton_50 = new QPushButton(NuevaReservacion);
         pushButton_50->setObjectName("pushButton_50");
         pushButton_50->setGeometry(QRect(760, 480, 111, 41));
+        txtobservaciones = new QLineEdit(NuevaReservacion);
+        txtobservaciones->setObjectName("txtobservaciones");
+        txtobservaciones->setGeometry(QRect(280, 370, 161, 41));
+        label_108 = new QLabel(NuevaReservacion);
+        label_108->setObjectName("label_108");
+        label_108->setGeometry(QRect(100, 370, 141, 31));
+        label_108->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+        label_109 = new QLabel(NuevaReservacion);
+        label_109->setObjectName("label_109");
+        label_109->setGeometry(QRect(630, 60, 63, 20));
+        lbcodereservas = new QLabel(NuevaReservacion);
+        lbcodereservas->setObjectName("lbcodereservas");
+        lbcodereservas->setGeometry(QRect(690, 60, 63, 20));
         stackedWidget->addWidget(NuevaReservacion);
         ModificarReserva = new QWidget();
         ModificarReserva->setObjectName("ModificarReserva");
         label_71 = new QLabel(ModificarReserva);
         label_71->setObjectName("label_71");
-        label_71->setGeometry(QRect(280, 10, 241, 31));
+        label_71->setGeometry(QRect(330, 10, 241, 31));
         label_71->setFont(font2);
         label_72 = new QLabel(ModificarReserva);
         label_72->setObjectName("label_72");
-        label_72->setGeometry(QRect(160, 70, 191, 21));
+        label_72->setGeometry(QRect(250, 130, 191, 21));
         label_72->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        lineEdit_30 = new QLineEdit(ModificarReserva);
-        lineEdit_30->setObjectName("lineEdit_30");
-        lineEdit_30->setGeometry(QRect(350, 70, 191, 31));
+        txtnombreMR = new QLineEdit(ModificarReserva);
+        txtnombreMR->setObjectName("txtnombreMR");
+        txtnombreMR->setGeometry(QRect(440, 130, 191, 31));
         label_73 = new QLabel(ModificarReserva);
         label_73->setObjectName("label_73");
-        label_73->setGeometry(QRect(160, 120, 49, 16));
+        label_73->setGeometry(QRect(250, 180, 49, 16));
         label_73->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        dateEdit_4 = new QDateEdit(ModificarReserva);
-        dateEdit_4->setObjectName("dateEdit_4");
-        dateEdit_4->setGeometry(QRect(350, 110, 151, 41));
+        FechaMR = new QDateEdit(ModificarReserva);
+        FechaMR->setObjectName("FechaMR");
+        FechaMR->setGeometry(QRect(440, 170, 151, 41));
         label_74 = new QLabel(ModificarReserva);
         label_74->setObjectName("label_74");
-        label_74->setGeometry(QRect(160, 160, 141, 31));
+        label_74->setGeometry(QRect(250, 220, 141, 31));
         label_74->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        timeEdit_3 = new QTimeEdit(ModificarReserva);
-        timeEdit_3->setObjectName("timeEdit_3");
-        timeEdit_3->setGeometry(QRect(350, 160, 151, 41));
-        timeEdit_4 = new QTimeEdit(ModificarReserva);
-        timeEdit_4->setObjectName("timeEdit_4");
-        timeEdit_4->setGeometry(QRect(350, 210, 151, 41));
+        HoraIMR = new QTimeEdit(ModificarReserva);
+        HoraIMR->setObjectName("HoraIMR");
+        HoraIMR->setGeometry(QRect(440, 220, 151, 41));
+        HoraFMR = new QTimeEdit(ModificarReserva);
+        HoraFMR->setObjectName("HoraFMR");
+        HoraFMR->setGeometry(QRect(440, 270, 151, 41));
         label_75 = new QLabel(ModificarReserva);
         label_75->setObjectName("label_75");
-        label_75->setGeometry(QRect(160, 210, 111, 31));
+        label_75->setGeometry(QRect(250, 270, 111, 31));
         label_75->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
         label_76 = new QLabel(ModificarReserva);
         label_76->setObjectName("label_76");
-        label_76->setGeometry(QRect(150, 250, 181, 41));
+        label_76->setGeometry(QRect(240, 310, 181, 41));
         label_76->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
-        lineEdit_31 = new QLineEdit(ModificarReserva);
-        lineEdit_31->setObjectName("lineEdit_31");
-        lineEdit_31->setGeometry(QRect(350, 260, 191, 31));
-        pushButton_51 = new QPushButton(ModificarReserva);
-        pushButton_51->setObjectName("pushButton_51");
-        pushButton_51->setGeometry(QRect(360, 350, 141, 41));
+        nameDoctorMR = new QLineEdit(ModificarReserva);
+        nameDoctorMR->setObjectName("nameDoctorMR");
+        nameDoctorMR->setGeometry(QRect(440, 320, 191, 31));
+        btmodificarR = new QPushButton(ModificarReserva);
+        btmodificarR->setObjectName("btmodificarR");
+        btmodificarR->setGeometry(QRect(370, 500, 141, 41));
         pushButton_52 = new QPushButton(ModificarReserva);
         pushButton_52->setObjectName("pushButton_52");
         pushButton_52->setGeometry(QRect(730, 480, 121, 41));
+        label_110 = new QLabel(ModificarReserva);
+        label_110->setObjectName("label_110");
+        label_110->setGeometry(QRect(250, 70, 63, 20));
+        label_110->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+        txtcodereserva = new QLineEdit(ModificarReserva);
+        txtcodereserva->setObjectName("txtcodereserva");
+        txtcodereserva->setGeometry(QRect(330, 70, 113, 28));
+        label_111 = new QLabel(ModificarReserva);
+        label_111->setObjectName("label_111");
+        label_111->setGeometry(QRect(240, 370, 151, 31));
+        label_111->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+        txtobeservacionesMR = new QTextEdit(ModificarReserva);
+        txtobeservacionesMR->setObjectName("txtobeservacionesMR");
+        txtobeservacionesMR->setGeometry(QRect(440, 360, 221, 101));
+        bt_buscarMR = new QPushButton(ModificarReserva);
+        bt_buscarMR->setObjectName("bt_buscarMR");
+        bt_buscarMR->setGeometry(QRect(460, 70, 83, 29));
         stackedWidget->addWidget(ModificarReserva);
         EliminarReserva = new QWidget();
         EliminarReserva->setObjectName("EliminarReserva");
@@ -1117,12 +1168,18 @@ public:
         comboBox_6 = new QComboBox(EliminarReserva);
         comboBox_6->setObjectName("comboBox_6");
         comboBox_6->setGeometry(QRect(370, 100, 161, 31));
-        pushButton_53 = new QPushButton(EliminarReserva);
-        pushButton_53->setObjectName("pushButton_53");
-        pushButton_53->setGeometry(QRect(360, 200, 111, 41));
+        bt_EliminarR = new QPushButton(EliminarReserva);
+        bt_EliminarR->setObjectName("bt_EliminarR");
+        bt_EliminarR->setGeometry(QRect(360, 200, 111, 41));
         pushButton_54 = new QPushButton(EliminarReserva);
         pushButton_54->setObjectName("pushButton_54");
         pushButton_54->setGeometry(QRect(720, 480, 121, 41));
+        txtcodeER = new QLineEdit(EliminarReserva);
+        txtcodeER->setObjectName("txtcodeER");
+        txtcodeER->setGeometry(QRect(370, 140, 161, 41));
+        label_112 = new QLabel(EliminarReserva);
+        label_112->setObjectName("label_112");
+        label_112->setGeometry(QRect(210, 150, 63, 20));
         stackedWidget->addWidget(EliminarReserva);
         AgendaConsulta = new QWidget();
         AgendaConsulta->setObjectName("AgendaConsulta");
@@ -1387,7 +1444,10 @@ public:
         otroRole->setGeometry(QRect(440, 140, 231, 41));
         pushButton_80 = new QPushButton(AgregarRoll);
         pushButton_80->setObjectName("pushButton_80");
-        pushButton_80->setGeometry(QRect(340, 230, 111, 41));
+        pushButton_80->setGeometry(QRect(380, 420, 111, 41));
+        checkBox = new QCheckBox(AgregarRoll);
+        checkBox->setObjectName("checkBox");
+        checkBox->setGeometry(QRect(530, 220, 171, 20));
         stackedWidget->addWidget(AgregarRoll);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -1400,7 +1460,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(19);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1545,20 +1605,27 @@ public:
         label_68->setText(QCoreApplication::translate("MainWindow", "Hora de Inicio:", nullptr));
         label_69->setText(QCoreApplication::translate("MainWindow", "Hora final:", nullptr));
         label_70->setText(QCoreApplication::translate("MainWindow", "Nombre del doctor:", nullptr));
-        pushButton_49->setText(QCoreApplication::translate("MainWindow", "Reservar", nullptr));
+        bt_reservar->setText(QCoreApplication::translate("MainWindow", "Reservar", nullptr));
         pushButton_50->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        label_108->setText(QCoreApplication::translate("MainWindow", "Observaciones:", nullptr));
+        label_109->setText(QCoreApplication::translate("MainWindow", "Code:", nullptr));
+        lbcodereservas->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_71->setText(QCoreApplication::translate("MainWindow", "Modificar Reservaci\303\263n", nullptr));
         label_72->setText(QCoreApplication::translate("MainWindow", "Nombre del paciente:", nullptr));
         label_73->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
         label_74->setText(QCoreApplication::translate("MainWindow", "Hora de Inicio:", nullptr));
         label_75->setText(QCoreApplication::translate("MainWindow", "Hora final:", nullptr));
         label_76->setText(QCoreApplication::translate("MainWindow", "Nombre del doctor:", nullptr));
-        pushButton_51->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
+        btmodificarR->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
         pushButton_52->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        label_110->setText(QCoreApplication::translate("MainWindow", "Codigo:", nullptr));
+        label_111->setText(QCoreApplication::translate("MainWindow", "Observaciones:", nullptr));
+        bt_buscarMR->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
         label_77->setText(QCoreApplication::translate("MainWindow", "Eliminar Reservaci\303\263n", nullptr));
         label_78->setText(QCoreApplication::translate("MainWindow", "Reservaciones:", nullptr));
-        pushButton_53->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
+        bt_EliminarR->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
         pushButton_54->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        label_112->setText(QCoreApplication::translate("MainWindow", "Codigo:", nullptr));
         label_79->setText(QCoreApplication::translate("MainWindow", "Agenda de Consultas", nullptr));
         pushButton_55->setText(QCoreApplication::translate("MainWindow", "Nueva Cita", nullptr));
         pushButton_56->setText(QCoreApplication::translate("MainWindow", "Modificar Cita", nullptr));
@@ -1609,6 +1676,7 @@ public:
         label_103->setText(QCoreApplication::translate("MainWindow", "Agregar rol", nullptr));
         label_104->setText(QCoreApplication::translate("MainWindow", "Ingrese el nuevo rol:", nullptr));
         pushButton_80->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "CheckBox", nullptr));
     } // retranslateUi
 
 };

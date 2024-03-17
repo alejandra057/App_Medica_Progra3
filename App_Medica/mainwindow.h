@@ -155,6 +155,14 @@ private slots:
 
     void on_pushButton_12_pressed();
 
+    void on_bt_reservar_pressed();
+
+    void on_btmodificarR_pressed();
+
+    void on_bt_buscarMR_pressed();
+
+    void on_bt_EliminarR_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

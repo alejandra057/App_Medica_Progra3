@@ -40,6 +40,8 @@ bool AdminSalas::createNewSala(QString code,QString descripcion, QString status,
     Sala.FechaFinDisponibilidad = fechafindisponibilidad;
     Room.seek(Room.size());
     escribir<<Sala.Code<<Sala.Descripcion<<Sala.Status<<Sala.FechaInicio<<Sala.FechaFinDisponibilidad;
+    Room.flush();
+    Room.close();
     return true;
 }
 

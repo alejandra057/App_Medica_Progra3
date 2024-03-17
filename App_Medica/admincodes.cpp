@@ -24,7 +24,7 @@ AdminCodes::AdminCodes() {
          codes.codigoExpedientes=1;
          codes.codigoSala=1;
          codes.codigoPaciente=1;
-         codes.codigoReservaciones=1;
+         codes.codigoReservaciones=0;
          codes.codigoCitas=1;
          AdministradorCodigos.seek(0);
          administrador << static_cast<qint64>(codes.codigoUser)

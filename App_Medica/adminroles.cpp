@@ -4,10 +4,12 @@
 #include <QDate>
 #include <QTextStream>
 //pa kenny
-QFile AdminRoles("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/RolesAdmin.itn");
-QFile Privilegio("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/PrivilegiosRoles.itn");
+//QFile AdminRoles("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/RolesAdmin.itn");
+//QFile Privilegio("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/PrivilegiosRoles.itn");
 //pa ustedes
-
+QFile AdminRoles("RolesAdmin.itn");
+QFile Privilegio("PrivilegiosRoles.itn");
+//pa ustedes
 QDataStream Roles (&AdminRoles);
 QDataStream privilegios(&Privilegio);
 long bytesA;

@@ -5,6 +5,7 @@
 #include "adminroles.h"
 #include "adminsalas.h"
 #include "admincodes.h"
+#include "reservas.h"
 #include <QMessageBox>
 QString role="admin";
 MainWindow::MainWindow(QWidget *parent)
@@ -545,7 +546,7 @@ void MainWindow::on_pushButton_34_pressed()
     QString namePaciente= ui->NamePacienteCrear->text();
     QString identidad = ui->IdentidadCrear->text();
     QDate fechaNacimiento = ui->calendarFechaNacimiento->selectedDate();
-    QString strFechaNacimiento = fechaNacimiento.toString("yyyy-MM-dd");
+    QString strFechaNacimiento = fechaNacimiento.toString("dd/MM/yyyy");
     QString Telefono = ui->Telefonocrear->text();
     QString Email = ui->EmailCrear->text();
     QString nameadicional= ui->contacadiocionalCrear->text();
@@ -582,10 +583,10 @@ void MainWindow::on_pushButton_36_pressed()
     QString diagnostico= ui->labelDiagnostico->text();
 
     QDate fecha = ui->feachaDeCita->selectedDate();
-    QString strFecha = fecha.toString("yyyy-MM-dd");
+    QString strFecha = fecha.toString("dd/MM/yyyy");
 
     QDate fechacita = ui->ProximaCita->selectedDate();
-    QString strFechaSiguienteCita= fechacita.toString("yyyy-MM-dd");
+    QString strFechaSiguienteCita= fechacita.toString("dd/MM/yyyy");
 
 
     if (expedientes.addToExpediente(name,identidad,strFecha,sintomas,observaciones,diagnostico,Recomendaciones,strFechaSiguienteCita,adicional))
@@ -635,9 +636,9 @@ void MainWindow::on_pushButton_24_pressed()
     QString status="Disponible";
     QString descripcion = ui->DescripcionSala->text();
     QDate fechainicio = ui->FechaStart->selectedDate();
-    QString strfechainicio= fechainicio.toString("yyyy-MM-dd");
+    QString strfechainicio= fechainicio.toString("dd/MM/yyyy");
     QDate fecha_end = ui->FechaEnd->selectedDate();
-    QString strfechaend=fecha_end.toString("yyyy-MM-dd");
+    QString strfechaend=fecha_end.toString("dd/MM/yyyy");
 
     if(Salas.createNewSala(codetext,descripcion,status,strfechainicio,strfechaend))
     {
@@ -682,8 +683,6 @@ void MainWindow::on_EliminarSala_pressed()
 }
 
 
-
-
 void MainWindow::on_btNewCita_pressed()
 {
    /* QString name = ui->txtnombrecita->text();
@@ -692,13 +691,96 @@ void MainWindow::on_btNewCita_pressed()
 }
 
 
-
-
-
-
-
 void MainWindow::on_pushButton_12_pressed()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_bt_reservar_pressed()
+{
+    Reservas reservar;
+    AdminCodes codes;
+    long codigo=codes.NextcodigoReservas();
+    QString codetext = QString::number(codigo);
+    ui->lbcodereservas->setText(codetext);
+    QString fecha = ui->date_reserva->date().toString("dd/MM/yyyy");
+    QString horaInicio = ui->Hora_inicio->time().toString("HH:mm");
+    QString horaFinal = ui->Hora_final->time().toString("HH:mm");
+    QString nombre = ui->txt_name->text();
+    QString nameDoctor=ui->txtnamedoctor->text();
+    QString observaciones=ui->txtobservaciones->text();
+    QString salaselect=ui->salas_cb->currentText();
+
+    if(reservar.Nuevareservacion(codetext,salaselect,nombre,fecha,horaInicio,horaFinal,nameDoctor,observaciones))
+    {
+        QMessageBox::information(this, "listo", QString("Reservado Exitosamente."));
+    }else
+    {
+        QMessageBox::information(this, "Error", QString("No se pudo reservar."));
+    }
+}
+
+
+void MainWindow::on_btmodificarR_pressed()
+{
+    Reservas reservar;
+    if(ui->txtnombreMR->text().isEmpty() && ui->nameDoctorMR->text().isEmpty() && ui->txtobeservacionesMR->toPlainText().isEmpty())
+    {
+     QMessageBox::information(this, "listo", QString("Campos vacios."));
+    }else
+    {
+        QString code = ui->txtcodereserva->text();
+        QString nombre=ui->txtnombreMR->text();
+        QString fecha = ui->FechaMR->date().toString("dd/MM/yyyy");
+        QString horaInicio = ui->HoraIMR->time().toString("HH:mm");
+        QString horaFinal = ui->HoraFMR->time().toString("HH:mm");
+        QString nameDoctor=ui->nameDoctorMR->text();
+        QString observaciones=ui->txtobeservacionesMR->toPlainText();
+        if(reservar.ModificarReservacion(code,nombre,fecha,horaInicio,horaFinal,nameDoctor,observaciones))
+        {
+          QMessageBox::information(this, "listo", QString("Modificado correctamente."));
+        }else{
+            QMessageBox::information(this, "listo", QString("Error."));
+        }
+    }
+}
+
+
+void MainWindow::on_bt_buscarMR_pressed()
+{
+    Reservas reservar;
+    QString code = ui->txtcodereserva->text();
+    Reservas::STReservaciones reservacion = reservar.Revisarcodigo(code); // Obtén la reservación
+    if (!reservacion.code.isEmpty())
+    {
+        QMessageBox::information(this, "listo", QString("Reservacion encontrada."));
+        ui->txtnombreMR->setText(reservacion.nombre);
+        ui->nameDoctorMR->setText(reservacion.namedoctor);
+        QDate fecha = QDate::fromString(reservacion.fecha, "dd/MM/yyyy");
+        ui->FechaMR->setDate(fecha);
+        QTime horainicio = QTime::fromString(reservacion.horainicio, "HH:mm");
+        ui->HoraIMR->setTime(horainicio);
+        QTime horafinal = QTime::fromString(reservacion.horafinal, "HH:mm");
+        ui->HoraFMR->setTime(horafinal);
+        ui->txtobeservacionesMR->setText(reservacion.observacion);
+    }
+
+    else
+    {
+        QMessageBox::information(this, "listo", QString("Codigo Inexistente."));
+    }
+}
+
+
+void MainWindow::on_bt_EliminarR_pressed()
+{
+     Reservas reservar;
+    QString code = ui->txtcodeER->text();
+     if(reservar.EliminarReservacion(code)){
+        QMessageBox::information(this, "listo", QString("Eliminado Correctamente."));
+     }else{
+        QMessageBox::information(this, "listo", QString("Codigo no encontrado."));
+     }
 }
 

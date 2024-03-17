@@ -3,8 +3,9 @@
 #include <QString>
 #include <QFile>
 #include <QDataStream>
-class  AdminSalas
+class AdminSalas
 {
+public:
     struct newSala
     {
         QString Code="";
@@ -12,13 +13,20 @@ class  AdminSalas
         QString Status="";
         QString FechaInicio="";
         QString FechaFinDisponibilidad="";
-
     };
-public:
+
     AdminSalas();
-    bool createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
+    bool createNewSala(QString code, QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
     bool modificateSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad);
     bool eliminarSala(QString descripcion);
     long getSala_Actal();
+
+    newSala obtenerSalaActual() const {
+        return sala;
+    }
+
+private:
+    newSala sala;
 };
+
 #endif

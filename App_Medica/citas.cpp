@@ -26,6 +26,7 @@ bool Citas::CrearCitas(QString nombre, QString fecha, QString hora)
     datos.hora=hora;
     crearcitas.seek(crearcitas.size());
     cin<<datos.nombre<<datos.fecha<<datos.hora;
+    crearcitas.flush();
     return true;
 }
 bool Citas::ModificarCitas(QString cita)
