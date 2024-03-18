@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -1040,16 +1040,6 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="status_modi">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>70</y>
-        <width>171</width>
-        <height>31</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QCalendarWidget" name="fechaStarModi">
       <property name="geometry">
        <rect>
@@ -1132,19 +1122,6 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="buscar_sala_btn">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>110</y>
-        <width>80</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Buscar</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_115">
       <property name="geometry">
        <rect>
@@ -1188,6 +1165,29 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <y>420</y>
         <width>118</width>
         <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buscar_sala">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>110</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Buscar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="status_modi">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>70</y>
+        <width>113</width>
+        <height>24</height>
        </rect>
       </property>
      </widget>
@@ -2221,10 +2221,10 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </rect>
       </property>
       <property name="text">
-       <string>Medicamento y listas:</string>
+       <string>Medicamento:</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_2">
+     <widget class="QComboBox" name="paciente_cb">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -2234,7 +2234,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </rect>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_3">
+     <widget class="QComboBox" name="medicamento_cb">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2243,8 +2243,58 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <height>31</height>
        </rect>
       </property>
+      <item>
+       <property name="text">
+        <string>AMIODARONA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AMOXICILINA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BETAMETASONA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ETAMBUTOL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HIERRO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>LOSARTAN</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NORFLOXACINA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RIFAMPICINA </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>POLIVITAMÍNICO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VITAMINA D</string>
+       </property>
+      </item>
      </widget>
-     <widget class="QLabel" name="label_60">
+     <widget class="QLabel" name="lb_fecha_actual">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -2254,7 +2304,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </rect>
       </property>
       <property name="text">
-       <string>7/02/24</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_41">
@@ -2270,7 +2320,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        <string>Regresar</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_42">
+     <widget class="QPushButton" name="new_recipe">
       <property name="geometry">
        <rect>
         <x>340</x>
@@ -2282,6 +2332,74 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       <property name="text">
        <string>Crear</string>
       </property>
+     </widget>
+     <widget class="QLabel" name="label_60">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>260</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dosis:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dosis_cb">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>260</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1 /kg al dia </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2/kg al dia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2 capsulas al dia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4 capsulas al dia </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2 capsulas cada 6 horas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4 capsulas cada 6 horas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2 capsulas cada 8 horas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4 capsulas cada 8 horas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="BuscarReceta">
@@ -4055,7 +4173,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

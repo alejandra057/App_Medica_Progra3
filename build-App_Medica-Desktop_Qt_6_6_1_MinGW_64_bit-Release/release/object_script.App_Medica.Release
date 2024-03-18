@@ -1,0 +1,11 @@
+release/admincodes.o
+release/adminexpedientes.o
+release/adminroles.o
+release/adminsalas.o
+release/citas.o
+release/classcreateuser.o
+release/main.o
+release/mainwindow.o
+release/recetas.o
+release/reservas.o
+release/moc_mainwindow.o

@@ -7,7 +7,7 @@
 #include "admincodes.h"
 #include "reservas.h"
 #include <QMessageBox>
-
+#include "recetas.h"
 QString NombreUserLogueado="";
 QString role="admin";
 QString code=0;
@@ -811,19 +811,6 @@ void MainWindow::on_bt_EliminarR_pressed()
 }
 
 
-void MainWindow::on_buscar_sala_btn_pressed()
-{
-
-    AdminSalas Salas;
-    QString codigo = ui->CodeModificar->text();
-    if (Salas.BuscarCodigo(codigo)){
-        QMessageBox::information(this, "listo", QString("Sala encontrada."));
-    }else{
-        QMessageBox::information(this, "listo", QString("Sala no encontrada."));
-    }
-
-}
-
 
 void MainWindow::on_pushButton_70_pressed()
 {
@@ -834,6 +821,35 @@ void MainWindow::on_pushButton_70_pressed()
          QMessageBox::information(this, "listo", QString("Se cambio correctamente la password."));
     }else{
          QMessageBox::information(this, "Error", QString("Ingreso datos incorrectamente."));
+    }
+}
+
+
+void MainWindow::on_new_recipe_pressed()
+{
+    /*
+    Recetas recetas;
+    QDateTime fechaActual = QDateTime::currentDateTime();
+    QString fecha= fechaActual();
+    ui->lb_fecha_actual->setText(fecha);
+    QString paciente =paciente_cb->currentText();
+    QString medicamentos = medicamentos_cb->currentText();
+    QString dosis = dosis_cb->currentText();
+    recetas.new_recetas(fecha,paciente,medicamentos,dosis);
+*/
+
+}
+
+
+void MainWindow::on_buscar_sala_pressed()
+{
+    AdminSalas Salas;
+    QString codigo = ui->CodeModificar->text();
+    if (Salas.BuscarCodigo(codigo)){
+        QMessageBox::information(this, "listo", QString("Sala encontrada."));
+
+    }else{
+        QMessageBox::information(this, "listo", QString("Sala no encontrada."));
     }
 }
 

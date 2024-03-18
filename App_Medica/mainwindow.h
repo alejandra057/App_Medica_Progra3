@@ -151,8 +151,6 @@ private slots:
 
     void on_btNewCita_pressed();
 
-
-
     void on_pushButton_12_pressed();
 
     void on_bt_reservar_pressed();
@@ -163,9 +161,13 @@ private slots:
 
     void on_bt_EliminarR_pressed();
 
-    void on_buscar_sala_btn_pressed();
-
     void on_pushButton_70_pressed();
+
+    void on_new_recipe_pressed();
+
+
+
+    void on_buscar_sala_pressed();
 
 private:
     Ui::MainWindow *ui;
