@@ -94,3 +94,47 @@ bool classcreateuser::CambiarStatus(QString name, QString cuenta)
     }
     return false;
 }
+
+bool classcreateuser::cuentaPassawordDefault(QString name, QString cuenta)
+{
+    long save = 0;
+    UserAdmin.seek(0);
+    while (!UserAdmin.atEnd()) {
+        CrearUserFormat create;
+        create.status = true;
+        save = UserAdmin.pos();
+        writeandwrite >> create.nombre >> create.password >> create.cuenta >> create.rol >> create.status;
+        if (create.nombre == name && create.cuenta == cuenta) {
+            UserAdmin.seek(save);
+            create.status = true;
+            writeandwrite << create.nombre << create.password << create.cuenta << create.rol << create.status;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool classcreateuser::ChangePassword(QString name, QString cuenta, QString newPassword, QString password)
+{
+    long save = 0;
+    UserAdmin.seek(0);
+    while (!UserAdmin.atEnd()) {
+        CrearUserFormat create;
+        save = UserAdmin.pos();
+        writeandwrite >> create.nombre >> create.password >> create.cuenta >> create.rol >> create.status;
+        if (create.cuenta == cuenta) {
+            if(create.password==password){
+            UserAdmin.seek(save);
+            create.password=newPassword;
+            writeandwrite << create.nombre << create.password << create.cuenta << create.rol << create.status;
+            return true;
+            }
+        }
+    }
+    return false;
+}
+
+QString classcreateuser::PasswordActual(QString name, QString cuenta)
+{
+
+}

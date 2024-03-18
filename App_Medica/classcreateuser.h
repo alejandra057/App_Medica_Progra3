@@ -23,6 +23,9 @@ public:
     bool EditUser(QString nombre,QString cuenta);
     bool BuscarUser(QString cuenta,QString password,QString name);
     bool CambiarStatus(QString name,QString cuenta);
+    bool cuentaPassawordDefault(QString name,QString cuenta);
+    bool ChangePassword(QString name,QString cuenta, QString newPasswords, QString password);
+    QString PasswordActual(QString name,QString cuenta);
 };
 
 #endif // CLASSCREATEUSER_H

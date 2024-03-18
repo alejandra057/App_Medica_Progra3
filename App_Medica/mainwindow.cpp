@@ -7,7 +7,12 @@
 #include "admincodes.h"
 #include "reservas.h"
 #include <QMessageBox>
+
+QString NombreUserLogueado="";
 QString role="admin";
+QString code=0;
+bool EsperaACrearExpediente=false;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -31,6 +36,7 @@ void MainWindow::on_pushButton_pressed()
     if (crearuser.BuscarUser(cuentauser,passworduser," "))
     {
         role=cuentauser;
+        NombreUserLogueado=cuentauser;
         ui->stackedWidget->setCurrentIndex(2);
     }else
     {
@@ -184,8 +190,16 @@ void MainWindow::on_pushButton_23_pressed()
 void MainWindow::on_pushButton_31_pressed()
 {
     adminRoles roles;
+    AdminCodes codes;
     if(roles.permisoCrearExpedientes(role)){
-     ui->stackedWidget->setCurrentIndex(11);
+        if(EsperaACrearExpediente==false)
+        {
+            EsperaACrearExpediente=true;
+            long codigo = codes.NextcodigoExpedientes();
+            code = QString::number(codigo);
+            ui->CodigoNextExpedienteLabel->setText(code);
+        }
+        ui->stackedWidget->setCurrentIndex(11);
     }
     else
     {
@@ -541,8 +555,12 @@ void MainWindow::on_pushButton_19_pressed()
 void MainWindow::on_pushButton_34_pressed()
 {
     //expedientes
+
     AdminExpedientes expedientes;
-    QString encabezado= ui->EncabezadoCrear->text();
+    //QString encabezado= ui->EncabezadoCrear->text();
+
+
+
     QString namePaciente= ui->NamePacienteCrear->text();
     QString identidad = ui->IdentidadCrear->text();
     QDate fechaNacimiento = ui->calendarFechaNacimiento->selectedDate();
@@ -556,11 +574,12 @@ void MainWindow::on_pushButton_34_pressed()
     QString Alergias = ui->AlergiasCrear->text();
     QString Enfermedades = ui->EnfermedadesCrear->text();
 
-        if(encabezado!=" " && namePaciente!=" " && identidad!=" " && strFechaNacimiento!=" " && Telefono!=" " && Email!=" " && nameadicional!=" " && TelefonoAdional!=" " && EmailAdional!=" " && tiposangre!=" " && Alergias!=" "&& Enfermedades!=" ")
+        if(code!=" " && namePaciente!=" " && identidad!=" " && strFechaNacimiento!=" " && Telefono!=" " && Email!=" " && nameadicional!=" " && TelefonoAdional!=" " && EmailAdional!=" " && tiposangre!=" " && Alergias!=" "&& Enfermedades!=" ")
         {
             //expedientes.addToExpediente(encabezado,namePaciente,identidad,strFechaNacimiento,Telefono,Email,nameadicional,TelefonoAdional,EmailAdional,tiposangre,Alergias,Enfermedades);
-            expedientes.createNewExpediente(encabezado,namePaciente,identidad,strFechaNacimiento,Telefono,Email,nameadicional,TelefonoAdional, EmailAdional,Alergias,tiposangre,Enfermedades);
-             QMessageBox::information(this, "listo", QString("Se ha creado correctamente el expediente."));
+            expedientes.createNewExpediente(code,namePaciente,identidad,strFechaNacimiento,Telefono,Email,nameadicional,TelefonoAdional, EmailAdional,Alergias,tiposangre,Enfermedades);
+            EsperaACrearExpediente=false;
+            QMessageBox::information(this, "listo", QString("Se ha creado correctamente el expediente."));
         }
         else
         {
@@ -803,5 +822,18 @@ void MainWindow::on_buscar_sala_btn_pressed()
         QMessageBox::information(this, "listo", QString("Sala no encontrada."));
     }
 
+}
+
+
+void MainWindow::on_pushButton_70_pressed()
+{
+    classcreateuser crearuser;
+    QString contraActual = ui->ActualPasswordUser->text();
+    QString newPasword = ui->NewPasswordUser->text();
+    if(crearuser.ChangePassword("name",role,newPasword,contraActual)){
+         QMessageBox::information(this, "listo", QString("Se cambio correctamente la password."));
+    }else{
+         QMessageBox::information(this, "Error", QString("Ingreso datos incorrectamente."));
+    }
 }
 

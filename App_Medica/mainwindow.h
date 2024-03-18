@@ -165,6 +165,8 @@ private slots:
 
     void on_buscar_sala_btn_pressed();
 
+    void on_pushButton_70_pressed();
+
 private:
     Ui::MainWindow *ui;
 };
