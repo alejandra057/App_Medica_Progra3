@@ -634,37 +634,44 @@ void MainWindow::on_pushButton_24_pressed()
     QString codetext = QString::number(codigo);
     ui->lbcodesala->setText(codetext);
     QString status="Disponible";
+    ui->lb_status->setText(status);
     QString descripcion = ui->DescripcionSala->text();
     QDate fechainicio = ui->FechaStart->selectedDate();
     QString strfechainicio= fechainicio.toString("dd/MM/yyyy");
     QDate fecha_end = ui->FechaEnd->selectedDate();
     QString strfechaend=fecha_end.toString("dd/MM/yyyy");
+    QString horainicio =ui->horainicio_crearSala->time().toString("HH:mm");
+    QString horafinal =ui->horafinal_crearSala->time().toString("HH:mm");
 
-    if(Salas.createNewSala(codetext,descripcion,status,strfechainicio,strfechaend))
+    if(Salas.createNewSala(codetext,descripcion,status,strfechainicio,strfechaend,horainicio,horafinal))
     {
          QMessageBox::information(this, "listo", QString("Se ha creado correctamente la sala."));
     }else
     {
          QMessageBox::information(this, "Error", QString("No ha creado correctamente la sala."));
     }
-
 }
 
 
 void MainWindow::on_pushButton_26_pressed()
 {
-   /* adminSalas salas;
-    int code= ui->CodeModificar->text().toInt();
-    string descripcion = ui->DescripcioModificar->text().toStdString();
-    QDate fechainit= ui->fechaStarModi->selectedDate();
-    QDate fechaFinal = ui->fechaFinalDisponibilidad->selectedDate();
-    if (salas.modificarSala(code,descripcion,"true",fechainit,fechaFinal))
+    AdminSalas Salas;
+    QString code = ui->CodeModificar->text();
+    QString descripcion = ui->DescripcioModificar->text();
+    QDate fechainits= ui->fechaStarModi->selectedDate();
+    QString fechainit= fechainits.toString("dd/MM/yyyy");
+    QString status = ui->status_modi->text();
+    QDate fechaFinals = ui->fechaFinalDisponibilidad->selectedDate();
+    QString fechaFinal= fechaFinals.toString("dd/MM/yyyy");
+    QString horainicio =ui->horainicio_crearSala->time().toString("HH:mm");
+    QString horafinal =ui->horafinal_modi->time().toString("HH:mm");
+    if (Salas.modificateSala(code,descripcion,status,fechainit,fechaFinal,horainicio,horafinal))
     {
         QMessageBox::information(this, "listo", QString("Se ha modificado correctamente la sala."));
     }else{
         QMessageBox::information(this, "listo", QString("No se ha encontrado la sala."));
     }
-*/
+
 }
 
 
@@ -782,5 +789,19 @@ void MainWindow::on_bt_EliminarR_pressed()
      }else{
         QMessageBox::information(this, "listo", QString("Codigo no encontrado."));
      }
+}
+
+
+void MainWindow::on_buscar_sala_btn_pressed()
+{
+
+    AdminSalas Salas;
+    QString codigo = ui->CodeModificar->text();
+    if (Salas.BuscarCodigo(codigo)){
+        QMessageBox::information(this, "listo", QString("Sala encontrada."));
+    }else{
+        QMessageBox::information(this, "listo", QString("Sala no encontrada."));
+    }
+
 }
 

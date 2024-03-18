@@ -163,6 +163,8 @@ private slots:
 
     void on_bt_EliminarR_pressed();
 
+    void on_buscar_sala_btn_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

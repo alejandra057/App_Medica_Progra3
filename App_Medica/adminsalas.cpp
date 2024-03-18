@@ -4,6 +4,8 @@
 #include <QDate>
 #include <QTextStream>
 #include "admincodes.h"
+#include "reservas.h"
+#include <QMessageBox>
 //pa windows
 QFile Room("Salas.arc");
 //pa kenny
@@ -22,7 +24,7 @@ AdminSalas::AdminSalas() {
     }
 }
 
-bool AdminSalas::createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad)
+bool AdminSalas::createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad,QString horainicio, QString horafinal)
 {
     QFile Room("Salas.arc");
     if (!Room.open(QIODevice::Append)){
@@ -30,16 +32,15 @@ bool AdminSalas::createNewSala(QString code,QString descripcion, QString status,
     }
     newSala Sala;
     Room.seek(Room.size());
-    /*AdminCodes codes;
-    long codigo=codes.NextcodigoSala();
-    code=QString::number(codigo);*/
     Sala.Code=code;
     Sala.Descripcion = descripcion;
     Sala.Status = status;
     Sala.FechaInicio = fechainicio;
     Sala.FechaFinDisponibilidad = fechafindisponibilidad;
+    Sala.HoraInicio= horainicio;
+    Sala.HoraFinal= horafinal;
     Room.seek(Room.size());
-    escribir<<Sala.Code<<Sala.Descripcion<<Sala.Status<<Sala.FechaInicio<<Sala.FechaFinDisponibilidad;
+    escribir<<Sala.Code<<Sala.Descripcion<<Sala.Status<<Sala.FechaInicio<<Sala.FechaFinDisponibilidad<<Sala.HoraInicio<<Sala.HoraFinal;
     Room.flush();
     Room.close();
     return true;
@@ -52,68 +53,119 @@ long AdminSalas::getSala_Actal()
         return false;
     }
     Room.seek(bytes);
-    QString Code, Descripcion, Status, Fechainicio, Fechafindisponibilidad;
-    leer >> Code >> Descripcion >> Status >> Fechainicio >> Fechafindisponibilidad;
-    Room.close();
+    QString Code, Descripcion, Status, Fechainicio, Fechafindisponibilidad,HoraInicio, HoraFinal;
+    leer >> Code >> Descripcion >> Status >> Fechainicio >> Fechafindisponibilidad >> HoraInicio >> HoraFinal;
     if (Status=="Disponible"){
         bytes=Room.pos();
         return Code.toLong();
     }
     bytes=Room.pos();
-
+    Room.close();
     return -1;
 
 }
 
 
 
-//faltan reservaciones
-/*bool AdminSalas::modificateSala(QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad)
+
+bool AdminSalas::BuscarCodigo(QString code)
 {
-    Salas.open(QIODevice::ReadWrite);
-    if(!Salas.isOpen())
+    QFile Room("Salas.arc");
+
+    if (!Room.open(QIODevice::ReadOnly)) {
+          exit(0);
+    }
+
+    QDataStream leer(&Room);
+    Room.seek(0);
+
+    AdminSalas::newSala Sala;
+    while (!leer.atEnd())
+    {
+      leer >> Sala.Code >> Sala.Descripcion >> Sala.Status >> Sala.FechaInicio >> Sala.FechaFinDisponibilidad >> Sala.HoraInicio >> Sala.HoraFinal;
+        if (Sala.Code == code)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool AdminSalas::modificateSala(QString code, QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad, QString horainicio, QString horafinal)
+{
+    QFile Room("Salas.arc");
+
+    if (!Room.open(QIODevice::ReadWrite)) {
+         exit(0);
+    }
+
+    QFile tempFileSalas("tempSalas.arc");
+    if (!tempFileSalas.open(QIODevice::ReadWrite))
     {
         exit(0);
     }
 
-    while (!read.atEnd()) {
-        newSala Sala;
-        read >> Sala.Descripcion >> Sala.Status >> Sala.FechaInicio >> Sala.FechaFinDisponibilidad;
-        Sala.append(Sala);
-    }
+    QDataStream escribir(&tempFileSalas);
+    QDataStream leer(&Room);
 
-    bool reservaciones = false;
-    for (const auto& Sala : salas) {
-        if (Sala.Descripcion == descripcion && Sala.Status != "Disponible" && Sala.FechaInicio < fechafindisponibilidad) {
-            reservaciones = true;
-            break;
+    AdminSalas::newSala temp;
+
+    while (!leer.atEnd())
+    {
+        leer >> temp.Code >> temp.Descripcion >> temp.Status >> temp.FechaInicio >> temp.FechaFinDisponibilidad >> temp.HoraInicio >> temp.HoraFinal;
+
+        if (temp.Code == code)
+        {
+            if (temp.FechaInicio == fechainicio && temp.HoraInicio == horainicio) {
+                QMessageBox::warning(nullptr, "Advertencia", "Ya hay una reserva para la misma fecha y hora");
+                Room.close();
+                tempFileSalas.close();
+                return false;
+            }
+
+            if (temp.FechaInicio < fechainicio || temp.FechaInicio > fechafindisponibilidad) {
+                Room.close();
+                tempFileSalas.close();
+                return false;
+            }
+            if (temp.FechaFinDisponibilidad < fechainicio) {
+                Room.close();
+                tempFileSalas.close();
+                return false;
+            }
+
+            if (temp.FechaInicio > fechafindisponibilidad) {
+                Room.close();
+                tempFileSalas.close();
+                return false;
+            }
+
+            temp.Descripcion = descripcion;
+            temp.FechaInicio = fechainicio;
+            temp.FechaFinDisponibilidad = fechafindisponibilidad;
+            temp.HoraInicio = horainicio;
+            temp.HoraFinal = horafinal;
         }
+
+        escribir << temp.Code << temp.Descripcion << temp.Status << temp.FechaInicio << temp.FechaFinDisponibilidad << temp.HoraInicio << temp.HoraFinal;
+        tempFileSalas.flush();
     }
 
-    if (reservaciones) {
-        return false;
-    }
+    tempFileSalas.close();
+    Room.close();
+    Room.remove();
+    tempFileSalas.rename("Salas.arc");
 
-    for (auto& Sala : salas) {
-        if (Sala.Descripcion == descripcion) {
-            Sala.Status = status;
-            Sala.FechaInicio = fechainicio;
-            Sala.FechaFinDisponibilidad = fechafindisponibilidad;
-            break;
-        }
-    }
-
-    Salas.seek(0);
-    for (const auto& Sala : salas) {
-        write << Sala.Descripcion << Sala.Status << Sala.FechaInicio << Sala.FechaFinDisponibilidad;
-    }
-    Salas.resize(Salas.pos());
     return true;
 }
 
 
+
+
+
 //faltan reservaciones
-bool AdminSalas::eliminarSala(QString descripcion)
+/*bool AdminSalas::eliminarSala(QString descripcion)
 {
     Salas.open(QIODevice::ReadWrite);
     if(!Salas.isOpen())
