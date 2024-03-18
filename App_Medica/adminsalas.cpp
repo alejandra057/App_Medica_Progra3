@@ -26,10 +26,6 @@ AdminSalas::AdminSalas() {
 
 bool AdminSalas::createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad,QString horainicio, QString horafinal)
 {
-    QFile Room("Salas.arc");
-    if (!Room.open(QIODevice::Append)){
-        return false;
-    }
     newSala Sala;
     Room.seek(Room.size());
     Sala.Code=code;
@@ -42,27 +38,20 @@ bool AdminSalas::createNewSala(QString code,QString descripcion, QString status,
     Room.seek(Room.size());
     escribir<<Sala.Code<<Sala.Descripcion<<Sala.Status<<Sala.FechaInicio<<Sala.FechaFinDisponibilidad<<Sala.HoraInicio<<Sala.HoraFinal;
     Room.flush();
-    Room.close();
     return true;
 }
 
 long AdminSalas::getSala_Actal()
 {
-    QFile Room("Salas.arc");
-    QDataStream leercode(&Room);
-    if (!Room.open(QIODevice::ReadOnly)){
-        return false;
-    }
-    Room.flush();
+
     Room.seek(bytes);
     QString Code, Descripcion, Status, Fechainicio, Fechafindisponibilidad,HoraInicio, HoraFinal;
-    leercode >> Code >> Descripcion >> Status >> Fechainicio >> Fechafindisponibilidad >> HoraInicio >> HoraFinal;
+    leer >> Code >> Descripcion >> Status >> Fechainicio >> Fechafindisponibilidad >> HoraInicio >> HoraFinal;
     if (Status=="Disponible"){
         bytes=Room.pos();
         return Code.toLong();
     }
     bytes=Room.pos();
-    Room.close();
     return -1;
 
 }
@@ -72,19 +61,14 @@ long AdminSalas::getSala_Actal()
 
 bool AdminSalas::BuscarCodigo(QString code)
 {
-    QFile Room("Salas.arc");
 
-    if (!Room.open(QIODevice::ReadOnly)) {
-          exit(0);
-    }
-
-    QDataStream leer3(&Room);
+    QDataStream leer1(&Room);
     Room.seek(0);
 
     AdminSalas::newSala Sala;
-    while (!leer3.atEnd())
+    while (!leer1.atEnd())
     {
-      leer3 >> Sala.Code >> Sala.Descripcion >> Sala.Status >> Sala.FechaInicio >> Sala.FechaFinDisponibilidad >> Sala.HoraInicio >> Sala.HoraFinal;
+      leer >> Sala.Code >> Sala.Descripcion >> Sala.Status >> Sala.FechaInicio >> Sala.FechaFinDisponibilidad >> Sala.HoraInicio >> Sala.HoraFinal;
         if (Sala.Code == code)
         {
             return true;
@@ -94,81 +78,100 @@ bool AdminSalas::BuscarCodigo(QString code)
     return false;
 }
 
+
 bool AdminSalas::modificateSala(QString code, QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad, QString horainicio, QString horafinal)
 {
-    /*
-    Reservaciones reservas;
+
+    QDataStream escribir2(&Room);
+    QDataStream leer2(&Room);
+    //abrir archivo reservaciones
+    Reservas reservaciones;
     QFile Reservaciones("Reservaciones.itn");
-    if (!Reservaciones.open(QIODevice::ReadWrite)) {
-        exit(0);
-    }
-    */
-
-    QFile Room("Salas.arc");
-    if (!Room.open(QIODevice::ReadWrite)) {
-         exit(0);
-    }
-
-    QDataStream escribir(&Room);
-    QDataStream leer(&Room);
-
-    AdminSalas::newSala temp;
-    Room.seek(0);
-    while (!leer.atEnd())
+    QDataStream leer_r(&Reservaciones);
+    if (!Reservaciones.open(QIODevice::ReadOnly))
     {
-        long pos = Room.pos();
-        leer >> temp.Code >> temp.Descripcion >> temp.Status >> temp.FechaInicio >> temp.FechaFinDisponibilidad >> temp.HoraInicio >> temp.HoraFinal;
+        QMessageBox::information(nullptr, "Error", "No se pudo abrir el archivo de salas");
+        return false;
+    }
+    AdminSalas::newSala sala;
+    Reservas:: STReservaciones reservass;
 
-        if (temp.Code == code)
-        {
 
-            /*
-            if (Reservaciones.FechaInicio == fechainicio && Reservaciones.HoraInicio == horainicio) {
-
-                Rervaciones.close();
-
-                return false;
-            }
-
-            if (temp.FechaInicio < fechainicio || temp.FechaInicio > fechafindisponibilidad) {
-                Room.close();
-
-                return false;
-            }
-            if (temp.FechaFinDisponibilidad < fechainicio) {
-                Room.close();
-
-                return false;
-            }
-
-            if (temp.FechaInicio > fechafindisponibilidad) {
-                Room.close();
-
-                return false;
-            }
-            */
-            temp.Descripcion = descripcion;
-            temp.FechaInicio = fechainicio;
-            temp.FechaFinDisponibilidad = fechafindisponibilidad;
-            temp.HoraInicio = horainicio;
-            temp.HoraFinal = horafinal;
-            Room.seek(pos);
-            escribir << temp.Code << temp.Descripcion << temp.Status << temp.FechaInicio << temp.FechaFinDisponibilidad << temp.HoraInicio << temp.HoraFinal;
-            Room.flush();
+    bool reservas_fuera = false;
+    while (!leer_r.atEnd()) {
+        leer_r >> reservass.code >> reservass.fecha >> reservass.horafinal >> reservass.horainicio >> reservass.namedoctor >> reservass.nombre >> reservass.observacion;
+        if (reservass.code == code && reservass.fecha > fechafindisponibilidad) {
+            reservas_fuera = true;
+            break;
         }
+    }
+    Reservaciones.seek(0);
 
+    if (!reservas_fuera) {
+        while (!leer2.atEnd()) {
+            long pos = Room.pos();
+            leer2 >> sala.Code >> sala.Descripcion >> sala.Status >> sala.FechaInicio >> sala.FechaFinDisponibilidad >> sala.HoraInicio >> sala.HoraFinal;
 
+            if (sala.Code == code) {
+                sala.Descripcion = descripcion;
+                sala.Status = status;
+                sala.FechaInicio = fechainicio;
+                sala.FechaFinDisponibilidad = fechafindisponibilidad;
+                sala.HoraInicio = horainicio;
+                sala.HoraFinal = horafinal;
+                Room.seek(pos);
+                escribir2 << sala.Code << sala.Descripcion << sala.Status << sala.FechaInicio << sala.FechaFinDisponibilidad << sala.HoraInicio << sala.HoraFinal;
+                Room.flush();
+                break;
+            }
+        }
+    } else {
+        QMessageBox::information(nullptr, "Error", "Existen reservaciones fuera de la fecha de disponibilidad.");
     }
 
-
-    Room.close();
-   // Rerservaciones.close();
     return true;
+
+
 }
 
+/*bool Reservas::EliminarReservacion(QString code)
+{
+    QFile tempFile("temp.itn");
+    if (!tempFile.open(QIODevice::ReadWrite))
+    {
+        qDebug() << "No se pudo abrir el archivo temporal.";
+        return false;
+    }
 
+    QDataStream escribir(&tempFile);
+    Reservaciones.seek(0);
+    QDataStream leer(&Reservaciones);
 
+    bool encontrado = false;
+    while (!leer.atEnd())
+    {
+        STReservaciones temp;
+        leer >> temp.code >> temp.nombre >> temp.fecha >> temp.horainicio >> temp.horafinal >> temp.namedoctor >> temp.observacion;
+        if (temp.code == code)
+        {
+            encontrado = true;
+            continue;
+        }
+        escribir << temp.code << temp.nombre << temp.fecha << temp.horainicio << temp.horafinal << temp.namedoctor << temp.observacion;
+    }
 
+    tempFile.close();
+    Reservaciones.remove();
+    tempFile.rename("Reservas.itn");
+
+    if (!encontrado)
+    {
+        return false;
+    }
+
+    return true;
+}
+*/
 
 //faltan reservaciones
 /*bool AdminSalas::eliminarSala(QString descripcion)

@@ -1043,10 +1043,10 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <widget class="QCalendarWidget" name="fechaStarModi">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>180</y>
-        <width>331</width>
-        <height>221</height>
+        <x>40</x>
+        <y>310</y>
+        <width>271</width>
+        <height>171</height>
        </rect>
       </property>
      </widget>
@@ -1063,8 +1063,8 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <widget class="QLabel" name="label_29">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>150</y>
+        <x>60</x>
+        <y>280</y>
         <width>91</width>
         <height>16</height>
        </rect>
@@ -1125,8 +1125,8 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <widget class="QLabel" name="label_115">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>430</y>
+        <x>50</x>
+        <y>490</y>
         <width>131</width>
         <height>16</height>
        </rect>
@@ -1152,7 +1152,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>190</x>
-        <y>430</y>
+        <y>490</y>
         <width>118</width>
         <height>25</height>
        </rect>
@@ -1188,6 +1188,16 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <y>70</y>
         <width>113</width>
         <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="texto_sala">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>150</y>
+        <width>241</width>
+        <height>121</height>
        </rect>
       </property>
      </widget>

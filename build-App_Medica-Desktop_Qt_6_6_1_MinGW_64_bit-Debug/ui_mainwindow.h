@@ -118,7 +118,6 @@ public:
     QLabel *label_27;
     QLabel *label_28;
     QLineEdit *DescripcioModificar;
-    QLineEdit *status_modi;
     QCalendarWidget *fechaStarModi;
     QCalendarWidget *fechaFinalDisponibilidad;
     QLabel *label_29;
@@ -126,11 +125,13 @@ public:
     QPushButton *pushButton_26;
     QPushButton *pushButton_27;
     QLineEdit *CodeModificar;
-    QPushButton *buscar_sala_btn;
     QLabel *label_115;
     QLabel *label_116;
     QTimeEdit *horainicio_modi;
     QTimeEdit *horafinal_modi;
+    QPushButton *buscar_sala;
+    QLineEdit *status_modi;
+    QTextEdit *texto_sala;
     QWidget *EliminarSala_2;
     QLabel *label_31;
     QLabel *label_32;
@@ -649,18 +650,15 @@ public:
         DescripcioModificar = new QLineEdit(ModificarSala);
         DescripcioModificar->setObjectName("DescripcioModificar");
         DescripcioModificar->setGeometry(QRect(350, 70, 171, 31));
-        status_modi = new QLineEdit(ModificarSala);
-        status_modi->setObjectName("status_modi");
-        status_modi->setGeometry(QRect(590, 70, 171, 31));
         fechaStarModi = new QCalendarWidget(ModificarSala);
         fechaStarModi->setObjectName("fechaStarModi");
-        fechaStarModi->setGeometry(QRect(50, 180, 331, 221));
+        fechaStarModi->setGeometry(QRect(40, 310, 271, 171));
         fechaFinalDisponibilidad = new QCalendarWidget(ModificarSala);
         fechaFinalDisponibilidad->setObjectName("fechaFinalDisponibilidad");
         fechaFinalDisponibilidad->setGeometry(QRect(500, 180, 291, 221));
         label_29 = new QLabel(ModificarSala);
         label_29->setObjectName("label_29");
-        label_29->setGeometry(QRect(130, 150, 91, 16));
+        label_29->setGeometry(QRect(60, 280, 91, 16));
         label_30 = new QLabel(ModificarSala);
         label_30->setObjectName("label_30");
         label_30->setGeometry(QRect(560, 150, 121, 16));
@@ -673,21 +671,27 @@ public:
         CodeModificar = new QLineEdit(ModificarSala);
         CodeModificar->setObjectName("CodeModificar");
         CodeModificar->setGeometry(QRect(80, 70, 113, 21));
-        buscar_sala_btn = new QPushButton(ModificarSala);
-        buscar_sala_btn->setObjectName("buscar_sala_btn");
-        buscar_sala_btn->setGeometry(QRect(100, 110, 80, 24));
         label_115 = new QLabel(ModificarSala);
         label_115->setObjectName("label_115");
-        label_115->setGeometry(QRect(60, 430, 131, 16));
+        label_115->setGeometry(QRect(50, 490, 131, 16));
         label_116 = new QLabel(ModificarSala);
         label_116->setObjectName("label_116");
         label_116->setGeometry(QRect(500, 420, 171, 21));
         horainicio_modi = new QTimeEdit(ModificarSala);
         horainicio_modi->setObjectName("horainicio_modi");
-        horainicio_modi->setGeometry(QRect(190, 430, 118, 25));
+        horainicio_modi->setGeometry(QRect(190, 490, 118, 25));
         horafinal_modi = new QTimeEdit(ModificarSala);
         horafinal_modi->setObjectName("horafinal_modi");
         horafinal_modi->setGeometry(QRect(680, 420, 118, 25));
+        buscar_sala = new QPushButton(ModificarSala);
+        buscar_sala->setObjectName("buscar_sala");
+        buscar_sala->setGeometry(QRect(100, 110, 80, 24));
+        status_modi = new QLineEdit(ModificarSala);
+        status_modi->setObjectName("status_modi");
+        status_modi->setGeometry(QRect(600, 70, 113, 24));
+        texto_sala = new QTextEdit(ModificarSala);
+        texto_sala->setObjectName("texto_sala");
+        texto_sala->setGeometry(QRect(40, 150, 241, 121));
         stackedWidget->addWidget(ModificarSala);
         EliminarSala_2 = new QWidget();
         EliminarSala_2->setObjectName("EliminarSala_2");
@@ -1527,7 +1531,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(14);
+        stackedWidget->setCurrentIndex(8);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1597,9 +1601,9 @@ public:
         label_30->setText(QCoreApplication::translate("MainWindow", "Fin de Disponibilidad:", nullptr));
         pushButton_26->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
         pushButton_27->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
-        buscar_sala_btn->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
         label_115->setText(QCoreApplication::translate("MainWindow", "Hora de disponibilidad:", nullptr));
         label_116->setText(QCoreApplication::translate("MainWindow", "Hora Final de de Disponiblidad:", nullptr));
+        buscar_sala->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
         label_31->setText(QCoreApplication::translate("MainWindow", "Eliminar Sala", nullptr));
         label_32->setText(QCoreApplication::translate("MainWindow", "C\303\263digo de Sala:", nullptr));
         pushButton_28->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));

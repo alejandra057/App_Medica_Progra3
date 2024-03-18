@@ -844,8 +844,17 @@ void MainWindow::on_new_recipe_pressed()
 void MainWindow::on_buscar_sala_pressed()
 {
     AdminSalas Salas;
+    AdminSalas::newSala sala;
     QString codigo = ui->CodeModificar->text();
+    QString texto_salas ="Código: " + sala.Code + "\n"
+                          + "Descripción: " + sala.Descripcion + "\n"
+                          + "Status: " + sala.Status + "\n"
+                          + "Fecha de inicio: " + sala.FechaInicio + "\n"
+                          + "Fecha de fin de disponibilidad: " + sala.FechaFinDisponibilidad + "\n"
+                          + "Hora de inicio: " + sala.HoraInicio + "\n"
+                          + "Hora de fin: " + sala.HoraFinal + "\n";
     if (Salas.BuscarCodigo(codigo)){
+         ui->texto_sala->setText(texto_salas);
         QMessageBox::information(this, "listo", QString("Sala encontrada."));
 
     }else{

@@ -111,9 +111,9 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "on_btmodificarR_pressed",
     "on_bt_buscarMR_pressed",
     "on_bt_EliminarR_pressed",
-    "on_buscar_sala_btn_pressed",
     "on_pushButton_70_pressed",
-    "on_new_recipe_pressed"
+    "on_new_recipe_pressed",
+    "on_buscar_sala_pressed"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
@@ -191,9 +191,9 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata70[24];
     char stringdata71[23];
     char stringdata72[24];
-    char stringdata73[27];
-    char stringdata74[25];
-    char stringdata75[22];
+    char stringdata73[25];
+    char stringdata74[22];
+    char stringdata75[23];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -272,9 +272,9 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(1695, 23),  // "on_btmodificarR_pressed"
         QT_MOC_LITERAL(1719, 22),  // "on_bt_buscarMR_pressed"
         QT_MOC_LITERAL(1742, 23),  // "on_bt_EliminarR_pressed"
-        QT_MOC_LITERAL(1766, 26),  // "on_buscar_sala_btn_pressed"
-        QT_MOC_LITERAL(1793, 24),  // "on_pushButton_70_pressed"
-        QT_MOC_LITERAL(1818, 21)   // "on_new_recipe_pressed"
+        QT_MOC_LITERAL(1766, 24),  // "on_pushButton_70_pressed"
+        QT_MOC_LITERAL(1791, 21),  // "on_new_recipe_pressed"
+        QT_MOC_LITERAL(1813, 22)   // "on_buscar_sala_pressed"
     },
     "MainWindow",
     "on_pushButton_pressed",
@@ -349,9 +349,9 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "on_btmodificarR_pressed",
     "on_bt_buscarMR_pressed",
     "on_bt_EliminarR_pressed",
-    "on_buscar_sala_btn_pressed",
     "on_pushButton_70_pressed",
-    "on_new_recipe_pressed"
+    "on_new_recipe_pressed",
+    "on_buscar_sala_pressed"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -676,11 +676,11 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_bt_EliminarR_pressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_buscar_sala_btn_pressed'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_70_pressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_new_recipe_pressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_buscar_sala_pressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -763,9 +763,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 68: _t->on_btmodificarR_pressed(); break;
         case 69: _t->on_bt_buscarMR_pressed(); break;
         case 70: _t->on_bt_EliminarR_pressed(); break;
-        case 71: _t->on_buscar_sala_btn_pressed(); break;
-        case 72: _t->on_pushButton_70_pressed(); break;
-        case 73: _t->on_new_recipe_pressed(); break;
+        case 71: _t->on_pushButton_70_pressed(); break;
+        case 72: _t->on_new_recipe_pressed(); break;
+        case 73: _t->on_buscar_sala_pressed(); break;
         default: ;
         }
     }
