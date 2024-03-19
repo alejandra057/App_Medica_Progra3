@@ -688,7 +688,7 @@ void MainWindow::on_pushButton_26_pressed()
     {
         QMessageBox::information(this, "listo", QString("Se ha modificado correctamente la sala."));
     }else{
-        QMessageBox::information(this, "listo", QString("No se ha encontrado la sala."));
+        QMessageBox::information(this, "listo", QString("No se han hecho reservaciones aun."));
     }
 
 }

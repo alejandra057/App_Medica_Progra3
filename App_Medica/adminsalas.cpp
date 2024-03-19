@@ -24,7 +24,7 @@ AdminSalas::AdminSalas() {
     }
 }
 
-bool AdminSalas::createNewSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad,QString horainicio, QString horafinal)
+bool AdminSalas::createNewSala(QString code, QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad,QString horainicio, QString horafinal)
 {
     newSala Sala;
     Room.seek(Room.size());
@@ -84,13 +84,12 @@ bool AdminSalas::modificateSala(QString code, QString descripcion, QString statu
 
     QDataStream escribir2(&Room);
     QDataStream leer2(&Room);
-    //abrir archivo reservaciones
     Reservas reservaciones;
     QFile Reservaciones("Reservaciones.itn");
     QDataStream leer_r(&Reservaciones);
     if (!Reservaciones.open(QIODevice::ReadOnly))
     {
-        QMessageBox::information(nullptr, "Error", "No se pudo abrir el archivo de salas");
+
         return false;
     }
     AdminSalas::newSala sala;

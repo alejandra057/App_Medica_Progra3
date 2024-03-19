@@ -1,12 +1,28 @@
 #ifndef RECETAS_H
 #define RECETAS_H
 
+#include <QString>
+class Recetas
+{
+public:
+    struct newRecetas
+    {
+        QString fecha="";
+        QString paciente="";
+        QString medicamento="";
+        QString dosis="";
 
-#include "adminexpedientes.h"
+    };
+
+    Recetas();
+
+    bool newReceta(QString fecha,QString paciente,QString medicamentos,QString dosis);
+    bool searchRecetaFecha(QString fecha);
+    bool searchRecetaPaciente(QString paciente);
 
 
-void newReceta(AdminExpedientes& adminExpedientes);
+private:
+    newRecetas receta;
+};
 
-void searchReceta(AdminExpedientes& adminExpedientes);
-
-#endif // RECETAS_H
+#endif
