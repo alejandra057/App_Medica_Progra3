@@ -82,3 +82,43 @@ bool AdminExpedientes::addToExpediente(QString Nombrepaciente , QString identida
     return false;
 }
 
+QString AdminExpedientes::getExpedientesInRange(QString fechaInicio, QString fechaFin)
+{
+    QString expedientesEnRango=" ";
+    ExpedientesAdmin.seek(0);
+    QDate inicio = QDate::fromString(fechaInicio, "dd/MM/yyyy");
+    QDate fin = QDate::fromString(fechaFin, "dd/MM/yyyy");
+    while (!ExpedientesAdmin.atEnd()) {
+        NewExpediente expe;
+        write>>expe.Codigo>>expe.NombrePaciente>>expe.identidad>>expe.FechaNacimiento>>expe.numero1>>expe.mail1>>expe.AdiconalContact>>expe.AdiocionalPhone>>expe.Adicionalmail>>expe.tipoSangre>>expe.Alegias>>expe.enfermedadesBase>>expe.FechaCita>>expe.Sintomas>>expe.Observaciones>>expe.diagnostico>>expe.Recomendaciones>>expe.newCita>>expe.adicionalComents;
+        QString fechaExpediente = expe.FechaNacimiento;
+        QDate fechaExpedienteDate = QDate::fromString(fechaExpediente, "dd/MM/yyyy");
+        if (fechaExpedienteDate >= inicio && fechaExpedienteDate <= fin) {
+            expedientesEnRango += "Codigo: " + expe.Codigo + "\n";
+            expedientesEnRango += "Nombre del Paciente: " + expe.NombrePaciente + "\n";
+            expedientesEnRango += "Identidad: " + expe.identidad + "\n";
+            expedientesEnRango += "Fecha de Nacimiento: " + expe.FechaNacimiento + "\n";
+            expedientesEnRango += "Número de Teléfono: " + expe.numero1 + "\n";
+            expedientesEnRango += "Correo Electrónico: " + expe.mail1 + "\n";
+            expedientesEnRango += "Contacto Adicional: " + expe.AdiconalContact + "\n";
+            expedientesEnRango += "Teléfono Adicional: " + expe.AdiocionalPhone + "\n";
+            expedientesEnRango += "Correo Electrónico Adicional: " + expe.Adicionalmail + "\n";
+            expedientesEnRango += "Tipo de Sangre: " + expe.tipoSangre + "\n";
+            expedientesEnRango += "Alergias: " + expe.Alegias + "\n";
+            expedientesEnRango += "Enfermedades Base: " + expe.enfermedadesBase + "\n";
+            expedientesEnRango += "Fecha de Cita: " + expe.FechaCita + "\n";
+            expedientesEnRango += "Síntomas: " + expe.Sintomas + "\n";
+            expedientesEnRango += "Observaciones: " + expe.Observaciones + "\n";
+            expedientesEnRango += "Diagnóstico: " + expe.diagnostico + "\n";
+            expedientesEnRango += "Recomendaciones: " + expe.Recomendaciones + "\n";
+            expedientesEnRango += "Nueva Cita: " + expe.newCita + "\n";
+            expedientesEnRango += "Comentarios Adicionales: " + expe.adicionalComents + "\n\n";
+        }
+    }
+    if(expedientesEnRango==" "){
+        expedientesEnRango= "No se han encotrado expedientes en las fechas seleccionada.";
+    }
+    return expedientesEnRango;
+}
+
+
