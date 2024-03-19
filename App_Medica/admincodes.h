@@ -28,6 +28,8 @@ public:
 
     long GetActualCodeSalas();
 
+    long GetActualCodeExpedientes();
+
 };
 
 #endif // ADMINCODES_H

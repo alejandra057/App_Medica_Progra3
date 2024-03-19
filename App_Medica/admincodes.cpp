@@ -206,3 +206,14 @@ long AdminCodes :: GetActualCodeSalas(){
 
     return codigoSalalong;
 }
+
+long AdminCodes::GetActualCodeExpedientes()
+{
+    AdministradorCodigos.seek(0);
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
+
+    long codigoExpedienteslong = static_cast<long>(codigoExpedientes);
+
+    return codigoExpedienteslong;
+}

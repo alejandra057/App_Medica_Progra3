@@ -521,7 +521,7 @@ void MainWindow::on_pushButton_16_pressed()
     classcreateuser crearuser;
     QString crearnombre = ui->NombreCrear->text();
     QString crearcuenta= ui->CrearCuenta->text();
-    QString Rol= ui->crearRol->text();
+   // QString Rol= ui->crearRol->text();
     bool status= true;
     if( crearuser.BuscarUser(crearcuenta,"",crearnombre))
     {
@@ -529,7 +529,7 @@ void MainWindow::on_pushButton_16_pressed()
     }
     else
     {
-        if (crearuser.CreateUserFun(crearnombre,"admin",crearcuenta,Rol,status))
+        if (crearuser.CreateUserFun(crearnombre,"admin",crearcuenta,"Rol",status))
         {
             QMessageBox::information(this, "Listo", QString("El usuario fue creado con exito."));
         }
@@ -632,7 +632,21 @@ void MainWindow::on_pushButton_80_pressed()
 
     adminRoles roles;
     QString Role = ui->otroRole->text();
-    if(roles.addRole(Role,true,true,true,true,true,true,true,true,true,true,true,true,true))
+
+    bool PermisoUser = ui->crearUser->isChecked();
+    bool PermisoExpedientes = ui->crearExpedientes->isChecked();
+    bool PermisoSala = ui->crearSalas->isChecked();
+    bool PermisoEditSala = ui->editSala->isChecked();
+    bool PermisoDesahibiltar = ui->DesaSala->isChecked();
+    bool PermisoEditExpe = ui->EditExpe->isChecked();
+    bool Permisoconvencional = ui->convencional->isChecked();
+    bool PermisocrearReceta = ui->crearReceta->isChecked();
+    bool PermisoeditReceta = ui->editReceta->isChecked();
+    bool PermisoAgeCita = ui->crearSalas->isChecked();
+    bool PermisoVerRepo = ui->VerRepo->isChecked();
+    bool PermisoVerReservas = ui->VerReservas->isChecked();
+    bool PermisoverCitas = ui->verCitas->isChecked();
+    if(roles.addRole(Role,PermisoUser,PermisoExpedientes,PermisoSala,PermisoEditSala,PermisoDesahibiltar,PermisoEditExpe,Permisoconvencional,PermisocrearReceta,PermisoeditReceta,PermisoAgeCita,PermisoVerRepo,PermisoVerReservas,PermisoverCitas))
     {
     QMessageBox::information(this, "listo", QString("Se ha creado correctamente el rol."));
         ui->stackedWidget->setCurrentIndex(3);
