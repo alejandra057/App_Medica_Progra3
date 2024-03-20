@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "QtDesigner/QDesignerFormWindowInterface"
+#include <QGraphicsEffect>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -166,8 +168,13 @@ private slots:
     void on_new_recipe_pressed();
 
 
-
     void on_buscar_sala_pressed();
+
+    void on_pushButton_76_clicked();
+
+    void on_showpacientes_clicked();
+
+
 
 private:
     Ui::MainWindow *ui;

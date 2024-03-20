@@ -172,7 +172,7 @@ void MainWindow::on_pushButton_22_pressed()
 {
     adminRoles roles;
     if(roles.permisoEditarSala(role)){
-        ui->stackedWidget->setCurrentIndex(10);
+        ui->stackedWidget->setCurrentIndex(9);
     }
     else
     {
@@ -874,5 +874,27 @@ void MainWindow::on_buscar_sala_pressed()
     }else{
         QMessageBox::information(this, "listo", QString("Sala no encontrada."));
     }
+}
+
+
+void MainWindow::on_pushButton_76_clicked()
+{
+
+    AdminExpedientes Reportcitas;
+    QString fechain = ui->datein->date().toString("dd/MM/yyyy");
+    QString fechaend = ui->dateend->date().toString("dd/MM/yyyy");
+    QString Reportecitas = Reportcitas.getExpedientesInRange(fechain,fechaend);
+    ui->txtreportcitas->setText(Reportecitas);
+
+}
+
+
+void MainWindow::on_showpacientes_clicked()
+{
+    AdminExpedientes expedientes;
+    QString fechain = ui->dateinpaciente->date().toString("dd/MM/yyyy");
+    QString fechaend = ui->dateendpaciente->date().toString("dd/MM/yyyy");
+    QString ReporteExpediente = expedientes.getExpedientesInRange(fechain,fechaend);
+    ui->txtreporteexpedientes->setText(ReporteExpediente);
 }
 

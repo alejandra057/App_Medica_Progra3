@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(203, 228, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
@@ -23,8 +26,15 @@
       <height>581</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(203, 228, 255);
+background-color: rgb(221, 213, 255);
+background-color: rgb(221, 213, 255);
+background-color: rgb(203, 228, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
     <property name="currentIndex">
-     <number>11</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QWidget" name="verticalLayoutWidget_20">
@@ -69,7 +79,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="cuenta"/>
+        <widget class="QLineEdit" name="cuenta">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_3">
@@ -86,12 +100,16 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="password"/>
+        <widget class="QLineEdit" name="password">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton">
          <property name="styleSheet">
-          <string notr="true">
+          <string notr="true">background-color: rgb(255, 255, 255);
 font: 700 11pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -111,6 +129,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>101</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Login</string>
@@ -158,7 +179,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_5"/>
+        <widget class="QLineEdit" name="lineEdit_5">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_6">
@@ -175,7 +200,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_4"/>
+        <widget class="QLineEdit" name="lineEdit_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_7">
@@ -192,10 +221,17 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
+        <widget class="QLineEdit" name="lineEdit_6">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Crear</string>
          </property>
@@ -213,6 +249,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Salir</string>
@@ -247,6 +286,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Administración del Sistema</string>
          </property>
@@ -254,6 +296,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_5">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Administración de Salas</string>
          </property>
@@ -261,6 +306,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_8">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Reservaciones</string>
          </property>
@@ -268,6 +316,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_6">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Expedientes</string>
          </property>
@@ -275,6 +326,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_9">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Agente de Consultas</string>
          </property>
@@ -282,6 +336,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_7">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Recetas</string>
          </property>
@@ -289,6 +346,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_10">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Opciones de Usuario</string>
          </property>
@@ -296,6 +356,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_11">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Reportes</string>
          </property>
@@ -331,6 +394,10 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_13">
+         <property name="styleSheet">
+          <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Crear nuevo usuario</string>
          </property>
@@ -338,6 +405,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_14">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Dar baja a un usuario</string>
          </property>
@@ -345,6 +415,10 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_79">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+         </property>
          <property name="text">
           <string>Agregar rol</string>
          </property>
@@ -352,6 +426,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_15">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar</string>
          </property>
@@ -369,6 +446,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -418,7 +498,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="CrearCuenta"/>
+          <widget class="QLineEdit" name="CrearCuenta">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_13">
@@ -428,15 +512,26 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QComboBox" name="RolUserCreate"/>
+          <widget class="QComboBox" name="RolUserCreate">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="NombreCrear"/>
+          <widget class="QLineEdit" name="NombreCrear">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_16">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Crear</string>
          </property>
@@ -454,6 +549,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -496,7 +594,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="NombreEdit"/>
+          <widget class="QLineEdit" name="NombreEdit">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_17">
@@ -506,12 +608,19 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="UsuarioEdit"/>
+          <widget class="QLineEdit" name="UsuarioEdit">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_19">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Dar de baja</string>
          </property>
@@ -547,29 +656,65 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_21">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Modificar sala</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_22">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Eliminar sala</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_20">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Crear nueva sala</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_23">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar </string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -671,6 +816,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <height>211</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(166, 166, 166);</string>
+      </property>
      </widget>
      <widget class="QCalendarWidget" name="FechaEnd">
       <property name="geometry">
@@ -681,6 +829,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <height>201</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(166, 166, 166);</string>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_24">
       <property name="geometry">
@@ -690,6 +841,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Crear</string>
@@ -704,6 +858,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <height>24</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Regresar</string>
       </property>
@@ -716,6 +873,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>113</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
      <widget class="QLabel" name="lbcodesala">
@@ -753,6 +913,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <height>25</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
      </widget>
      <widget class="QLabel" name="label_114">
       <property name="geometry">
@@ -776,6 +939,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <height>25</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
      </widget>
      <widget class="QLabel" name="lb_status">
       <property name="geometry">
@@ -792,13 +958,223 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="ModificarSala">
+     <widget class="QPushButton" name="pushButton_27">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>530</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Regresar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buscar_sala">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>100</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Buscar</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>100</y>
+        <width>301</width>
+        <height>179</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_7">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>Codigo:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="CodeModificar">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>Descripción:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="DescripcioModificar">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>Status:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="status_modi">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_26">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Modificar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_32">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>260</y>
+        <width>301</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_117">
+         <property name="text">
+          <string>Información de la Sala:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="texto_sala">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_33">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>20</y>
+        <width>346</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_34">
+       <item>
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>Fecha de Inicio:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCalendarWidget" name="fechaStarModi">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(166, 166, 166);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QFormLayout" name="formLayout_9">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_115">
+           <property name="text">
+            <string>Hora de disponibilidad:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QTimeEdit" name="horainicio_modi">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_34">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>290</y>
+        <width>346</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_35">
+       <item>
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>Fin de Disponibilidad:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCalendarWidget" name="fechaFinalDisponibilidad">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(166, 166, 166);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_116">
+           <property name="text">
+            <string>Hora Final de de Disponiblidad:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTimeEdit" name="horafinal_modi">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
      <widget class="QLabel" name="label_25">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>10</y>
-        <width>201</width>
-        <height>31</height>
+        <x>40</x>
+        <y>30</y>
+        <width>299</width>
+        <height>36</height>
        </rect>
       </property>
       <property name="font">
@@ -811,229 +1187,6 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        <string>Modificar Sala</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_26">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>60</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Codigo:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_27">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>130</y>
-        <width>81</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Descripción:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_28">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>190</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Status:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="DescripcioModificar">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>120</y>
-        <width>171</width>
-        <height>31</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QCalendarWidget" name="fechaStarModi">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>260</y>
-        <width>301</width>
-        <height>171</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QCalendarWidget" name="fechaFinalDisponibilidad">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>230</y>
-        <width>291</width>
-        <height>221</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_29">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>230</y>
-        <width>91</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Fecha de Inicio:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_30">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>210</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Fin de Disponibilidad:</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_26">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>510</y>
-        <width>80</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Modificar</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_27">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>530</y>
-        <width>80</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Regresar</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="CodeModificar">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>60</y>
-        <width>113</width>
-        <height>21</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_115">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>440</y>
-        <width>131</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Hora de disponibilidad:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_116">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>450</y>
-        <width>171</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Hora Final de de Disponiblidad:</string>
-      </property>
-     </widget>
-     <widget class="QTimeEdit" name="horainicio_modi">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>440</y>
-        <width>118</width>
-        <height>25</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QTimeEdit" name="horafinal_modi">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>450</y>
-        <width>118</width>
-        <height>25</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buscar_sala">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>60</y>
-        <width>80</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Buscar</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="status_modi">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>190</y>
-        <width>113</width>
-        <height>24</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="texto_sala">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>50</y>
-        <width>241</width>
-        <height>121</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_117">
-      <property name="geometry">
-       <rect>
-        <x>610</x>
-        <y>30</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Información de la Sala:</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="EliminarSala_2">
      <widget class="QPushButton" name="pushButton_30">
@@ -1044,6 +1197,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -1085,7 +1241,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="codeDelete"/>
+          <widget class="QLineEdit" name="codeDelete">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_33">
@@ -1095,12 +1255,19 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_15"/>
+          <widget class="QLineEdit" name="lineEdit_15">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_28">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Buscar</string>
          </property>
@@ -1108,6 +1275,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="EliminarSala">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Eliminar</string>
          </property>
@@ -1145,6 +1315,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_31">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Nuevo Expediente</string>
          </property>
@@ -1152,6 +1325,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_32">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Agregar Datos al Expediente</string>
          </property>
@@ -1159,6 +1335,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_33">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar</string>
          </property>
@@ -1195,6 +1374,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>121</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -1277,13 +1459,24 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="Telefonocrear"/>
+        <widget class="QLineEdit" name="Telefonocrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="EmailCrear"/>
+        <widget class="QLineEdit" name="EmailCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="3" column="1">
         <widget class="QComboBox" name="TipodeSangreCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <item>
           <property name="text">
            <string/>
@@ -1332,13 +1525,25 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="AlergiasCrear"/>
+        <widget class="QLineEdit" name="AlergiasCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="EnfermedadesCrear"/>
+        <widget class="QLineEdit" name="EnfermedadesCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QLineEdit" name="EncabezadoCrear"/>
+        <widget class="QLineEdit" name="EncabezadoCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -1346,7 +1551,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>380</y>
+        <y>410</y>
         <width>441</width>
         <height>136</height>
        </rect>
@@ -1364,7 +1569,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="contacadiocionalCrear"/>
+        <widget class="QLineEdit" name="contacadiocionalCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_43">
@@ -1378,7 +1587,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="TelefonoadiocionalCrear"/>
+        <widget class="QLineEdit" name="TelefonoadiocionalCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_102">
@@ -1392,10 +1605,17 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="EmailadionalCrear"/>
+        <widget class="QLineEdit" name="EmailadionalCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="3" column="1">
         <widget class="QPushButton" name="pushButton_34">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Crear </string>
          </property>
@@ -1409,7 +1629,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <x>60</x>
         <y>177</y>
         <width>361</width>
-        <height>201</height>
+        <height>228</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_33">
@@ -1425,7 +1645,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QCalendarWidget" name="calendarFechaNacimiento"/>
+        <widget class="QCalendarWidget" name="calendarFechaNacimiento">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(166, 166, 166);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -1458,7 +1682,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="IdentidadCrear"/>
+        <widget class="QLineEdit" name="IdentidadCrear">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_38">
@@ -1506,6 +1734,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <height>41</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Regresar</string>
       </property>
@@ -1532,7 +1763,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QCalendarWidget" name="feachaDeCita"/>
+        <widget class="QCalendarWidget" name="feachaDeCita">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(166, 166, 166);</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_53">
@@ -1546,7 +1781,12 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QCalendarWidget" name="ProximaCita"/>
+        <widget class="QCalendarWidget" name="ProximaCita">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(139, 139, 139);
+background-color: rgb(166, 166, 166);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -1579,7 +1819,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        <item>
         <layout class="QGridLayout" name="gridLayout_8">
          <item row="0" column="1">
-          <widget class="QLineEdit" name="NamePaciente"/>
+          <widget class="QLineEdit" name="NamePaciente">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label_105">
@@ -1593,7 +1837,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLineEdit" name="Sintomaspresen"/>
+          <widget class="QLineEdit" name="Sintomaspresen">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="4" column="0">
           <widget class="QLabel" name="label_52">
@@ -1629,10 +1877,18 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLineEdit" name="Observacionepaci"/>
+          <widget class="QLineEdit" name="Observacionepaci">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="IdentidadPaciente"/>
+          <widget class="QLineEdit" name="IdentidadPaciente">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="5" column="0">
           <widget class="QLabel" name="label_54">
@@ -1646,10 +1902,18 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QLineEdit" name="AdicionalComents"/>
+          <widget class="QLineEdit" name="AdicionalComents">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QLineEdit" name="RecomendacionesPaci"/>
+          <widget class="QLineEdit" name="RecomendacionesPaci">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_106">
@@ -1674,14 +1938,18 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="6" column="1">
-          <widget class="QLineEdit" name="labelDiagnostico"/>
+          <widget class="QLineEdit" name="labelDiagnostico">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_36">
          <property name="styleSheet">
-          <string notr="true">
+          <string notr="true">background-color: rgb(255, 255, 255);
 font: 700 11pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1721,6 +1989,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_39">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Buscar Receta</string>
          </property>
@@ -1728,6 +1999,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_38">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Nueva Receta</string>
          </property>
@@ -1735,6 +2009,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_40">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar</string>
          </property>
@@ -1765,6 +2042,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -1813,7 +2093,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QComboBox" name="paciente_cb"/>
+          <widget class="QComboBox" name="paciente_cb">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_58">
@@ -1824,6 +2108,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
          </item>
          <item row="2" column="1">
           <widget class="QComboBox" name="medicamento_cb">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
            <item>
             <property name="text">
              <string>AMIODARONA</string>
@@ -1878,6 +2165,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
          </item>
          <item row="3" column="1">
           <widget class="QComboBox" name="dosis_cb">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
            <item>
             <property name="text">
              <string>1 /kg al dia </string>
@@ -1936,6 +2226,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="new_recipe">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Crear</string>
          </property>
@@ -1953,6 +2246,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -1994,10 +2290,17 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox_4"/>
+          <widget class="QComboBox" name="comboBox_4">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_43">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>Buscar</string>
            </property>
@@ -2013,7 +2316,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QTextBrowser" name="textBrowser"/>
+        <widget class="QTextBrowser" name="textBrowser">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -2035,7 +2342,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
-        <widget class="QCalendarWidget" name="calendarWidget_6"/>
+        <widget class="QCalendarWidget" name="calendarWidget_6">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(166, 166, 166);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -2069,6 +2380,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_47">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Eliminar Reservación</string>
          </property>
@@ -2076,6 +2390,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_46">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Modificar Reservación</string>
          </property>
@@ -2083,6 +2400,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_45">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Nueva Reservación</string>
          </property>
@@ -2090,6 +2410,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_48">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar</string>
          </property>
@@ -2107,6 +2430,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>111</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -2210,7 +2536,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QDateEdit" name="date_reserva"/>
+          <widget class="QDateEdit" name="date_reserva">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_66">
@@ -2224,19 +2554,39 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QComboBox" name="salas_cb"/>
+          <widget class="QComboBox" name="salas_cb">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="txt_name"/>
+          <widget class="QLineEdit" name="txt_name">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QTimeEdit" name="Hora_inicio"/>
+          <widget class="QTimeEdit" name="Hora_inicio">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QTimeEdit" name="Hora_final"/>
+          <widget class="QTimeEdit" name="Hora_final">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QLineEdit" name="txtnamedoctor"/>
+          <widget class="QLineEdit" name="txtnamedoctor">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="6" column="0">
           <widget class="QLabel" name="label_108">
@@ -2250,12 +2600,19 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="6" column="1">
-          <widget class="QLineEdit" name="txtobservaciones"/>
+          <widget class="QLineEdit" name="txtobservaciones">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="bt_reservar">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Reservar</string>
          </property>
@@ -2273,6 +2630,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>121</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -2318,10 +2678,17 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="txtcodereserva"/>
+          <widget class="QLineEdit" name="txtcodereserva">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="bt_buscarMR">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>Buscar</string>
            </property>
@@ -2332,19 +2699,39 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        <item>
         <layout class="QGridLayout" name="gridLayout_9">
          <item row="0" column="1">
-          <widget class="QLineEdit" name="txtnombreMR"/>
+          <widget class="QLineEdit" name="txtnombreMR">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QDateEdit" name="FechaMR"/>
+          <widget class="QDateEdit" name="FechaMR">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QTextEdit" name="txtobeservacionesMR"/>
+          <widget class="QTextEdit" name="txtobeservacionesMR">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QLineEdit" name="nameDoctorMR"/>
+          <widget class="QLineEdit" name="nameDoctorMR">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QTimeEdit" name="HoraFMR"/>
+          <widget class="QTimeEdit" name="HoraFMR">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_76">
@@ -2358,7 +2745,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QTimeEdit" name="HoraIMR"/>
+          <widget class="QTimeEdit" name="HoraIMR">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="4" column="0">
           <widget class="QLabel" name="label_73">
@@ -2419,6 +2810,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="btmodificarR">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Modificar</string>
          </property>
@@ -2436,6 +2830,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>121</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -2481,7 +2878,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QComboBox" name="comboBox_6"/>
+          <widget class="QComboBox" name="comboBox_6">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_112">
@@ -2491,12 +2892,19 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="txtcodeER"/>
+          <widget class="QLineEdit" name="txtcodeER">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="bt_EliminarR">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Eliminar</string>
          </property>
@@ -2534,6 +2942,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_55">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Nueva Cita</string>
          </property>
@@ -2541,6 +2952,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_56">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Modificar Cita</string>
          </property>
@@ -2548,6 +2962,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_57">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Eliminar Cita</string>
          </property>
@@ -2555,6 +2972,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_58">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Consulta de Citas</string>
          </property>
@@ -2562,6 +2982,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_59">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar</string>
          </property>
@@ -2579,6 +3002,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>111</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -2624,13 +3050,25 @@ font: 16pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="txtnombrecita"/>
+          <widget class="QLineEdit" name="txtnombrecita">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QDateEdit" name="dateCita"/>
+          <widget class="QDateEdit" name="dateCita">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QTimeEdit" name="TimeCita"/>
+          <widget class="QTimeEdit" name="TimeCita">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_82">
@@ -2658,6 +3096,9 @@ font: 16pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="btNewCita">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Crear</string>
          </property>
@@ -2675,6 +3116,9 @@ font: 16pt &quot;Segoe UI&quot;;</string>
         <width>141</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -2720,7 +3164,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QComboBox" name="comboBox_7"/>
+          <widget class="QComboBox" name="comboBox_7">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_87">
@@ -2734,7 +3182,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QDateEdit" name="dateEdit_6"/>
+          <widget class="QDateEdit" name="dateEdit_6">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_86">
@@ -2748,12 +3200,19 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QTimeEdit" name="timeEdit_6"/>
+          <widget class="QTimeEdit" name="timeEdit_6">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_62">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Modificar</string>
          </property>
@@ -2771,6 +3230,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>121</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -2816,12 +3278,19 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox_8"/>
+          <widget class="QComboBox" name="comboBox_8">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_64">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Eliminar</string>
          </property>
@@ -2839,6 +3308,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>111</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -2884,10 +3356,17 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QDateEdit" name="dateEdit_7"/>
+          <widget class="QDateEdit" name="dateEdit_7">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_66">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>Consultar</string>
            </property>
@@ -2896,7 +3375,14 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </layout>
        </item>
        <item>
-        <widget class="QTextBrowser" name="textBrowser_2"/>
+        <widget class="QTextBrowser" name="textBrowser_2">
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -2930,6 +3416,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_68">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Cambiar Contraseña</string>
          </property>
@@ -2937,6 +3426,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_69">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar</string>
          </property>
@@ -2967,6 +3459,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>101</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -3022,7 +3517,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="ActualPasswordUser"/>
+          <widget class="QLineEdit" name="ActualPasswordUser">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_96">
@@ -3036,12 +3535,19 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="NewPasswordUser"/>
+          <widget class="QLineEdit" name="NewPasswordUser">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_70">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Cambiar</string>
          </property>
@@ -3079,6 +3585,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_72">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Pacientes</string>
          </property>
@@ -3086,6 +3595,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_73">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Citas</string>
          </property>
@@ -3093,6 +3605,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_78">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Regresar</string>
          </property>
@@ -3110,6 +3625,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -3144,7 +3662,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        <item>
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="1">
-          <widget class="QDateEdit" name="dateEdit_8"/>
+          <widget class="QDateEdit" name="dateinpaciente">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_120">
@@ -3154,7 +3676,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QDateEdit" name="dateEdit_11"/>
+          <widget class="QDateEdit" name="dateendpaciente">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label_99">
@@ -3166,10 +3692,17 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </layout>
        </item>
        <item>
-        <widget class="QTextBrowser" name="textBrowser_3"/>
+        <widget class="QTextBrowser" name="txtreporteexpedientes">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_74">
+        <widget class="QPushButton" name="showpacientes">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Ver</string>
          </property>
@@ -3187,6 +3720,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <width>80</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Regresar</string>
@@ -3224,7 +3760,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        <item>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="1" column="1">
-          <widget class="QDateEdit" name="dateEdit_10"/>
+          <widget class="QDateEdit" name="dateend">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_119">
@@ -3234,7 +3774,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QDateEdit" name="dateEdit_9"/>
+          <widget class="QDateEdit" name="datein">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label_101">
@@ -3246,10 +3790,17 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </layout>
        </item>
        <item>
-        <widget class="QTextBrowser" name="textBrowser_4"/>
+        <widget class="QTextBrowser" name="txtreportcitas">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_76">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Ver</string>
          </property>
@@ -3297,7 +3848,11 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="otroRole"/>
+          <widget class="QLineEdit" name="otroRole">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -3361,6 +3916,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
          </item>
          <item row="0" column="1">
           <widget class="QCheckBox" name="VerRepo">
+           <property name="styleSheet">
+            <string notr="true">gridline-color: rgb(0, 0, 0);</string>
+           </property>
            <property name="text">
             <string>Ver reportes.</string>
            </property>
@@ -3405,6 +3963,9 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_80">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Agregar</string>
          </property>
