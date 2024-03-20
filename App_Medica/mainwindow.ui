@@ -34,7 +34,7 @@ background-color: rgb(203, 228, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QWidget" name="verticalLayoutWidget_20">
@@ -3982,7 +3982,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>25</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

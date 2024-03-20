@@ -123,4 +123,40 @@ QString AdminExpedientes::getExpedientesInRange(QString fechaInicio, QString fec
     return expedientesEnRango;
 }
 
+QString AdminExpedientes::getExpedientesPaciente(QString Identidad)
+{
+     QString ExpedientePaciente=" "; ExpedientesAdmin.seek(0);
+     while (!ExpedientesAdmin.atEnd())
+     {
+         NewExpediente expe; write>>expe.Codigo>>expe.NombrePaciente>>expe.identidad>>expe.FechaNacimiento>>expe.numero1>>expe.mail1>>expe.AdiconalContact>>expe.AdiocionalPhone>>expe.Adicionalmail>>expe.tipoSangre>>expe.Alegias>>expe.enfermedadesBase>>expe.FechaCita>>expe.Sintomas>>expe.Observaciones>>expe.diagnostico>>expe.Recomendaciones>>expe.newCita>>expe.adicionalComents;
+         if (expe.identidad==Identidad)
+         {
+             ExpedientePaciente += "Codigo: " + expe.Codigo + "\n";
+             ExpedientePaciente += "Nombre del Paciente: " + expe.NombrePaciente + "\n";
+             ExpedientePaciente += "Identidad: " + expe.identidad + "\n";
+             ExpedientePaciente += "Fecha de Nacimiento: " + expe.FechaNacimiento + "\n";
+             ExpedientePaciente += "Número de Teléfono: " + expe.numero1 + "\n";
+             ExpedientePaciente += "Correo Electrónico: " + expe.mail1 + "\n";
+             ExpedientePaciente += "Contacto Adicional: " + expe.AdiconalContact + "\n";
+             ExpedientePaciente += "Teléfono Adicional: " + expe.AdiocionalPhone + "\n";
+             ExpedientePaciente += "Correo Electrónico Adicional: " + expe.Adicionalmail + "\n";
+             ExpedientePaciente += "Tipo de Sangre: " + expe.tipoSangre + "\n";
+             ExpedientePaciente += "Alergias: " + expe.Alegias + "\n";
+             ExpedientePaciente += "Enfermedades Base: " + expe.enfermedadesBase + "\n";
+             ExpedientePaciente += "Fecha de Cita: " + expe.FechaCita + "\n";
+             ExpedientePaciente += "Síntomas: " + expe.Sintomas + "\n";
+             ExpedientePaciente += "Observaciones: " + expe.Observaciones + "\n";
+             ExpedientePaciente += "Diagnóstico: " + expe.diagnostico + "\n";
+             ExpedientePaciente += "Recomendaciones: " + expe.Recomendaciones + "\n";
+             ExpedientePaciente += "Nueva Cita: " + expe.newCita + "\n";
+             ExpedientePaciente += "Comentarios Adicionales: " + expe.adicionalComents + "\n\n";
+         }
+     }
+     if(ExpedientePaciente==" ")
+     {
+         ExpedientePaciente= "No se han encotrado expedientes del paciente con la identidad indicada. Porfavor, verfique la informacion.";
+     }
+     return ExpedientePaciente;
+}
+
 

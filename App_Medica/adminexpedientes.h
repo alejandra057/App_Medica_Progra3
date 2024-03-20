@@ -35,7 +35,7 @@ public:
     bool createNewExpediente(QString Codigo,QString nombrePaciente,QString Identidad,QString fechaNacimiento,QString Numero1,QString Mail1,QString adiconalContact,QString adiocionalPhone,QString adicionalmail,QString alegias,QString TipoSangre,QString EnfermedadesBase);
     bool addToExpediente(QString Nombrepaciente , QString identidad,QString FechaCita,QString Sintomas,QString Observaciones,QString diagnostico,QString Recomendaciones,QString newCita,QString adicionalComents);
     QString getExpedientesInRange(QString fechaInicio, QString fechaFin);
-
+    QString getExpedientesPaciente(QString Identidad);
 };
 
 #endif // ADMINEXPEDIENTES_H
