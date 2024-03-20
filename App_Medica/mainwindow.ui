@@ -3170,7 +3170,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
+         <item row="2" column="0">
           <widget class="QLabel" name="label_87">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);
@@ -3181,14 +3181,14 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QDateEdit" name="dateEdit_6">
+         <item row="2" column="1">
+          <widget class="QDateEdit" name="fechaMDCita">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
+         <item row="3" column="0">
           <widget class="QLabel" name="label_86">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);
@@ -3199,10 +3199,24 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="QTimeEdit" name="timeEdit_6">
+         <item row="3" column="1">
+          <widget class="QTimeEdit" name="HoraMDCita">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="txtnameMDCita"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_121">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Nombre</string>
            </property>
           </widget>
          </item>

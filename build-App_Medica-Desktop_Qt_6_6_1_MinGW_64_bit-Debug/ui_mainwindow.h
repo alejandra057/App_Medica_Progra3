@@ -379,9 +379,11 @@ public:
     QLabel *label_85;
     QComboBox *cb_MDCita;
     QLabel *label_87;
-    QDateEdit *dateEdit_6;
+    QDateEdit *fechaMDCita;
     QLabel *label_86;
-    QTimeEdit *timeEdit_6;
+    QTimeEdit *HoraMDCita;
+    QLineEdit *txtnameMDCita;
+    QLabel *label_121;
     QPushButton *bt_ModCita;
     QWidget *EliminarCita;
     QPushButton *pushButton_65;
@@ -2281,26 +2283,38 @@ public:
         label_87->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
-        formLayout_6->setWidget(1, QFormLayout::LabelRole, label_87);
+        formLayout_6->setWidget(2, QFormLayout::LabelRole, label_87);
 
-        dateEdit_6 = new QDateEdit(verticalLayoutWidget_22);
-        dateEdit_6->setObjectName("dateEdit_6");
-        dateEdit_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        fechaMDCita = new QDateEdit(verticalLayoutWidget_22);
+        fechaMDCita->setObjectName("fechaMDCita");
+        fechaMDCita->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        formLayout_6->setWidget(1, QFormLayout::FieldRole, dateEdit_6);
+        formLayout_6->setWidget(2, QFormLayout::FieldRole, fechaMDCita);
 
         label_86 = new QLabel(verticalLayoutWidget_22);
         label_86->setObjectName("label_86");
         label_86->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
-        formLayout_6->setWidget(2, QFormLayout::LabelRole, label_86);
+        formLayout_6->setWidget(3, QFormLayout::LabelRole, label_86);
 
-        timeEdit_6 = new QTimeEdit(verticalLayoutWidget_22);
-        timeEdit_6->setObjectName("timeEdit_6");
-        timeEdit_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        HoraMDCita = new QTimeEdit(verticalLayoutWidget_22);
+        HoraMDCita->setObjectName("HoraMDCita");
+        HoraMDCita->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        formLayout_6->setWidget(2, QFormLayout::FieldRole, timeEdit_6);
+        formLayout_6->setWidget(3, QFormLayout::FieldRole, HoraMDCita);
+
+        txtnameMDCita = new QLineEdit(verticalLayoutWidget_22);
+        txtnameMDCita->setObjectName("txtnameMDCita");
+
+        formLayout_6->setWidget(1, QFormLayout::FieldRole, txtnameMDCita);
+
+        label_121 = new QLabel(verticalLayoutWidget_22);
+        label_121->setObjectName("label_121");
+        label_121->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_6->setWidget(1, QFormLayout::LabelRole, label_121);
 
 
         verticalLayout_24->addLayout(formLayout_6);
@@ -2993,6 +3007,7 @@ public:
         label_85->setText(QCoreApplication::translate("MainWindow", "Cita:", nullptr));
         label_87->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
         label_86->setText(QCoreApplication::translate("MainWindow", "Hora:", nullptr));
+        label_121->setText(QCoreApplication::translate("MainWindow", "Nombre", nullptr));
         bt_ModCita->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
         pushButton_65->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_88->setText(QCoreApplication::translate("MainWindow", "Eliminar Cita", nullptr));

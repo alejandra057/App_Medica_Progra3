@@ -816,7 +816,7 @@ void MainWindow::on_bt_buscarMR_pressed()
 {
     Reservas reservar;
     QString code = ui->txtcodereserva->text();
-    Reservas::STReservaciones reservacion = reservar.Revisarcodigo(code); // Obtén la reservación
+    Reservas::STReservaciones reservacion = reservar.Revisarcodigo(code);
     if (!reservacion.code.isEmpty())
     {
         QMessageBox::information(this, "listo", QString("Reservacion encontrada."));
@@ -926,6 +926,24 @@ void MainWindow::on_showpacientes_clicked()
 
 void MainWindow::on_bt_ModCita_pressed()
 {
+    AdminCodes codes;
+    Citas cita;
+    QString codeselect=ui->cb_MDCita->currentText();
+    Citas::Datoscitas citass=cita.buscarcita(codeselect);
+    QString name=ui->txtnameMDCita->text();
+    QString fecha = ui->fechaMDCita->date().toString("dd/MM/yyyy");
+    QString horaInicio = ui->HoraMDCita->time().toString("HH:mm");
+    //QMessageBox::information(this, "listo", QString("No entra."));
+     // QMessageBox::information(this, "listo", QString("Cita encontrada."));
+        ui->txtnameMDCita->setText(citass.nombre);
+        QDate Fecha = QDate::fromString(citass.fecha, "dd/MM/yyyy");
+        ui->fechaMDCita->setDate(Fecha);
+        QTime hora = QTime::fromString(citass.hora, "HH:mm");
+        ui->HoraMDCita->setTime(hora);
+
+       /* if (cita.ModificarCitas(codeselect,name,fecha,hora)){
+         QMessageBox::information(this, "listo", QString("Cita encontrada."));
+        }*/
 
 
     //ui->stackedWidget->setCurrentIndex(17);

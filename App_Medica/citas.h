@@ -5,6 +5,7 @@
 #include <QTime>
 class Citas
 {
+    public:
     struct Datoscitas
     {
         QString code="";
@@ -12,7 +13,9 @@ class Citas
         QString fecha="";
         QString hora="";
     };
-public:
+
+
+
     Citas();
 
     bool CrearCitas(QString code,QString nombre, QString fecha, QString hora);
@@ -21,6 +24,17 @@ public:
     QString ConsultarCitas(QString cita);
     Datoscitas buscarcita(QString code);
     long getCita_Actal();
+
+    Datoscitas obtenerCitas() const{
+        return citass;
+    }
+
+    void ModificarCitas(const Datoscitas& nuevacita){
+        citass=nuevacita;
+    }
+
+private:
+    Datoscitas citass;
 };
 
 #endif // CITAS_H

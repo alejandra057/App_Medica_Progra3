@@ -67,18 +67,20 @@ bool Recetas::crearNuevaReceta(long code, const QStringList &medicamento, const 
     QFile file("Recetas.itn");
     if (!file.open(QIODevice::Append)) {
         // Error al abrir el archivo
+        qDebug() << "Error al abrir el archivo Recetas.itn";
         return false;
     }
 
     QDataStream out(&file);
     out.setVersion(QDataStream::Qt_5_0);
 
-    out << code; // Escribir el código de receta
-    out << medicamento.join(";"); // Escribir los medicamentos como una sola cadena
-    out << dosis; // Escribir la dosis
-    out << QDate::currentDate(); // Escribir la fecha actual
+    out << static_cast<qint64>(code); // Convertir el código de receta a qint64 antes de escribirlo
+    out << medicamento;
+    out << dosis;
+    out << QDate::currentDate();
 
     file.close();
+
     return true;
 
 
