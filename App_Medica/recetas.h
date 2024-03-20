@@ -16,7 +16,7 @@ public:
 
     Recetas();
 
-    bool newReceta(QString fecha,QString paciente,QString medicamentos,QString dosis);
+    bool crearNuevaReceta(long code, const QStringList& medicamento, const QString& dosis);
     bool searchRecetaFecha(QString fecha);
     bool searchRecetaPaciente(QString paciente);
 

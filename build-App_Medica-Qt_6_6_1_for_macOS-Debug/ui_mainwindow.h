@@ -287,9 +287,9 @@ public:
     QWidget *verticalLayoutWidget_30;
     QVBoxLayout *verticalLayout_32;
     QLabel *label_63;
+    QPushButton *pushButton_45;
     QPushButton *pushButton_47;
     QPushButton *pushButton_46;
-    QPushButton *pushButton_45;
     QPushButton *pushButton_48;
     QWidget *NuevaReservacion;
     QPushButton *pushButton_50;
@@ -377,12 +377,12 @@ public:
     QLabel *label_84;
     QFormLayout *formLayout_6;
     QLabel *label_85;
-    QComboBox *comboBox_7;
+    QComboBox *cb_MDCita;
     QLabel *label_87;
     QDateEdit *dateEdit_6;
     QLabel *label_86;
     QTimeEdit *timeEdit_6;
-    QPushButton *pushButton_62;
+    QPushButton *bt_ModCita;
     QWidget *EliminarCita;
     QPushButton *pushButton_65;
     QWidget *verticalLayoutWidget_16;
@@ -1781,6 +1781,12 @@ public:
 
         verticalLayout_32->addWidget(label_63);
 
+        pushButton_45 = new QPushButton(verticalLayoutWidget_30);
+        pushButton_45->setObjectName("pushButton_45");
+        pushButton_45->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout_32->addWidget(pushButton_45);
+
         pushButton_47 = new QPushButton(verticalLayoutWidget_30);
         pushButton_47->setObjectName("pushButton_47");
         pushButton_47->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -1792,12 +1798,6 @@ public:
         pushButton_46->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout_32->addWidget(pushButton_46);
-
-        pushButton_45 = new QPushButton(verticalLayoutWidget_30);
-        pushButton_45->setObjectName("pushButton_45");
-        pushButton_45->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        verticalLayout_32->addWidget(pushButton_45);
 
         pushButton_48 = new QPushButton(verticalLayoutWidget_30);
         pushButton_48->setObjectName("pushButton_48");
@@ -2270,11 +2270,11 @@ public:
 
         formLayout_6->setWidget(0, QFormLayout::LabelRole, label_85);
 
-        comboBox_7 = new QComboBox(verticalLayoutWidget_22);
-        comboBox_7->setObjectName("comboBox_7");
-        comboBox_7->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        cb_MDCita = new QComboBox(verticalLayoutWidget_22);
+        cb_MDCita->setObjectName("cb_MDCita");
+        cb_MDCita->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        formLayout_6->setWidget(0, QFormLayout::FieldRole, comboBox_7);
+        formLayout_6->setWidget(0, QFormLayout::FieldRole, cb_MDCita);
 
         label_87 = new QLabel(verticalLayoutWidget_22);
         label_87->setObjectName("label_87");
@@ -2305,11 +2305,11 @@ public:
 
         verticalLayout_24->addLayout(formLayout_6);
 
-        pushButton_62 = new QPushButton(verticalLayoutWidget_22);
-        pushButton_62->setObjectName("pushButton_62");
-        pushButton_62->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        bt_ModCita = new QPushButton(verticalLayoutWidget_22);
+        bt_ModCita->setObjectName("bt_ModCita");
+        bt_ModCita->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        verticalLayout_24->addWidget(pushButton_62);
+        verticalLayout_24->addWidget(bt_ModCita);
 
         stackedWidget->addWidget(ModificarCita);
         EliminarCita = new QWidget();
@@ -2773,7 +2773,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 875, 24));
+        menubar->setGeometry(QRect(0, 0, 875, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -2781,7 +2781,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(20);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2944,9 +2944,9 @@ public:
         label_62->setText(QCoreApplication::translate("MainWindow", "Receta", nullptr));
         radioButton_2->setText(QCoreApplication::translate("MainWindow", "Fecha", nullptr));
         label_63->setText(QCoreApplication::translate("MainWindow", "Reservaciones", nullptr));
+        pushButton_45->setText(QCoreApplication::translate("MainWindow", "Nueva Reservaci\303\263n", nullptr));
         pushButton_47->setText(QCoreApplication::translate("MainWindow", "Eliminar Reservaci\303\263n", nullptr));
         pushButton_46->setText(QCoreApplication::translate("MainWindow", "Modificar Reservaci\303\263n", nullptr));
-        pushButton_45->setText(QCoreApplication::translate("MainWindow", "Nueva Reservaci\303\263n", nullptr));
         pushButton_48->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         pushButton_50->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_64->setText(QCoreApplication::translate("MainWindow", "Nueva Reservaci\303\263n", nullptr));
@@ -2993,7 +2993,7 @@ public:
         label_85->setText(QCoreApplication::translate("MainWindow", "Cita:", nullptr));
         label_87->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
         label_86->setText(QCoreApplication::translate("MainWindow", "Hora:", nullptr));
-        pushButton_62->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
+        bt_ModCita->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
         pushButton_65->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_88->setText(QCoreApplication::translate("MainWindow", "Eliminar Cita", nullptr));
         label_89->setText(QCoreApplication::translate("MainWindow", "Cita:", nullptr));
