@@ -7,6 +7,7 @@ class Citas
 {
     struct Datoscitas
     {
+        QString code="";
         QString nombre="";
         QString fecha="";
         QString hora="";
@@ -14,10 +15,12 @@ class Citas
 public:
     Citas();
 
-    bool CrearCitas(QString nombre, QString fecha, QString hora);
-    bool ModificarCitas(QString cita);
+    bool CrearCitas(QString code,QString nombre, QString fecha, QString hora);
+    bool ModificarCitas(QString code,QString nombre, QString fecha, QString hora);
     bool EliminarCitas(QString cita);
     QString ConsultarCitas(QString cita);
+    Datoscitas buscarcita(QString code);
+    long getCita_Actal();
 };
 
 #endif // CITAS_H

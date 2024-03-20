@@ -34,7 +34,7 @@ background-color: rgb(203, 228, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>20</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QWidget" name="verticalLayoutWidget_20">
@@ -2379,6 +2379,16 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="pushButton_45">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Nueva Reservación</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="pushButton_47">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -2395,16 +2405,6 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
           <string>Modificar Reservación</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_45">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Nueva Reservación</string>
          </property>
         </widget>
        </item>
@@ -3164,7 +3164,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QComboBox" name="comboBox_7">
+          <widget class="QComboBox" name="cb_MDCita">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
@@ -3209,7 +3209,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_62">
+        <widget class="QPushButton" name="bt_ModCita">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
@@ -3982,7 +3982,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>24</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

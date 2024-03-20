@@ -9,18 +9,33 @@
 QFile crearcitas("Citas.itn");
 //QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Citas.itn");
 QDataStream cin (&crearcitas);
+long bytess;
 Citas::Citas()
 {
+    bytess=0;
     crearcitas.open(QIODevice::ReadWrite);
     if(!crearcitas.isOpen())
     {
         exit(0);
     }
 }
-bool Citas::CrearCitas(QString nombre, QString fecha, QString hora)
+bool Citas::CrearCitas(QString code,QString nombre, QString fecha, QString hora)
 {
+    crearcitas.seek(0);
+
+    while (!cin.atEnd())
+    {
+        Datoscitas datos;
+        cin >> datos.nombre >> datos.fecha >> datos.hora;
+        if (datos.fecha == fecha && datos.hora == hora)
+        {
+            qDebug() << "ya esta reservada.";
+            return false;
+        }
+    }
     Datoscitas datos;
     crearcitas.seek(crearcitas.size());
+    datos.code=code;
     datos.nombre=nombre;
     datos.fecha=fecha;
     datos.hora=hora;
@@ -29,17 +44,133 @@ bool Citas::CrearCitas(QString nombre, QString fecha, QString hora)
     crearcitas.flush();
     return true;
 }
-bool Citas::ModificarCitas(QString cita)
+bool Citas::ModificarCitas(QString code,QString nombre, QString fecha, QString hora)
 {
+    Datoscitas datos;
+    QFile tempFile("temp.itn");
+    if (!tempFile.open(QIODevice::ReadWrite))
+    {
+        qDebug() << "No se pudo abrir el archivo en temp.";
+        return false;
+    }
 
+    QDataStream escribir(&tempFile);
+    crearcitas.seek(0);
+    QDataStream leer(&crearcitas);
+
+    bool encontrado = false;
+    while (!leer.atEnd())
+    {
+        leer >>datos.code>> datos.nombre >> datos.fecha >> datos.hora;
+        if (datos.code == code)
+        {
+            datos.nombre=nombre;
+            datos.fecha = fecha;
+            datos.hora = hora;
+            encontrado = true;
+        }
+        escribir <<datos.code<< datos.nombre << datos.fecha << datos.hora;
+    }
+
+    tempFile.close();
+    crearcitas.remove();
+    tempFile.rename("Citas.itn");
+
+    if (!encontrado)
+    {
+        qDebug() << "No se encontró la cita con el nombre especificado.";
+        return false;
+    }
+
+    return true;
 }
 
 bool Citas::EliminarCitas(QString cita)
 {
+    QFile tempFile("temp.itn");
+    if (!tempFile.open(QIODevice::ReadWrite))
+    {
+        qDebug() << "No se pudo abrir el archivo temporal.";
+        return false;
+    }
 
+    QDataStream escribir(&tempFile);
+    crearcitas.seek(0);
+    QDataStream leer(&crearcitas);
+
+    bool encontrado = false;
+    while (!leer.atEnd())
+    {
+        Datoscitas datos;
+        leer >>datos.code >> datos.nombre >> datos.fecha >> datos.hora;
+        if (datos.nombre == cita)
+        {
+            encontrado = true;
+            continue;
+        }
+        escribir <<datos.code<< datos.nombre << datos.fecha << datos.hora;
+    }
+
+    tempFile.close();
+    crearcitas.remove();
+    tempFile.rename("Citas.itn");
+
+    if (!encontrado)
+    {
+        qDebug() << "No se encontró la cita con el nombre especificado.";
+        return false;
+    }
+
+    return true;
 }
 
 QString Citas::ConsultarCitas(QString cita)
 {
+    QString citasEnFecha;
+    QTextStream stream(&citasEnFecha);
+    crearcitas.seek(0);
+    QDataStream leer(&crearcitas);
+
+    while (!leer.atEnd())
+    {
+        Datoscitas datos;
+        leer >>datos.code>> datos.nombre >> datos.fecha >> datos.hora;
+        if (datos.code == cita)
+        {
+            stream << "Nombre: " << datos.nombre << ", Fecha: " << datos.fecha << ", Hora: " << datos.hora << "\n";
+        }
+    }
+
+    return citasEnFecha;
+}
+
+Citas::Datoscitas Citas::buscarcita(QString code)
+{
+    Datoscitas datos;
+    QDataStream leerr(&crearcitas);
+     crearcitas.seek(0);
+    while(!leerr.atEnd())
+    {
+        leerr >> datos.code >> datos.nombre >> datos.fecha >> datos.hora;
+        if (datos.code == code)
+        {
+            return datos;
+        }
+    }
+    qDebug() << "reservar code." << datos.code << " code: " << code;
+    return Datoscitas();
+}
+long Citas::getCita_Actal()
+{
+    QDataStream leerr(&crearcitas);
+    crearcitas.seek(bytess);
+    QString Code, nombre, Fecha,Hora;
+    leerr >> Code >> nombre >>  Fecha >> Hora;
+
+        bytess=crearcitas.pos();
+        return Code.toLong();
+
+    //bytes=crearcitas.pos();
+    //return -1;
 
 }

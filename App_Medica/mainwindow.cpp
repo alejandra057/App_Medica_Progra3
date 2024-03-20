@@ -8,6 +8,7 @@
 #include "reservas.h"
 #include <QMessageBox>
 #include "recetas.h"
+#include "citas.h"
 QString NombreUserLogueado="";
 QString role="admin";
 QString code=0;
@@ -324,6 +325,20 @@ void MainWindow::on_pushButton_56_pressed()
     adminRoles roles;
     if(roles.permisoCita(role))
     {
+        AdminCodes codes;
+        long bytes = 0;
+        long cant_codigos = 0 ;
+        Citas cita;
+
+        while (cant_codigos <= codes.GetActualCodeCitas()) {
+            long code = cita.getCita_Actal();
+            if (code != -1) {
+                ui->cb_MDCita->addItem(QString::number(code));
+            }
+            bytes += 32;
+            cant_codigos++;
+        }
+
         ui->stackedWidget->setCurrentIndex(22);
     }
     else
@@ -725,9 +740,19 @@ void MainWindow::on_EliminarSala_pressed()
 
 void MainWindow::on_btNewCita_pressed()
 {
-   /* QString name = ui->txtnombrecita->text();
-    QDate fecha=ui->dateCita->date();
-    QTime hora=ui->TimeCita->time;*/
+    QString name = ui->txtnombrecita->text();
+    QString fecha=ui->dateCita->date().toString("dd/MM/yyyy");
+    QString hora=ui->TimeCita->time().toString("HH:mm");
+    Citas cita;
+    AdminCodes codes;
+    long codigo=codes.NextcodigoCitas();
+    QString codetext = QString::number(codigo);
+    if(cita.CrearCitas(codetext,name,fecha,hora)){
+        QMessageBox::information(this, "listo", QString("Creada Exitosamente."));
+    }else
+    {
+        QMessageBox::information(this, "Error", QString("Error."));
+    }
 }
 
 
@@ -896,5 +921,14 @@ void MainWindow::on_showpacientes_clicked()
     QString fechaend = ui->dateendpaciente->date().toString("dd/MM/yyyy");
     QString ReporteExpediente = expedientes.getExpedientesInRange(fechain,fechaend);
     ui->txtreporteexpedientes->setText(ReporteExpediente);
+}
+
+
+void MainWindow::on_bt_ModCita_pressed()
+{
+
+
+    //ui->stackedWidget->setCurrentIndex(17);
+
 }
 

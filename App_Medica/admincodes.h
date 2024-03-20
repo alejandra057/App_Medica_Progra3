@@ -30,6 +30,8 @@ public:
 
     long GetActualCodeExpedientes();
 
+    long GetActualCodeCitas();
+
 };
 
 #endif // ADMINCODES_H

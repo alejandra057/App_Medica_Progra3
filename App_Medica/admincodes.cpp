@@ -217,3 +217,13 @@ long AdminCodes::GetActualCodeExpedientes()
 
     return codigoExpedienteslong;
 }
+
+long AdminCodes :: GetActualCodeCitas(){
+    AdministradorCodigos.seek(0);
+    qint64 codigoUser, codigoExpedientes, codigoSala, codigoPaciente, codigoReservaciones, codigoCitas;
+    administrador >> codigoUser >> codigoExpedientes >> codigoSala >> codigoPaciente >> codigoReservaciones >> codigoCitas;
+
+    long codigocitalong = static_cast<long>(codigoCitas);
+
+    return codigocitalong;
+}

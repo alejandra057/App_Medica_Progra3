@@ -176,6 +176,8 @@ private slots:
 
 
 
+    void on_bt_ModCita_pressed();
+
 private:
     Ui::MainWindow *ui;
 };
