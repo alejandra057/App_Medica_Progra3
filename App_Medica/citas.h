@@ -23,12 +23,17 @@ class Citas
     bool EliminarCitas(QString cita);
     QString ConsultarCitas(QString cita);
     Datoscitas buscarcita(QString code);
+    Datoscitas Consultaporfecha(QString fecha);
+    QString ConvertirDatosCitaAString(const Datoscitas& datos);
     long getCita_Actal();
 
     Datoscitas obtenerCitas() const{
         return citass;
     }
 
+   /* QString obtenertexto() const{
+        return citass;
+    }*/
     void ModificarCitas(const Datoscitas& nuevacita){
         citass=nuevacita;
     }

@@ -975,3 +975,12 @@ void MainWindow::on_bt_Eliminar_pressed()
     }
 }
 
+
+void MainWindow::on_bt_consultar_pressed()
+{
+    ui->AreaConsulta->clear();
+    Citas cita;
+    QString fecha = ui->fechaConsulta->date().toString("dd/MM/yyyy");
+    ui->AreaConsulta->append( cita.ConsultarCitas(fecha));
+}
+

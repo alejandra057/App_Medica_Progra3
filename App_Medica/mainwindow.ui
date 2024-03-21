@@ -34,7 +34,7 @@ background-color: rgb(203, 228, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="currentIndex">
-     <number>23</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QWidget" name="verticalLayoutWidget_20">
@@ -3370,14 +3370,31 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QDateEdit" name="dateEdit_7">
+          <widget class="QDateEdit" name="fechaConsulta">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="dateTime">
+            <datetime>
+             <hour>0</hour>
+             <minute>0</minute>
+             <second>0</second>
+             <year>2024</year>
+             <month>4</month>
+             <day>1</day>
+            </datetime>
+           </property>
+           <property name="minimumDate">
+            <date>
+             <year>2015</year>
+             <month>9</month>
+             <day>14</day>
+            </date>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_66">
+          <widget class="QPushButton" name="bt_consultar">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
@@ -3389,7 +3406,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </layout>
        </item>
        <item>
-        <widget class="QTextBrowser" name="textBrowser_2">
+        <widget class="QTextBrowser" name="AreaConsulta">
          <property name="whatsThis">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>

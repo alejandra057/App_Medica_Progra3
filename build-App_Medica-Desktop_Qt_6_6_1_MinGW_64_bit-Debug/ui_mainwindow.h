@@ -9,6 +9,7 @@
 #ifndef UI_MAINWINDOW_H
 #define UI_MAINWINDOW_H
 
+#include <QtCore/QDate>
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
@@ -401,9 +402,9 @@ public:
     QLabel *label_90;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_91;
-    QDateEdit *dateEdit_7;
-    QPushButton *pushButton_66;
-    QTextBrowser *textBrowser_2;
+    QDateEdit *fechaConsulta;
+    QPushButton *bt_consultar;
+    QTextBrowser *AreaConsulta;
     QWidget *OpcionesDeUsuario;
     QWidget *verticalLayoutWidget_27;
     QVBoxLayout *verticalLayout_29;
@@ -2398,26 +2399,28 @@ public:
 
         horizontalLayout_3->addWidget(label_91);
 
-        dateEdit_7 = new QDateEdit(verticalLayoutWidget_13);
-        dateEdit_7->setObjectName("dateEdit_7");
-        dateEdit_7->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        fechaConsulta = new QDateEdit(verticalLayoutWidget_13);
+        fechaConsulta->setObjectName("fechaConsulta");
+        fechaConsulta->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        fechaConsulta->setDateTime(QDateTime(QDate(2024, 4, 1), QTime(0, 0, 0)));
+        fechaConsulta->setMinimumDate(QDate(2015, 9, 14));
 
-        horizontalLayout_3->addWidget(dateEdit_7);
+        horizontalLayout_3->addWidget(fechaConsulta);
 
-        pushButton_66 = new QPushButton(verticalLayoutWidget_13);
-        pushButton_66->setObjectName("pushButton_66");
-        pushButton_66->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        bt_consultar = new QPushButton(verticalLayoutWidget_13);
+        bt_consultar->setObjectName("bt_consultar");
+        bt_consultar->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_3->addWidget(pushButton_66);
+        horizontalLayout_3->addWidget(bt_consultar);
 
 
         verticalLayout_15->addLayout(horizontalLayout_3);
 
-        textBrowser_2 = new QTextBrowser(verticalLayoutWidget_13);
-        textBrowser_2->setObjectName("textBrowser_2");
-        textBrowser_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        AreaConsulta = new QTextBrowser(verticalLayoutWidget_13);
+        AreaConsulta->setObjectName("AreaConsulta");
+        AreaConsulta->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        verticalLayout_15->addWidget(textBrowser_2);
+        verticalLayout_15->addWidget(AreaConsulta);
 
         stackedWidget->addWidget(ConsultarCita);
         OpcionesDeUsuario = new QWidget();
@@ -2795,7 +2798,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(23);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -3016,9 +3019,9 @@ public:
         pushButton_67->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_90->setText(QCoreApplication::translate("MainWindow", "Consultar Cita", nullptr));
         label_91->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
-        pushButton_66->setText(QCoreApplication::translate("MainWindow", "Consultar", nullptr));
+        bt_consultar->setText(QCoreApplication::translate("MainWindow", "Consultar", nullptr));
 #if QT_CONFIG(whatsthis)
-        textBrowser_2->setWhatsThis(QCoreApplication::translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", nullptr));
+        AreaConsulta->setWhatsThis(QCoreApplication::translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         label_92->setText(QCoreApplication::translate("MainWindow", "Opciones de usuario", nullptr));
         pushButton_68->setText(QCoreApplication::translate("MainWindow", "Cambiar Contrase\303\261a", nullptr));

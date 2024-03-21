@@ -127,8 +127,6 @@ bool Citas::EliminarCitas(QString cita)
 
 QString Citas::ConsultarCitas(QString cita)
 {
-    QString citasEnFecha;
-    QTextStream stream(&citasEnFecha);
     crearcitas.seek(0);
     QDataStream leer(&crearcitas);
 
@@ -136,18 +134,43 @@ QString Citas::ConsultarCitas(QString cita)
     {
         Datoscitas datos;
         leer >>datos.code>> datos.nombre >> datos.fecha >> datos.hora;
-        qDebug()<<"datos.code "<< datos.code <<" code: "<<cita<<" citas en fecha: "<<citasEnFecha;
-        if (datos.code == cita)
+        qDebug()<<"datos.code "<< datos.code <<" fecha desde consulta: "<<cita<<" datos.fecha: "<<datos.fecha;
+        if (datos.fecha == cita)
         {
-            stream << "Nombre: " << datos.nombre << ", Fecha: " << datos.fecha << ", Hora: " << datos.hora << "\n";
+            qDebug()<<"Entra al if";
+            //return Consultaporfecha(cita);
+            return ConvertirDatosCitaAString(datos);
+
         }
     }
 
-    return citasEnFecha;
+    return "Cita no encontrada";
+}
+Citas::Datoscitas Citas::Consultaporfecha(QString fecha){\
+
+    Datoscitas datos;
+    QDataStream leerr(&crearcitas);
+    crearcitas.seek(0);
+    while(!leerr.atEnd())
+    {
+        leerr >> datos.code >> datos.nombre >> datos.fecha >> datos.hora;
+        if (datos.fecha == fecha)
+        {
+            return datos;
+        }
+    }
+    qDebug() << "En consultaxfecha fecha datos." << datos.fecha << " fehca: " << fecha;
+    return Datoscitas();
+}
+QString Citas::ConvertirDatosCitaAString(const Datoscitas& datos)
+{
+    return QString("Código: %1\nNombre: %2\nFecha: %3\nHora: %4")
+        .arg(datos.code).arg(datos.nombre).arg(datos.fecha).arg(datos.hora);
 }
 
 Citas::Datoscitas Citas::buscarcita(QString code)
 {
+
     Datoscitas datos;
     QDataStream leerr(&crearcitas);
      crearcitas.seek(0);
@@ -162,6 +185,7 @@ Citas::Datoscitas Citas::buscarcita(QString code)
     qDebug() << "reservar code." << datos.code << " code: " << code;
     return Datoscitas();
 }
+
 long Citas::getCita_Actal()
 {
     QDataStream leerr(&crearcitas);

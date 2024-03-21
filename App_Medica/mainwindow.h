@@ -184,6 +184,8 @@ private slots:
 
     void on_bt_Eliminar_pressed();
 
+    void on_bt_consultar_pressed();
+
 private:
     Ui::MainWindow *ui;
 };
