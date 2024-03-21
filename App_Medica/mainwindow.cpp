@@ -266,16 +266,16 @@ void MainWindow::on_pushButton_45_pressed()
     adminRoles roles;
     if(roles.permisoReservaciones(role)){
     long bytes = 0;
-    long cant_codigos = 0 ;
+    long cant_codigosss = 0 ;
     AdminSalas salas;
 
-    while (cant_codigos <= codes.GetActualCodeSalas()) {
+    while (cant_codigosss <= codes.GetActualCodeSalas()) {
         long code = salas.getSala_Actal();
         if (code != -1) {
             ui->salas_cb->addItem(QString::number(code));
         }
         bytes += 32;
-        cant_codigos++;
+        cant_codigosss++;
     }
 
 
@@ -326,16 +326,16 @@ void MainWindow::on_pushButton_56_pressed()
     if(roles.permisoCita(role))
     {
         AdminCodes codes;
-        long bytes = 0;
-        long cant_codigos = 0 ;
+        long bytessss = 0;
+        long cant_codigos = 1 ;
         Citas cita;
 
         while (cant_codigos <= codes.GetActualCodeCitas()) {
-            long code = cita.getCita_Actal();
-            if (code != -1) {
-                ui->cb_MDCita->addItem(QString::number(code));
+            long codes = cita.getCita_Actal();
+            if (codes != 0) {
+                ui->cb_MDCita->addItem(QString::number(codes));
             }
-            bytes += 32;
+            bytessss += 32;
             cant_codigos++;
         }
 
@@ -941,12 +941,37 @@ void MainWindow::on_bt_ModCita_pressed()
         QTime hora = QTime::fromString(citass.hora, "HH:mm");
         ui->HoraMDCita->setTime(hora);
 
-       /* if (cita.ModificarCitas(codeselect,name,fecha,hora)){
+       if (cita.ModificarCitas(codeselect,name,fecha,horaInicio)){
          QMessageBox::information(this, "listo", QString("Cita encontrada."));
-        }*/
+        }
 
 
     //ui->stackedWidget->setCurrentIndex(17);
 
+}
+
+
+void MainWindow::on_cb_MDCita_currentIndexChanged(int index)
+{
+    index++;
+    qDebug() <<"Index "<< index;
+}
+
+
+void MainWindow::on_bt_EliminarCita_pressed()
+{
+
+}
+
+
+void MainWindow::on_bt_Eliminar_pressed()
+{
+    AdminCodes codes;
+    Citas cita;
+
+    QString code=ui->txt_EliminarCita->text();
+    if(cita.EliminarCitas(code)){
+        QMessageBox::information(this, "listo", QString("Eliminado Correctamente."));
+    }
 }
 

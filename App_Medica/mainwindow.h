@@ -178,6 +178,12 @@ private slots:
 
     void on_bt_ModCita_pressed();
 
+    void on_cb_MDCita_currentIndexChanged(int index);
+
+    void on_bt_EliminarCita_pressed();
+
+    void on_bt_Eliminar_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

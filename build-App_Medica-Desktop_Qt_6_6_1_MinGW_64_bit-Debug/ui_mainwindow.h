@@ -392,8 +392,8 @@ public:
     QLabel *label_88;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_89;
-    QComboBox *comboBox_8;
-    QPushButton *pushButton_64;
+    QLineEdit *txt_EliminarCita;
+    QPushButton *bt_Eliminar;
     QWidget *ConsultarCita;
     QPushButton *pushButton_67;
     QWidget *verticalLayoutWidget_13;
@@ -2354,20 +2354,20 @@ public:
 
         horizontalLayout_4->addWidget(label_89);
 
-        comboBox_8 = new QComboBox(verticalLayoutWidget_16);
-        comboBox_8->setObjectName("comboBox_8");
-        comboBox_8->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        txt_EliminarCita = new QLineEdit(verticalLayoutWidget_16);
+        txt_EliminarCita->setObjectName("txt_EliminarCita");
+        txt_EliminarCita->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_4->addWidget(comboBox_8);
+        horizontalLayout_4->addWidget(txt_EliminarCita);
 
 
         verticalLayout_18->addLayout(horizontalLayout_4);
 
-        pushButton_64 = new QPushButton(verticalLayoutWidget_16);
-        pushButton_64->setObjectName("pushButton_64");
-        pushButton_64->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        bt_Eliminar = new QPushButton(verticalLayoutWidget_16);
+        bt_Eliminar->setObjectName("bt_Eliminar");
+        bt_Eliminar->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        verticalLayout_18->addWidget(pushButton_64);
+        verticalLayout_18->addWidget(bt_Eliminar);
 
         stackedWidget->addWidget(EliminarCita);
         ConsultarCita = new QWidget();
@@ -2795,7 +2795,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(20);
+        stackedWidget->setCurrentIndex(23);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -3012,7 +3012,7 @@ public:
         pushButton_65->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_88->setText(QCoreApplication::translate("MainWindow", "Eliminar Cita", nullptr));
         label_89->setText(QCoreApplication::translate("MainWindow", "Cita:", nullptr));
-        pushButton_64->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
+        bt_Eliminar->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
         pushButton_67->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_90->setText(QCoreApplication::translate("MainWindow", "Consultar Cita", nullptr));
         label_91->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));

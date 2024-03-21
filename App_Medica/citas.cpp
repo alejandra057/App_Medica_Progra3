@@ -26,7 +26,7 @@ bool Citas::CrearCitas(QString code,QString nombre, QString fecha, QString hora)
     while (!cin.atEnd())
     {
         Datoscitas datos;
-        cin >> datos.nombre >> datos.fecha >> datos.hora;
+        cin >>datos.code>> datos.nombre >> datos.fecha >> datos.hora;
         if (datos.fecha == fecha && datos.hora == hora)
         {
             qDebug() << "ya esta reservada.";
@@ -40,7 +40,7 @@ bool Citas::CrearCitas(QString code,QString nombre, QString fecha, QString hora)
     datos.fecha=fecha;
     datos.hora=hora;
     crearcitas.seek(crearcitas.size());
-    cin<<datos.nombre<<datos.fecha<<datos.hora;
+    cin<< datos.code <<datos.nombre<<datos.fecha<<datos.hora;
     crearcitas.flush();
     return true;
 }
@@ -62,6 +62,7 @@ bool Citas::ModificarCitas(QString code,QString nombre, QString fecha, QString h
     while (!leer.atEnd())
     {
         leer >>datos.code>> datos.nombre >> datos.fecha >> datos.hora;
+        qDebug() << "Datos.code "<< datos.code<< " code: "<<code <<" Datos.nombre: "<<datos.nombre;
         if (datos.code == code)
         {
             datos.nombre=nombre;
@@ -103,7 +104,7 @@ bool Citas::EliminarCitas(QString cita)
     {
         Datoscitas datos;
         leer >>datos.code >> datos.nombre >> datos.fecha >> datos.hora;
-        if (datos.nombre == cita)
+        if (datos.code == cita)
         {
             encontrado = true;
             continue;
@@ -135,6 +136,7 @@ QString Citas::ConsultarCitas(QString cita)
     {
         Datoscitas datos;
         leer >>datos.code>> datos.nombre >> datos.fecha >> datos.hora;
+        qDebug()<<"datos.code "<< datos.code <<" code: "<<cita<<" citas en fecha: "<<citasEnFecha;
         if (datos.code == cita)
         {
             stream << "Nombre: " << datos.nombre << ", Fecha: " << datos.fecha << ", Hora: " << datos.hora << "\n";

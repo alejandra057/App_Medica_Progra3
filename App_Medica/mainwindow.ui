@@ -34,7 +34,7 @@ background-color: rgb(203, 228, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="currentIndex">
-     <number>20</number>
+     <number>23</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QWidget" name="verticalLayoutWidget_20">
@@ -3292,7 +3292,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox_8">
+          <widget class="QLineEdit" name="txt_EliminarCita">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
@@ -3301,7 +3301,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_64">
+        <widget class="QPushButton" name="bt_Eliminar">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
