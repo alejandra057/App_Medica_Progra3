@@ -10,9 +10,9 @@
     //long codigoSala;
     //long codigoPaciente;
 //pa windows
-QFile AdministradorCodigos("AdministradorCodigos.itn");
+//QFile AdministradorCodigos("AdministradorCodigos.itn");
 //pa kenny
-//QFile AdministradorCodigos("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/AdministradorCodigos.itn");
+QFile AdministradorCodigos("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/AdministradorCodigos.itn");
 QDataStream administrador (&AdministradorCodigos);
 
 AdminCodes::AdminCodes() {

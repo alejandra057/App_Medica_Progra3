@@ -8,7 +8,8 @@
 #include <QTime>
 #include <QMessageBox>
 
-QFile Reservaciones("Reservas.itn");
+//QFile Reservaciones("Reservas.itn");
+QFile Reservaciones("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Reservas.itn");
 QDataStream writee (&Reservaciones);
 Reservas::Reservas()
 {
@@ -88,7 +89,8 @@ Reservas::STReservaciones Reservas::Revisarcodigo(QString code)
 
 bool Reservas::ModificarReservacion(QString code, QString nombre, QString fecha, QString horainicio, QString horafinal, QString namedoctor, QString observaciones)
 {
-    QFile tempFile("temp.itn");
+    //QFile tempFile("temp.itn");
+    QFile tempFile("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/temp.itn");
     if (!tempFile.open(QIODevice::ReadWrite))
     {
         qDebug() << "No se pudo abrir el archivo temporal.";
@@ -125,7 +127,8 @@ bool Reservas::ModificarReservacion(QString code, QString nombre, QString fecha,
 
 bool Reservas::EliminarReservacion(QString code)
 {
-    QFile tempFile("temp.itn");
+    //QFile tempFile("temp.itn");
+    QFile tempFile("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/temp.itn");
     if (!tempFile.open(QIODevice::ReadWrite))
     {
         qDebug() << "No se pudo abrir el archivo temporal.";
@@ -151,8 +154,8 @@ bool Reservas::EliminarReservacion(QString code)
 
     tempFile.close();
     Reservaciones.remove();
-    tempFile.rename("Reservas.itn");
-
+    //tempFile.rename("Reservas.itn");
+    tempFile.rename("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Reservas.itn");
     if (!encontrado)
     {
         return false;

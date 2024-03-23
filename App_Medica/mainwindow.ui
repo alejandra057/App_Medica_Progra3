@@ -34,7 +34,7 @@ background-color: rgb(203, 228, 255);
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QWidget" name="verticalLayoutWidget_20">
@@ -1454,7 +1454,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
         <x>50</x>
         <y>140</y>
         <width>381</width>
-        <height>251</height>
+        <height>288</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_36">
@@ -3317,7 +3317,7 @@ font: 700 11pt &quot;Segoe UI&quot;;</string>
            </property>
            <property name="dateTime">
             <datetime>
-             <hour>12</hour>
+             <hour>18</hour>
              <minute>0</minute>
              <second>0</second>
              <year>2024</year>

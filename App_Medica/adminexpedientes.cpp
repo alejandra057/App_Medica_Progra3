@@ -5,13 +5,13 @@
 #include <QDate>
 #include <QTextStream>
 
-QFile ExpedientesAdmin("Expedientes.itn");
-//QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Expedientes.itn");
+//QFile ExpedientesAdmin("Expedientes.itn");
+QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Expedientes.itn");
 QDataStream write (&ExpedientesAdmin);
 
 
-QFile ExpedientesEncabezado("ExpedientesEncabezado.itn");
-//QFile ExpedientesEncabezado("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/ExpedientesEncabezado.itn");
+//QFile ExpedientesEncabezado("ExpedientesEncabezado.itn");
+QFile ExpedientesEncabezado("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/ExpedientesEncabezado.itn");
 QDataStream encabezadoWrite(&ExpedientesEncabezado);
 AdminExpedientes::AdminExpedientes() {
     ExpedientesAdmin.open(QIODevice::ReadWrite);

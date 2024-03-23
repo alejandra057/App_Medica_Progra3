@@ -6,7 +6,8 @@
 #include <QTime>
 #include <QTextStream>
 
-QFile crearcitas("Citas.itn");
+//QFile crearcitas("Citas.itn");
+QFile crearcitas("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Citas.itn");
 //QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Citas.itn");
 QDataStream cin (&crearcitas);
 long bytess;
@@ -114,7 +115,8 @@ bool Citas::EliminarCitas(QString cita)
 
     tempFile.close();
     crearcitas.remove();
-    tempFile.rename("Citas.itn");
+    //tempFile.rename("Citas.itn");
+    tempFile.rename("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Citas.itn");
 
     if (!encontrado)
     {

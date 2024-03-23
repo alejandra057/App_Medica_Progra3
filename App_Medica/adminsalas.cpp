@@ -7,9 +7,9 @@
 #include "reservas.h"
 #include <QMessageBox>
 //pa windows
-QFile Room("Salas.arc");
+//QFile Room("Salas.arc");
 //pa kenny
-//QFile Room("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Salas.itn");
+QFile Room("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Salas.itn");
 
 
 QDataStream escribir(&Room);
@@ -86,7 +86,8 @@ bool AdminSalas::modificateSala(QString code, QString descripcion, QString statu
 
         if (sala.Code == code) {
 
-            QFile Reservaciones("Reservaciones.itn");
+            //QFile Reservaciones("Reservaciones.itn");
+            QFile Reservaciones("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/Reservaciones.itn");
             QDataStream leer_r(&Reservaciones);
             if (Reservaciones.open(QIODevice::ReadOnly)) {
                 Reservas::STReservaciones reservass;
@@ -120,7 +121,8 @@ bool AdminSalas::modificateSala(QString code, QString descripcion, QString statu
 
 
 bool AdminSalas::eliminarSala(QString code, QString usuarioActual) {
-    QFile Reservaciones("Reservaciones.itn");
+    //QFile Reservaciones("Reservaciones.itn");
+    QFile Reservaciones("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/Reservaciones.itn");
     QDataStream leer_r(&Reservaciones);
     if (Reservaciones.open(QIODevice::ReadOnly)) {
         while (!leer_r.atEnd()) {

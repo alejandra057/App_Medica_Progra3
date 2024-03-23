@@ -561,7 +561,7 @@ void MainWindow::on_pushButton_16_pressed()
     classcreateuser crearuser;
     QString crearnombre = ui->NombreCrear->text();
     QString crearcuenta= ui->CrearCuenta->text();
-   // QString Rol= ui->crearRol->text();
+    QString Rol= ui->RolUserCreate->currentData().toString();
     bool status= true;
     if( crearuser.BuscarUser(crearcuenta,"",crearnombre))
     {
@@ -765,11 +765,16 @@ void MainWindow::on_btNewCita_pressed()
     AdminCodes codes;
     long codigo=codes.NextcodigoCitas();
     QString codetext = QString::number(codigo);
-    if(cita.CrearCitas(codetext,name,fecha,hora)){
-        QMessageBox::information(this, "listo", QString("Creada Exitosamente."));
+    if(name!=""){
+        if(cita.CrearCitas(codetext,name,fecha,hora)){
+             QMessageBox::information(this, "listo", QString("Creada Exitosamente."));
+        }else
+        {
+            QMessageBox::information(this, "Error", QString("Error."));
+        }
     }else
     {
-        QMessageBox::information(this, "Error", QString("Error."));
+         QMessageBox::information(this, "listo", QString("No a ingresado el nombre."));
     }
 }
 

@@ -5,8 +5,8 @@
 //QFile Recetas("Recetas.itn");
 bool Recetas::crearNuevaReceta(long code, QString medicamento, QString dosis)
 {
-    QFile Recetas("Recetas.itn");
-    //QFile Recetas("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Recetas.itn");
+    //QFile Recetas("Recetas.itn");
+    QFile Recetas("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Recetas.itn");
     if (!Recetas.open(QIODevice::Append)) {
         return false; // No es necesario llamar a exit(0) aquí
     }
@@ -25,8 +25,8 @@ bool Recetas::crearNuevaReceta(long code, QString medicamento, QString dosis)
 
 QString Recetas::searchRecetaFecha(QString fechaB)
 {
-    QFile Recetas("Recetas.itn");
-    //QFile Recetas("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Recetas.itn");
+    //QFile Recetas("Recetas.itn");
+    QFile Recetas("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Recetas.itn");
     if (!Recetas.open(QIODevice::ReadOnly)) {
         return "No se puede abrir el archivo de recetas.";
     }
@@ -67,8 +67,8 @@ QString Recetas::searchRecetaFecha(QString fechaB)
 
 QString Recetas::searchRecetaPaciente(QString codigoPaciente)
 {
-    //QFile Recetas("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Recetas.itn");
-    QFile Recetas("Recetas.itn");
+    QFile Recetas("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Recetas.itn");
+    //QFile Recetas("Recetas.itn");
     if (!Recetas.open(QIODevice::ReadOnly)) {
         return "No se puede abrir el archivo de recetas.";
     }
