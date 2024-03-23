@@ -187,17 +187,17 @@ public:
     QWidget *formLayoutWidget_8;
     QFormLayout *formLayout_10;
     QLabel *label_40;
-    QLabel *label_42;
-    QLabel *label_44;
-    QLabel *label_45;
-    QLabel *label_46;
-    QLabel *label_14;
     QLineEdit *Telefonocrear;
+    QLabel *label_42;
     QLineEdit *EmailCrear;
+    QLabel *label_44;
     QComboBox *TipodeSangreCrear;
+    QLabel *label_45;
     QLineEdit *AlergiasCrear;
+    QLabel *label_46;
     QLineEdit *EnfermedadesCrear;
     QLineEdit *EncabezadoCrear;
+    QLabel *label_14;
     QWidget *formLayoutWidget_9;
     QFormLayout *formLayout_11;
     QLabel *label_41;
@@ -231,7 +231,6 @@ public:
     QVBoxLayout *verticalLayout_11;
     QLabel *label_48;
     QGridLayout *gridLayout_8;
-    QLineEdit *NamePaciente;
     QLabel *label_105;
     QLineEdit *Sintomaspresen;
     QLabel *label_52;
@@ -240,11 +239,11 @@ public:
     QLineEdit *Observacionepaci;
     QLineEdit *IdentidadPaciente;
     QLabel *label_54;
-    QLineEdit *AdicionalComents;
-    QLineEdit *RecomendacionesPaci;
     QLabel *label_106;
     QLabel *label_107;
-    QLineEdit *labelDiagnostico;
+    QLineEdit *NamePaciente;
+    QTextEdit *labelDiagnostico;
+    QTextEdit *AdicionalComents;
     QPushButton *pushButton_36;
     QWidget *Recetas;
     QWidget *verticalLayoutWidget_28;
@@ -1219,6 +1218,12 @@ public:
 
         formLayout_10->setWidget(1, QFormLayout::LabelRole, label_40);
 
+        Telefonocrear = new QLineEdit(formLayoutWidget_8);
+        Telefonocrear->setObjectName("Telefonocrear");
+        Telefonocrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(1, QFormLayout::FieldRole, Telefonocrear);
+
         label_42 = new QLabel(formLayoutWidget_8);
         label_42->setObjectName("label_42");
         label_42->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
@@ -1226,45 +1231,18 @@ public:
 
         formLayout_10->setWidget(2, QFormLayout::LabelRole, label_42);
 
+        EmailCrear = new QLineEdit(formLayoutWidget_8);
+        EmailCrear->setObjectName("EmailCrear");
+        EmailCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(2, QFormLayout::FieldRole, EmailCrear);
+
         label_44 = new QLabel(formLayoutWidget_8);
         label_44->setObjectName("label_44");
         label_44->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
         formLayout_10->setWidget(3, QFormLayout::LabelRole, label_44);
-
-        label_45 = new QLabel(formLayoutWidget_8);
-        label_45->setObjectName("label_45");
-        label_45->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(4, QFormLayout::LabelRole, label_45);
-
-        label_46 = new QLabel(formLayoutWidget_8);
-        label_46->setObjectName("label_46");
-        label_46->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(5, QFormLayout::LabelRole, label_46);
-
-        label_14 = new QLabel(formLayoutWidget_8);
-        label_14->setObjectName("label_14");
-        label_14->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(6, QFormLayout::LabelRole, label_14);
-
-        Telefonocrear = new QLineEdit(formLayoutWidget_8);
-        Telefonocrear->setObjectName("Telefonocrear");
-        Telefonocrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(1, QFormLayout::FieldRole, Telefonocrear);
-
-        EmailCrear = new QLineEdit(formLayoutWidget_8);
-        EmailCrear->setObjectName("EmailCrear");
-        EmailCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(2, QFormLayout::FieldRole, EmailCrear);
 
         TipodeSangreCrear = new QComboBox(formLayoutWidget_8);
         TipodeSangreCrear->addItem(QString());
@@ -1281,11 +1259,25 @@ public:
 
         formLayout_10->setWidget(3, QFormLayout::FieldRole, TipodeSangreCrear);
 
+        label_45 = new QLabel(formLayoutWidget_8);
+        label_45->setObjectName("label_45");
+        label_45->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(4, QFormLayout::LabelRole, label_45);
+
         AlergiasCrear = new QLineEdit(formLayoutWidget_8);
         AlergiasCrear->setObjectName("AlergiasCrear");
         AlergiasCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         formLayout_10->setWidget(4, QFormLayout::FieldRole, AlergiasCrear);
+
+        label_46 = new QLabel(formLayoutWidget_8);
+        label_46->setObjectName("label_46");
+        label_46->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(5, QFormLayout::LabelRole, label_46);
 
         EnfermedadesCrear = new QLineEdit(formLayoutWidget_8);
         EnfermedadesCrear->setObjectName("EnfermedadesCrear");
@@ -1298,6 +1290,13 @@ public:
         EncabezadoCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         formLayout_10->setWidget(6, QFormLayout::FieldRole, EncabezadoCrear);
+
+        label_14 = new QLabel(formLayoutWidget_8);
+        label_14->setObjectName("label_14");
+        label_14->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(6, QFormLayout::LabelRole, label_14);
 
         formLayoutWidget_9 = new QWidget(NuevoExpediente);
         formLayoutWidget_9->setObjectName("formLayoutWidget_9");
@@ -1457,7 +1456,7 @@ public:
 
         verticalLayoutWidget_9 = new QWidget(AgregardataExp);
         verticalLayoutWidget_9->setObjectName("verticalLayoutWidget_9");
-        verticalLayoutWidget_9->setGeometry(QRect(80, 50, 451, 391));
+        verticalLayoutWidget_9->setGeometry(QRect(80, 40, 451, 471));
         verticalLayout_11 = new QVBoxLayout(verticalLayoutWidget_9);
         verticalLayout_11->setObjectName("verticalLayout_11");
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
@@ -1470,12 +1469,6 @@ public:
 
         gridLayout_8 = new QGridLayout();
         gridLayout_8->setObjectName("gridLayout_8");
-        NamePaciente = new QLineEdit(verticalLayoutWidget_9);
-        NamePaciente->setObjectName("NamePaciente");
-        NamePaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(NamePaciente, 0, 1, 1, 1);
-
         label_105 = new QLabel(verticalLayoutWidget_9);
         label_105->setObjectName("label_105");
         label_105->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
@@ -1529,18 +1522,6 @@ public:
 
         gridLayout_8->addWidget(label_54, 5, 0, 1, 1);
 
-        AdicionalComents = new QLineEdit(verticalLayoutWidget_9);
-        AdicionalComents->setObjectName("AdicionalComents");
-        AdicionalComents->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(AdicionalComents, 5, 1, 1, 1);
-
-        RecomendacionesPaci = new QLineEdit(verticalLayoutWidget_9);
-        RecomendacionesPaci->setObjectName("RecomendacionesPaci");
-        RecomendacionesPaci->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(RecomendacionesPaci, 4, 1, 1, 1);
-
         label_106 = new QLabel(verticalLayoutWidget_9);
         label_106->setObjectName("label_106");
         label_106->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
@@ -1555,11 +1536,21 @@ public:
 
         gridLayout_8->addWidget(label_107, 6, 0, 1, 1);
 
-        labelDiagnostico = new QLineEdit(verticalLayoutWidget_9);
+        NamePaciente = new QLineEdit(verticalLayoutWidget_9);
+        NamePaciente->setObjectName("NamePaciente");
+        NamePaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(NamePaciente, 0, 1, 1, 1);
+
+        labelDiagnostico = new QTextEdit(verticalLayoutWidget_9);
         labelDiagnostico->setObjectName("labelDiagnostico");
-        labelDiagnostico->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         gridLayout_8->addWidget(labelDiagnostico, 6, 1, 1, 1);
+
+        AdicionalComents = new QTextEdit(verticalLayoutWidget_9);
+        AdicionalComents->setObjectName("AdicionalComents");
+
+        gridLayout_8->addWidget(AdicionalComents, 5, 1, 1, 1);
 
 
         verticalLayout_11->addLayout(gridLayout_8);
@@ -2792,7 +2783,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(14);
+        stackedWidget->setCurrentIndex(12);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2881,9 +2872,6 @@ public:
         label_40->setText(QCoreApplication::translate("MainWindow", "Telefono 1:", nullptr));
         label_42->setText(QCoreApplication::translate("MainWindow", "Email:", nullptr));
         label_44->setText(QCoreApplication::translate("MainWindow", "Tipo de sangre:", nullptr));
-        label_45->setText(QCoreApplication::translate("MainWindow", "Alegrias conocidas:", nullptr));
-        label_46->setText(QCoreApplication::translate("MainWindow", "Enfermedades base:", nullptr));
-        label_14->setText(QCoreApplication::translate("MainWindow", "Encabezado:", nullptr));
         TipodeSangreCrear->setItemText(0, QString());
         TipodeSangreCrear->setItemText(1, QCoreApplication::translate("MainWindow", "A+", nullptr));
         TipodeSangreCrear->setItemText(2, QCoreApplication::translate("MainWindow", "A-", nullptr));
@@ -2894,6 +2882,9 @@ public:
         TipodeSangreCrear->setItemText(7, QCoreApplication::translate("MainWindow", "O+", nullptr));
         TipodeSangreCrear->setItemText(8, QCoreApplication::translate("MainWindow", "O-", nullptr));
 
+        label_45->setText(QCoreApplication::translate("MainWindow", "Alegrias conocidas:", nullptr));
+        label_46->setText(QCoreApplication::translate("MainWindow", "Enfermedades base:", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "Encabezado:", nullptr));
         label_41->setText(QCoreApplication::translate("MainWindow", "Nombre del contacto adicional:", nullptr));
         label_43->setText(QCoreApplication::translate("MainWindow", "Telefono contacto adicional:", nullptr));
         label_102->setText(QCoreApplication::translate("MainWindow", "Email de contacto adicional:", nullptr));

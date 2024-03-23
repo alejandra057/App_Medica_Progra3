@@ -636,8 +636,8 @@ void MainWindow::on_pushButton_36_pressed()
     QString sintomas = ui->Sintomaspresen->text();
     QString observaciones = ui->Observacionepaci->text();
     QString Recomendaciones = ui->Observacionepaci->text();
-    QString adicional = ui->AdicionalComents->text();
-    QString diagnostico= ui->labelDiagnostico->text();
+    QString adicional = ui->AdicionalComents->toPlainText();
+    QString diagnostico= ui->labelDiagnostico->toPlainText();
 
     QDate fecha = ui->feachaDeCita->selectedDate();
     QString strFecha = fecha.toString("dd/MM/yyyy");
