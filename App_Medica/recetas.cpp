@@ -78,20 +78,27 @@ QString Recetas::searchRecetaPaciente(QString codigoPaciente)
 
     QString result;
     bool found = false;
-
+    Recetas.seek(0);
     while (!in.atEnd()) {
         qint64 code;
-        QStringList medicamento;
+        QString medicamento;
         QString dosis;
-        QString paciente;
+        QDate paciente;
+
 
         in >> code >> medicamento >> dosis >> paciente;
+         long numeroLong = static_cast<long>(code);
+        bool ok; // Utilizado para verificar si la conversión fue exitosa
+        long numero = codigoPaciente.toLong(&ok);
 
-        if (paciente == codigoPaciente) {
+        QString dateString = paciente.toString("dd/MM/yyyy");
+
+        if (numeroLong == numero) {
             found = true;
             result += "Código: " + QString::number(code) + "\n";
-            result += "Medicamento: " + medicamento.join(", ") + "\n";
+            result += "Medicamento: " + medicamento+ "\n";
             result += "Dosis: " + dosis + "\n";
+            result += "Fechas: " + dateString + "\n";
         }
     }
 

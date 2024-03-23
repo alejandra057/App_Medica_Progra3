@@ -2400,7 +2400,7 @@ public:
         fechaConsulta = new QDateEdit(verticalLayoutWidget_13);
         fechaConsulta->setObjectName("fechaConsulta");
         fechaConsulta->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        fechaConsulta->setDateTime(QDateTime(QDate(2024, 4, 2), QTime(23, 0, 0)));
+        fechaConsulta->setDateTime(QDateTime(QDate(2024, 4, 3), QTime(5, 0, 0)));
         fechaConsulta->setMinimumDate(QDate(2015, 9, 14));
 
         horizontalLayout_3->addWidget(fechaConsulta);
@@ -2792,7 +2792,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(15);
+        stackedWidget->setCurrentIndex(14);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

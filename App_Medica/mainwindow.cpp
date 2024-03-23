@@ -236,9 +236,10 @@ void MainWindow::on_pushButton_38_pressed()
         AdminCodes acode;
         long code = acode.GetActualCodeExpedientes();
         ui->recetas_cb->clear();
+        ui->paciente_cb->addItem("vacio");
         for (long var = 0; var < code; var++) {
             QString codepaciente = QString::number(var);
-            ui->recetas_cb->addItem(codepaciente);
+            ui->paciente_cb->addItem(codepaciente);
         }
         ui->stackedWidget->setCurrentIndex(14);
     }
@@ -257,9 +258,10 @@ void MainWindow::on_pushButton_39_pressed()
         AdminCodes acode;
         long code = acode.GetActualCodeExpedientes();
         ui->paciente_cb->clear();
+        ui->recetas_cb->addItem("vacio");
         for (long var = 0; var < code; ++var) {
             QString codepaciente = QString::number(var);
-            ui->paciente_cb->addItem(codepaciente);
+            ui->recetas_cb->addItem(codepaciente);
         }
         ui->stackedWidget->setCurrentIndex(15);
     }
@@ -885,10 +887,20 @@ void MainWindow::on_new_recipe_pressed()
     bool ok; long selectedcode = code.toLong(&ok);
     QString Medicamento = ui->medicamento_cb->currentText();
     QString dosis = ui->dosis_cb->currentText();
-    if(recetas.crearNuevaReceta(selectedcode,Medicamento,dosis)) {
-        QMessageBox::information(this, "info", QString("Se ha agregado su receta correctamente."));
-    }else {
-        QMessageBox::information(this, "info", QString("A ocurrido un error. Intentelo de nuevamente."));
+    if(code!="vacio")
+    {
+        if(recetas.crearNuevaReceta(selectedcode,Medicamento,dosis))
+        {
+            QMessageBox::information(this, "info", QString("Se ha agregado su receta correctamente."));
+        }
+        else
+        {
+            QMessageBox::information(this, "info", QString("A ocurrido un error. Intentelo de nuevamente."));
+        }
+    }
+    else
+    {
+        QMessageBox::information(this, "info", QString("Debes de seleccionar un paciente."));
     }
 }
 
@@ -1022,10 +1034,10 @@ void MainWindow::on_pushButton_43_pressed()
     QDate selectedDate = ui->fecha_receta->selectedDate();
     QString dateString = selectedDate.toString("yyyy-MM-dd");
 
-    if(codeReceta!=" "){
+    if(codeReceta!="vacio"){
         ui->textBrowser->clear();
         ui->textBrowser->insertPlainText(recetas.searchRecetaPaciente(codeReceta));
-    }else if (dateString!=""){
+    }else {
         ui->textBrowser->clear();
         ui->textBrowser->insertPlainText(recetas.searchRecetaFecha(dateString));
     }
@@ -1042,6 +1054,12 @@ void MainWindow::on_pushButton_76_pressed()
 {
 
 
+
+}
+
+
+void MainWindow::on_pushButton_43_clicked()
+{
 
 }
 
