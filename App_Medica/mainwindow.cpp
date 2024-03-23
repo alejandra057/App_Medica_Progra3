@@ -633,9 +633,9 @@ void MainWindow::on_pushButton_36_pressed()
     AdminExpedientes expedientes;
     QString name = ui->NamePaciente->text();
     QString identidad =ui->IdentidadPaciente->text();
-    QString sintomas = ui->Sintomaspresen->text();
-    QString observaciones = ui->Observacionepaci->text();
-    QString Recomendaciones = ui->Observacionepaci->text();
+    QString sintomas = ui->Sintomaspresen->toPlainText();
+    QString observaciones = ui->Observacionepaci->toPlainText();
+    QString Recomendaciones = ui->RecomendacionesParaPaciente->toPlainText();
     QString adicional = ui->AdicionalComents->toPlainText();
     QString diagnostico= ui->labelDiagnostico->toPlainText();
 

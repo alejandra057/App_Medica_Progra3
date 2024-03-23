@@ -231,19 +231,20 @@ public:
     QVBoxLayout *verticalLayout_11;
     QLabel *label_48;
     QGridLayout *gridLayout_8;
-    QLabel *label_105;
-    QLineEdit *Sintomaspresen;
-    QLabel *label_52;
-    QLabel *label_50;
-    QLabel *label_51;
-    QLineEdit *Observacionepaci;
+    QTextEdit *Observacionepaci;
+    QTextEdit *labelDiagnostico;
     QLineEdit *IdentidadPaciente;
     QLabel *label_54;
+    QLabel *label_52;
+    QLabel *label_50;
+    QLineEdit *NamePaciente;
+    QLabel *label_105;
+    QTextEdit *RecomendacionesParaPaciente;
+    QTextEdit *AdicionalComents;
+    QLabel *label_51;
     QLabel *label_106;
     QLabel *label_107;
-    QLineEdit *NamePaciente;
-    QTextEdit *labelDiagnostico;
-    QTextEdit *AdicionalComents;
+    QTextEdit *Sintomaspresen;
     QPushButton *pushButton_36;
     QWidget *Recetas;
     QWidget *verticalLayoutWidget_28;
@@ -1456,7 +1457,7 @@ public:
 
         verticalLayoutWidget_9 = new QWidget(AgregardataExp);
         verticalLayoutWidget_9->setObjectName("verticalLayoutWidget_9");
-        verticalLayoutWidget_9->setGeometry(QRect(80, 40, 451, 471));
+        verticalLayoutWidget_9->setGeometry(QRect(80, 40, 451, 544));
         verticalLayout_11 = new QVBoxLayout(verticalLayoutWidget_9);
         verticalLayout_11->setObjectName("verticalLayout_11");
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
@@ -1469,18 +1470,28 @@ public:
 
         gridLayout_8 = new QGridLayout();
         gridLayout_8->setObjectName("gridLayout_8");
-        label_105 = new QLabel(verticalLayoutWidget_9);
-        label_105->setObjectName("label_105");
-        label_105->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+        Observacionepaci = new QTextEdit(verticalLayoutWidget_9);
+        Observacionepaci->setObjectName("Observacionepaci");
+
+        gridLayout_8->addWidget(Observacionepaci, 3, 1, 1, 1);
+
+        labelDiagnostico = new QTextEdit(verticalLayoutWidget_9);
+        labelDiagnostico->setObjectName("labelDiagnostico");
+
+        gridLayout_8->addWidget(labelDiagnostico, 6, 1, 1, 1);
+
+        IdentidadPaciente = new QLineEdit(verticalLayoutWidget_9);
+        IdentidadPaciente->setObjectName("IdentidadPaciente");
+        IdentidadPaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(IdentidadPaciente, 1, 1, 1, 1);
+
+        label_54 = new QLabel(verticalLayoutWidget_9);
+        label_54->setObjectName("label_54");
+        label_54->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
-        gridLayout_8->addWidget(label_105, 0, 0, 1, 1);
-
-        Sintomaspresen = new QLineEdit(verticalLayoutWidget_9);
-        Sintomaspresen->setObjectName("Sintomaspresen");
-        Sintomaspresen->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(Sintomaspresen, 2, 1, 1, 1);
+        gridLayout_8->addWidget(label_54, 5, 0, 1, 1);
 
         label_52 = new QLabel(verticalLayoutWidget_9);
         label_52->setObjectName("label_52");
@@ -1496,31 +1507,35 @@ public:
 
         gridLayout_8->addWidget(label_50, 2, 0, 1, 1);
 
+        NamePaciente = new QLineEdit(verticalLayoutWidget_9);
+        NamePaciente->setObjectName("NamePaciente");
+        NamePaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(NamePaciente, 0, 1, 1, 1);
+
+        label_105 = new QLabel(verticalLayoutWidget_9);
+        label_105->setObjectName("label_105");
+        label_105->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        gridLayout_8->addWidget(label_105, 0, 0, 1, 1);
+
+        RecomendacionesParaPaciente = new QTextEdit(verticalLayoutWidget_9);
+        RecomendacionesParaPaciente->setObjectName("RecomendacionesParaPaciente");
+
+        gridLayout_8->addWidget(RecomendacionesParaPaciente, 4, 1, 1, 1);
+
+        AdicionalComents = new QTextEdit(verticalLayoutWidget_9);
+        AdicionalComents->setObjectName("AdicionalComents");
+
+        gridLayout_8->addWidget(AdicionalComents, 5, 1, 1, 1);
+
         label_51 = new QLabel(verticalLayoutWidget_9);
         label_51->setObjectName("label_51");
         label_51->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
         gridLayout_8->addWidget(label_51, 3, 0, 1, 1);
-
-        Observacionepaci = new QLineEdit(verticalLayoutWidget_9);
-        Observacionepaci->setObjectName("Observacionepaci");
-        Observacionepaci->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(Observacionepaci, 3, 1, 1, 1);
-
-        IdentidadPaciente = new QLineEdit(verticalLayoutWidget_9);
-        IdentidadPaciente->setObjectName("IdentidadPaciente");
-        IdentidadPaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(IdentidadPaciente, 1, 1, 1, 1);
-
-        label_54 = new QLabel(verticalLayoutWidget_9);
-        label_54->setObjectName("label_54");
-        label_54->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        gridLayout_8->addWidget(label_54, 5, 0, 1, 1);
 
         label_106 = new QLabel(verticalLayoutWidget_9);
         label_106->setObjectName("label_106");
@@ -1536,21 +1551,10 @@ public:
 
         gridLayout_8->addWidget(label_107, 6, 0, 1, 1);
 
-        NamePaciente = new QLineEdit(verticalLayoutWidget_9);
-        NamePaciente->setObjectName("NamePaciente");
-        NamePaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        Sintomaspresen = new QTextEdit(verticalLayoutWidget_9);
+        Sintomaspresen->setObjectName("Sintomaspresen");
 
-        gridLayout_8->addWidget(NamePaciente, 0, 1, 1, 1);
-
-        labelDiagnostico = new QTextEdit(verticalLayoutWidget_9);
-        labelDiagnostico->setObjectName("labelDiagnostico");
-
-        gridLayout_8->addWidget(labelDiagnostico, 6, 1, 1, 1);
-
-        AdicionalComents = new QTextEdit(verticalLayoutWidget_9);
-        AdicionalComents->setObjectName("AdicionalComents");
-
-        gridLayout_8->addWidget(AdicionalComents, 5, 1, 1, 1);
+        gridLayout_8->addWidget(Sintomaspresen, 2, 1, 1, 1);
 
 
         verticalLayout_11->addLayout(gridLayout_8);
@@ -2783,7 +2787,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(12);
+        stackedWidget->setCurrentIndex(18);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2898,11 +2902,11 @@ public:
         label_49->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
         label_53->setText(QCoreApplication::translate("MainWindow", "Proxima cita recomendada:", nullptr));
         label_48->setText(QCoreApplication::translate("MainWindow", "Agregar Datos al Expediente", nullptr));
-        label_105->setText(QCoreApplication::translate("MainWindow", "Nombre del Paciente:", nullptr));
+        label_54->setText(QCoreApplication::translate("MainWindow", "Comentarios adicionales:", nullptr));
         label_52->setText(QCoreApplication::translate("MainWindow", "Recomendaciones:", nullptr));
         label_50->setText(QCoreApplication::translate("MainWindow", "Sintomas presentados:", nullptr));
+        label_105->setText(QCoreApplication::translate("MainWindow", "Nombre del Paciente:", nullptr));
         label_51->setText(QCoreApplication::translate("MainWindow", "Observaciones:", nullptr));
-        label_54->setText(QCoreApplication::translate("MainWindow", "Comentarios adicionales:", nullptr));
         label_106->setText(QCoreApplication::translate("MainWindow", "Identidad del Paciente:", nullptr));
         label_107->setText(QCoreApplication::translate("MainWindow", "Diagnositico:", nullptr));
         pushButton_36->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
