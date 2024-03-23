@@ -540,12 +540,14 @@ void MainWindow::on_pushButton_71_pressed()
 void MainWindow::on_pushButton_75_pressed()
 {
     ui->stackedWidget->setCurrentIndex(27);
+    ui->txtreporteexpedientes->clear();
 }
 
 
 void MainWindow::on_pushButton_77_pressed()
 {
     ui->stackedWidget->setCurrentIndex(27);
+    ui->txtreportcitas->clear();
 }
 
 
@@ -706,7 +708,7 @@ void MainWindow::on_pushButton_24_pressed()
     ui->lbcodesala->setText(codetext);
     QString status="Disponible";
     ui->lb_status->setText(status);
-    QString descripcion = ui->DescripcionSala->text();
+    QString descripcion = ui->DescripcionSala->toPlainText();
     QDate fechainicio = ui->FechaStart->selectedDate();
     QString strfechainicio= fechainicio.toString("dd/MM/yyyy");
     QDate fecha_end = ui->FechaEnd->selectedDate();
@@ -1061,5 +1063,31 @@ void MainWindow::on_pushButton_76_pressed()
 void MainWindow::on_pushButton_43_clicked()
 {
 
+}
+
+
+void MainWindow::on_pushButton_81_clicked()
+{
+    AdminExpedientes expedientes;
+    ui->txtreppacientes->clear();
+    QString identidad = ui->identidadrepo->text();
+    QString expedientexpaciente = expedientes.getExpedientesPaciente(identidad);
+    ui->txtreppacientes->setText(expedientexpaciente);
+
+
+}
+
+
+void MainWindow::on_pushButton_82_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(27);
+    ui->identidadrepo->clear();
+    ui->txtreppacientes->clear();
+}
+
+
+void MainWindow::on_pushButton_29_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(30);
 }
 

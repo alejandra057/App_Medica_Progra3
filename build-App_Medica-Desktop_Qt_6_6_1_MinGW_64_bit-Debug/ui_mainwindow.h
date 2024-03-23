@@ -115,26 +115,39 @@ public:
     QPushButton *pushButton_23;
     QWidget *CrearNuevaSala;
     QLabel *label_19;
-    QLabel *label_20;
-    QLabel *label_21;
-    QLabel *label_22;
-    QLabel *label_23;
-    QLabel *label_24;
-    QCalendarWidget *FechaStart;
-    QCalendarWidget *FechaEnd;
-    QPushButton *pushButton_24;
     QPushButton *pushButton_25;
-    QLineEdit *DescripcionSala;
+    QWidget *horizontalLayoutWidget_4;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *label_20;
     QLabel *lbcodesala;
-    QLabel *label_113;
-    QTimeEdit *horafinal_crearSala;
-    QLabel *label_114;
-    QTimeEdit *horainicio_crearSala;
+    QWidget *horizontalLayoutWidget_5;
+    QHBoxLayout *horizontalLayout_11;
+    QLabel *label_22;
     QLabel *lb_status;
+    QWidget *verticalLayoutWidget_37;
+    QVBoxLayout *verticalLayout_38;
+    QLabel *label_21;
+    QTextEdit *DescripcionSala;
+    QPushButton *pushButton_24;
+    QWidget *verticalLayoutWidget_38;
+    QVBoxLayout *verticalLayout_39;
+    QLabel *label_23;
+    QCalendarWidget *FechaStart;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label_113;
+    QTimeEdit *horainicio_crearSala;
+    QWidget *verticalLayoutWidget_39;
+    QVBoxLayout *verticalLayout_40;
+    QLabel *label_24;
+    QCalendarWidget *FechaEnd;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_114;
+    QTimeEdit *horafinal_crearSala;
     QWidget *ModificarSala;
     QPushButton *pushButton_27;
     QPushButton *buscar_sala;
-    QWidget *formLayoutWidget;
+    QWidget *verticalLayoutWidget_32;
+    QVBoxLayout *verticalLayout;
     QFormLayout *formLayout_7;
     QLabel *label_26;
     QLineEdit *CodeModificar;
@@ -142,11 +155,9 @@ public:
     QLineEdit *DescripcioModificar;
     QLabel *label_28;
     QLineEdit *status_modi;
-    QPushButton *pushButton_26;
-    QWidget *verticalLayoutWidget_32;
-    QVBoxLayout *verticalLayout;
     QLabel *label_117;
     QTextEdit *texto_sala;
+    QPushButton *pushButton_26;
     QWidget *verticalLayoutWidget_33;
     QVBoxLayout *verticalLayout_34;
     QLabel *label_29;
@@ -184,20 +195,6 @@ public:
     QWidget *NuevoExpediente;
     QLabel *label_35;
     QPushButton *pushButton_35;
-    QWidget *formLayoutWidget_8;
-    QFormLayout *formLayout_10;
-    QLabel *label_40;
-    QLabel *label_42;
-    QLabel *label_44;
-    QLabel *label_45;
-    QLabel *label_46;
-    QLabel *label_14;
-    QLineEdit *Telefonocrear;
-    QLineEdit *EmailCrear;
-    QComboBox *TipodeSangreCrear;
-    QLineEdit *AlergiasCrear;
-    QLineEdit *EnfermedadesCrear;
-    QLineEdit *EncabezadoCrear;
     QWidget *formLayoutWidget_9;
     QFormLayout *formLayout_11;
     QLabel *label_41;
@@ -206,19 +203,30 @@ public:
     QLineEdit *TelefonoadiocionalCrear;
     QLabel *label_102;
     QLineEdit *EmailadionalCrear;
-    QPushButton *pushButton_34;
     QWidget *verticalLayoutWidget_31;
     QVBoxLayout *verticalLayout_33;
     QLabel *label_39;
     QCalendarWidget *calendarFechaNacimiento;
-    QWidget *gridLayoutWidget_8;
-    QGridLayout *gridLayout_13;
+    QWidget *verticalLayoutWidget_35;
+    QVBoxLayout *verticalLayout_36;
+    QFormLayout *formLayout_10;
+    QLabel *label_38;
+    QLabel *CodigoNextExpedienteLabel;
     QLabel *label_36;
     QLineEdit *NamePacienteCrear;
-    QLineEdit *IdentidadCrear;
-    QLabel *label_38;
     QLabel *label_37;
-    QLabel *CodigoNextExpedienteLabel;
+    QLineEdit *IdentidadCrear;
+    QLabel *label_40;
+    QLineEdit *Telefonocrear;
+    QLabel *label_42;
+    QLineEdit *EmailCrear;
+    QLabel *label_44;
+    QComboBox *TipodeSangreCrear;
+    QLabel *label_45;
+    QLineEdit *AlergiasCrear;
+    QLabel *label_46;
+    QLineEdit *EnfermedadesCrear;
+    QPushButton *pushButton_34;
     QWidget *AgregardataExp;
     QPushButton *pushButton_37;
     QWidget *verticalLayoutWidget_8;
@@ -231,20 +239,20 @@ public:
     QVBoxLayout *verticalLayout_11;
     QLabel *label_48;
     QGridLayout *gridLayout_8;
-    QLineEdit *NamePaciente;
-    QLabel *label_105;
-    QLineEdit *Sintomaspresen;
-    QLabel *label_52;
-    QLabel *label_50;
-    QLabel *label_51;
-    QLineEdit *Observacionepaci;
+    QTextEdit *Observacionepaci;
+    QTextEdit *labelDiagnostico;
     QLineEdit *IdentidadPaciente;
     QLabel *label_54;
-    QLineEdit *AdicionalComents;
-    QLineEdit *RecomendacionesPaci;
+    QLabel *label_52;
+    QLabel *label_50;
+    QLineEdit *NamePaciente;
+    QLabel *label_105;
+    QTextEdit *RecomendacionesParaPaciente;
+    QTextEdit *AdicionalComents;
+    QLabel *label_51;
     QLabel *label_106;
     QLabel *label_107;
-    QLineEdit *labelDiagnostico;
+    QTextEdit *Sintomaspresen;
     QPushButton *pushButton_36;
     QWidget *Recetas;
     QWidget *verticalLayoutWidget_28;
@@ -260,13 +268,12 @@ public:
     QVBoxLayout *verticalLayout_27;
     QLabel *label_56;
     QGridLayout *gridLayout_10;
-    QLabel *label_60;
-    QLabel *label_59;
-    QComboBox *paciente_cb;
-    QLabel *label_58;
     QComboBox *medicamento_cb;
+    QLabel *label_59;
+    QLabel *label_60;
+    QLabel *label_58;
+    QComboBox *paciente_cb;
     QComboBox *dosis_cb;
-    QLabel *label_57;
     QPushButton *new_recipe;
     QWidget *BuscarReceta;
     QPushButton *pushButton_44;
@@ -428,6 +435,7 @@ public:
     QVBoxLayout *verticalLayout_4;
     QLabel *label_97;
     QPushButton *pushButton_72;
+    QPushButton *pushButton_29;
     QPushButton *pushButton_73;
     QPushButton *pushButton_78;
     QWidget *ReportePacientes;
@@ -454,6 +462,16 @@ public:
     QLabel *label_101;
     QTextBrowser *txtreportcitas;
     QPushButton *pushButton_76;
+    QWidget *page;
+    QPushButton *pushButton_82;
+    QWidget *verticalLayoutWidget_36;
+    QVBoxLayout *verticalLayout_37;
+    QLabel *label_122;
+    QHBoxLayout *horizontalLayout_7;
+    QLabel *label_57;
+    QLineEdit *identidadrepo;
+    QTextBrowser *txtreppacientes;
+    QPushButton *pushButton_81;
     QWidget *AgregarRoll;
     QWidget *verticalLayoutWidget_7;
     QVBoxLayout *verticalLayout_9;
@@ -489,7 +507,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(-30, 0, 891, 581));
+        stackedWidget->setGeometry(QRect(-30, 10, 891, 581));
         stackedWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(203, 228, 255);\n"
 "background-color: rgb(221, 213, 255);\n"
 "background-color: rgb(221, 213, 255);\n"
@@ -558,7 +576,7 @@ public:
         pushButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         verticalLayoutWidget_29 = new QWidget(Registro);
         verticalLayoutWidget_29->setObjectName("verticalLayoutWidget_29");
-        verticalLayoutWidget_29->setGeometry(QRect(230, 90, 391, 301));
+        verticalLayoutWidget_29->setGeometry(QRect(290, 90, 331, 301));
         verticalLayout_31 = new QVBoxLayout(verticalLayoutWidget_29);
         verticalLayout_31->setObjectName("verticalLayout_31");
         verticalLayout_31->setContentsMargins(0, 0, 0, 0);
@@ -694,7 +712,7 @@ public:
         AdminitracionDeSistema->setObjectName("AdminitracionDeSistema");
         verticalLayoutWidget_5 = new QWidget(AdminitracionDeSistema);
         verticalLayoutWidget_5->setObjectName("verticalLayoutWidget_5");
-        verticalLayoutWidget_5->setGeometry(QRect(250, 90, 363, 301));
+        verticalLayoutWidget_5->setGeometry(QRect(292, 90, 321, 301));
         verticalLayout_6 = new QVBoxLayout(verticalLayoutWidget_5);
         verticalLayout_6->setObjectName("verticalLayout_6");
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -739,7 +757,7 @@ public:
         pushButton_17->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         verticalLayoutWidget_14 = new QWidget(CrearUsuario);
         verticalLayoutWidget_14->setObjectName("verticalLayoutWidget_14");
-        verticalLayoutWidget_14->setGeometry(QRect(290, 90, 351, 261));
+        verticalLayoutWidget_14->setGeometry(QRect(330, 90, 311, 261));
         verticalLayout_16 = new QVBoxLayout(verticalLayoutWidget_14);
         verticalLayout_16->setObjectName("verticalLayout_16");
         verticalLayout_16->setContentsMargins(0, 0, 0, 0);
@@ -803,7 +821,7 @@ public:
         pushButton_18->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         verticalLayoutWidget_15 = new QWidget(DarDeBajaUser);
         verticalLayoutWidget_15->setObjectName("verticalLayoutWidget_15");
-        verticalLayoutWidget_15->setGeometry(QRect(240, 140, 431, 211));
+        verticalLayoutWidget_15->setGeometry(QRect(320, 140, 351, 211));
         verticalLayout_17 = new QVBoxLayout(verticalLayoutWidget_15);
         verticalLayout_17->setObjectName("verticalLayout_17");
         verticalLayout_17->setContentsMargins(0, 0, 0, 0);
@@ -899,63 +917,133 @@ public:
         CrearNuevaSala->setObjectName("CrearNuevaSala");
         label_19 = new QLabel(CrearNuevaSala);
         label_19->setObjectName("label_19");
-        label_19->setGeometry(QRect(280, 10, 241, 31));
+        label_19->setGeometry(QRect(60, 30, 241, 31));
         label_19->setFont(font);
-        label_20 = new QLabel(CrearNuevaSala);
-        label_20->setObjectName("label_20");
-        label_20->setGeometry(QRect(60, 60, 49, 16));
-        label_21 = new QLabel(CrearNuevaSala);
-        label_21->setObjectName("label_21");
-        label_21->setGeometry(QRect(290, 60, 91, 21));
-        label_22 = new QLabel(CrearNuevaSala);
-        label_22->setObjectName("label_22");
-        label_22->setGeometry(QRect(550, 60, 71, 16));
-        label_23 = new QLabel(CrearNuevaSala);
-        label_23->setObjectName("label_23");
-        label_23->setGeometry(QRect(40, 130, 121, 16));
-        label_24 = new QLabel(CrearNuevaSala);
-        label_24->setObjectName("label_24");
-        label_24->setGeometry(QRect(480, 130, 151, 16));
-        FechaStart = new QCalendarWidget(CrearNuevaSala);
-        FechaStart->setObjectName("FechaStart");
-        FechaStart->setGeometry(QRect(40, 160, 291, 211));
-        FechaStart->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
-        FechaEnd = new QCalendarWidget(CrearNuevaSala);
-        FechaEnd->setObjectName("FechaEnd");
-        FechaEnd->setGeometry(QRect(480, 160, 301, 201));
-        FechaEnd->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
-        pushButton_24 = new QPushButton(CrearNuevaSala);
-        pushButton_24->setObjectName("pushButton_24");
-        pushButton_24->setGeometry(QRect(400, 460, 80, 24));
-        pushButton_24->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         pushButton_25 = new QPushButton(CrearNuevaSala);
         pushButton_25->setObjectName("pushButton_25");
-        pushButton_25->setGeometry(QRect(40, 510, 80, 24));
+        pushButton_25->setGeometry(QRect(40, 540, 80, 24));
         pushButton_25->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        DescripcionSala = new QLineEdit(CrearNuevaSala);
-        DescripcionSala->setObjectName("DescripcionSala");
-        DescripcionSala->setGeometry(QRect(380, 60, 113, 21));
-        DescripcionSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lbcodesala = new QLabel(CrearNuevaSala);
+        horizontalLayoutWidget_4 = new QWidget(CrearNuevaSala);
+        horizontalLayoutWidget_4->setObjectName("horizontalLayoutWidget_4");
+        horizontalLayoutWidget_4->setGeometry(QRect(50, 90, 160, 41));
+        horizontalLayout_10 = new QHBoxLayout(horizontalLayoutWidget_4);
+        horizontalLayout_10->setObjectName("horizontalLayout_10");
+        horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
+        label_20 = new QLabel(horizontalLayoutWidget_4);
+        label_20->setObjectName("label_20");
+
+        horizontalLayout_10->addWidget(label_20);
+
+        lbcodesala = new QLabel(horizontalLayoutWidget_4);
         lbcodesala->setObjectName("lbcodesala");
-        lbcodesala->setGeometry(QRect(110, 60, 63, 20));
-        label_113 = new QLabel(CrearNuevaSala);
-        label_113->setObjectName("label_113");
-        label_113->setGeometry(QRect(50, 390, 161, 31));
-        horafinal_crearSala = new QTimeEdit(CrearNuevaSala);
-        horafinal_crearSala->setObjectName("horafinal_crearSala");
-        horafinal_crearSala->setGeometry(QRect(700, 380, 118, 25));
-        horafinal_crearSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        label_114 = new QLabel(CrearNuevaSala);
-        label_114->setObjectName("label_114");
-        label_114->setGeometry(QRect(480, 380, 201, 21));
-        horainicio_crearSala = new QTimeEdit(CrearNuevaSala);
-        horainicio_crearSala->setObjectName("horainicio_crearSala");
-        horainicio_crearSala->setGeometry(QRect(210, 390, 118, 25));
-        horainicio_crearSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        lb_status = new QLabel(CrearNuevaSala);
+
+        horizontalLayout_10->addWidget(lbcodesala);
+
+        horizontalLayoutWidget_5 = new QWidget(CrearNuevaSala);
+        horizontalLayoutWidget_5->setObjectName("horizontalLayoutWidget_5");
+        horizontalLayoutWidget_5->setGeometry(QRect(50, 150, 160, 41));
+        horizontalLayout_11 = new QHBoxLayout(horizontalLayoutWidget_5);
+        horizontalLayout_11->setObjectName("horizontalLayout_11");
+        horizontalLayout_11->setContentsMargins(0, 0, 0, 0);
+        label_22 = new QLabel(horizontalLayoutWidget_5);
+        label_22->setObjectName("label_22");
+
+        horizontalLayout_11->addWidget(label_22);
+
+        lb_status = new QLabel(horizontalLayoutWidget_5);
         lb_status->setObjectName("lb_status");
-        lb_status->setGeometry(QRect(590, 60, 101, 16));
+
+        horizontalLayout_11->addWidget(lb_status);
+
+        verticalLayoutWidget_37 = new QWidget(CrearNuevaSala);
+        verticalLayoutWidget_37->setObjectName("verticalLayoutWidget_37");
+        verticalLayoutWidget_37->setGeometry(QRect(50, 200, 391, 321));
+        verticalLayout_38 = new QVBoxLayout(verticalLayoutWidget_37);
+        verticalLayout_38->setObjectName("verticalLayout_38");
+        verticalLayout_38->setContentsMargins(0, 0, 0, 0);
+        label_21 = new QLabel(verticalLayoutWidget_37);
+        label_21->setObjectName("label_21");
+
+        verticalLayout_38->addWidget(label_21);
+
+        DescripcionSala = new QTextEdit(verticalLayoutWidget_37);
+        DescripcionSala->setObjectName("DescripcionSala");
+        DescripcionSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout_38->addWidget(DescripcionSala);
+
+        pushButton_24 = new QPushButton(verticalLayoutWidget_37);
+        pushButton_24->setObjectName("pushButton_24");
+        pushButton_24->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout_38->addWidget(pushButton_24);
+
+        verticalLayoutWidget_38 = new QWidget(CrearNuevaSala);
+        verticalLayoutWidget_38->setObjectName("verticalLayoutWidget_38");
+        verticalLayoutWidget_38->setGeometry(QRect(530, 20, 346, 261));
+        verticalLayout_39 = new QVBoxLayout(verticalLayoutWidget_38);
+        verticalLayout_39->setObjectName("verticalLayout_39");
+        verticalLayout_39->setContentsMargins(0, 0, 0, 0);
+        label_23 = new QLabel(verticalLayoutWidget_38);
+        label_23->setObjectName("label_23");
+
+        verticalLayout_39->addWidget(label_23);
+
+        FechaStart = new QCalendarWidget(verticalLayoutWidget_38);
+        FechaStart->setObjectName("FechaStart");
+        FechaStart->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
+
+        verticalLayout_39->addWidget(FechaStart);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName("horizontalLayout_8");
+        label_113 = new QLabel(verticalLayoutWidget_38);
+        label_113->setObjectName("label_113");
+
+        horizontalLayout_8->addWidget(label_113);
+
+        horainicio_crearSala = new QTimeEdit(verticalLayoutWidget_38);
+        horainicio_crearSala->setObjectName("horainicio_crearSala");
+        horainicio_crearSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_8->addWidget(horainicio_crearSala);
+
+
+        verticalLayout_39->addLayout(horizontalLayout_8);
+
+        verticalLayoutWidget_39 = new QWidget(CrearNuevaSala);
+        verticalLayoutWidget_39->setObjectName("verticalLayoutWidget_39");
+        verticalLayoutWidget_39->setGeometry(QRect(530, 300, 346, 261));
+        verticalLayout_40 = new QVBoxLayout(verticalLayoutWidget_39);
+        verticalLayout_40->setObjectName("verticalLayout_40");
+        verticalLayout_40->setContentsMargins(0, 0, 0, 0);
+        label_24 = new QLabel(verticalLayoutWidget_39);
+        label_24->setObjectName("label_24");
+
+        verticalLayout_40->addWidget(label_24);
+
+        FechaEnd = new QCalendarWidget(verticalLayoutWidget_39);
+        FechaEnd->setObjectName("FechaEnd");
+        FechaEnd->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
+
+        verticalLayout_40->addWidget(FechaEnd);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName("horizontalLayout_9");
+        label_114 = new QLabel(verticalLayoutWidget_39);
+        label_114->setObjectName("label_114");
+
+        horizontalLayout_9->addWidget(label_114);
+
+        horafinal_crearSala = new QTimeEdit(verticalLayoutWidget_39);
+        horafinal_crearSala->setObjectName("horafinal_crearSala");
+        horafinal_crearSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_9->addWidget(horafinal_crearSala);
+
+
+        verticalLayout_40->addLayout(horizontalLayout_9);
+
         stackedWidget->addWidget(CrearNuevaSala);
         ModificarSala = new QWidget();
         ModificarSala->setObjectName("ModificarSala");
@@ -965,59 +1053,52 @@ public:
         pushButton_27->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         buscar_sala = new QPushButton(ModificarSala);
         buscar_sala->setObjectName("buscar_sala");
-        buscar_sala->setGeometry(QRect(350, 100, 80, 24));
+        buscar_sala->setGeometry(QRect(350, 80, 80, 24));
         buscar_sala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        formLayoutWidget = new QWidget(ModificarSala);
-        formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(40, 100, 301, 179));
-        formLayout_7 = new QFormLayout(formLayoutWidget);
+        verticalLayoutWidget_32 = new QWidget(ModificarSala);
+        verticalLayoutWidget_32->setObjectName("verticalLayoutWidget_32");
+        verticalLayoutWidget_32->setGeometry(QRect(40, 83, 301, 411));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget_32);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        formLayout_7 = new QFormLayout();
         formLayout_7->setObjectName("formLayout_7");
-        formLayout_7->setContentsMargins(0, 0, 0, 0);
-        label_26 = new QLabel(formLayoutWidget);
+        label_26 = new QLabel(verticalLayoutWidget_32);
         label_26->setObjectName("label_26");
 
         formLayout_7->setWidget(0, QFormLayout::LabelRole, label_26);
 
-        CodeModificar = new QLineEdit(formLayoutWidget);
+        CodeModificar = new QLineEdit(verticalLayoutWidget_32);
         CodeModificar->setObjectName("CodeModificar");
         CodeModificar->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         formLayout_7->setWidget(0, QFormLayout::FieldRole, CodeModificar);
 
-        label_27 = new QLabel(formLayoutWidget);
+        label_27 = new QLabel(verticalLayoutWidget_32);
         label_27->setObjectName("label_27");
 
         formLayout_7->setWidget(1, QFormLayout::LabelRole, label_27);
 
-        DescripcioModificar = new QLineEdit(formLayoutWidget);
+        DescripcioModificar = new QLineEdit(verticalLayoutWidget_32);
         DescripcioModificar->setObjectName("DescripcioModificar");
         DescripcioModificar->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         formLayout_7->setWidget(1, QFormLayout::FieldRole, DescripcioModificar);
 
-        label_28 = new QLabel(formLayoutWidget);
+        label_28 = new QLabel(verticalLayoutWidget_32);
         label_28->setObjectName("label_28");
 
         formLayout_7->setWidget(2, QFormLayout::LabelRole, label_28);
 
-        status_modi = new QLineEdit(formLayoutWidget);
+        status_modi = new QLineEdit(verticalLayoutWidget_32);
         status_modi->setObjectName("status_modi");
         status_modi->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         formLayout_7->setWidget(2, QFormLayout::FieldRole, status_modi);
 
-        pushButton_26 = new QPushButton(formLayoutWidget);
-        pushButton_26->setObjectName("pushButton_26");
-        pushButton_26->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        formLayout_7->setWidget(3, QFormLayout::SpanningRole, pushButton_26);
+        verticalLayout->addLayout(formLayout_7);
 
-        verticalLayoutWidget_32 = new QWidget(ModificarSala);
-        verticalLayoutWidget_32->setObjectName("verticalLayoutWidget_32");
-        verticalLayoutWidget_32->setGeometry(QRect(40, 260, 301, 261));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget_32);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         label_117 = new QLabel(verticalLayoutWidget_32);
         label_117->setObjectName("label_117");
 
@@ -1028,6 +1109,12 @@ public:
         texto_sala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(texto_sala);
+
+        pushButton_26 = new QPushButton(verticalLayoutWidget_32);
+        pushButton_26->setObjectName("pushButton_26");
+        pushButton_26->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout->addWidget(pushButton_26);
 
         verticalLayoutWidget_33 = new QWidget(ModificarSala);
         verticalLayoutWidget_33->setObjectName("verticalLayoutWidget_33");
@@ -1200,108 +1287,15 @@ public:
         NuevoExpediente->setObjectName("NuevoExpediente");
         label_35 = new QLabel(NuevoExpediente);
         label_35->setObjectName("label_35");
-        label_35->setGeometry(QRect(290, 10, 281, 41));
+        label_35->setGeometry(QRect(50, 30, 281, 41));
         label_35->setFont(font2);
         pushButton_35 = new QPushButton(NuevoExpediente);
         pushButton_35->setObjectName("pushButton_35");
-        pushButton_35->setGeometry(QRect(759, 503, 121, 41));
+        pushButton_35->setGeometry(QRect(50, 520, 121, 41));
         pushButton_35->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        formLayoutWidget_8 = new QWidget(NuevoExpediente);
-        formLayoutWidget_8->setObjectName("formLayoutWidget_8");
-        formLayoutWidget_8->setGeometry(QRect(490, 80, 391, 221));
-        formLayout_10 = new QFormLayout(formLayoutWidget_8);
-        formLayout_10->setObjectName("formLayout_10");
-        formLayout_10->setContentsMargins(0, 0, 0, 0);
-        label_40 = new QLabel(formLayoutWidget_8);
-        label_40->setObjectName("label_40");
-        label_40->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(1, QFormLayout::LabelRole, label_40);
-
-        label_42 = new QLabel(formLayoutWidget_8);
-        label_42->setObjectName("label_42");
-        label_42->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(2, QFormLayout::LabelRole, label_42);
-
-        label_44 = new QLabel(formLayoutWidget_8);
-        label_44->setObjectName("label_44");
-        label_44->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(3, QFormLayout::LabelRole, label_44);
-
-        label_45 = new QLabel(formLayoutWidget_8);
-        label_45->setObjectName("label_45");
-        label_45->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(4, QFormLayout::LabelRole, label_45);
-
-        label_46 = new QLabel(formLayoutWidget_8);
-        label_46->setObjectName("label_46");
-        label_46->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(5, QFormLayout::LabelRole, label_46);
-
-        label_14 = new QLabel(formLayoutWidget_8);
-        label_14->setObjectName("label_14");
-        label_14->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        formLayout_10->setWidget(6, QFormLayout::LabelRole, label_14);
-
-        Telefonocrear = new QLineEdit(formLayoutWidget_8);
-        Telefonocrear->setObjectName("Telefonocrear");
-        Telefonocrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(1, QFormLayout::FieldRole, Telefonocrear);
-
-        EmailCrear = new QLineEdit(formLayoutWidget_8);
-        EmailCrear->setObjectName("EmailCrear");
-        EmailCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(2, QFormLayout::FieldRole, EmailCrear);
-
-        TipodeSangreCrear = new QComboBox(formLayoutWidget_8);
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->addItem(QString());
-        TipodeSangreCrear->setObjectName("TipodeSangreCrear");
-        TipodeSangreCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(3, QFormLayout::FieldRole, TipodeSangreCrear);
-
-        AlergiasCrear = new QLineEdit(formLayoutWidget_8);
-        AlergiasCrear->setObjectName("AlergiasCrear");
-        AlergiasCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(4, QFormLayout::FieldRole, AlergiasCrear);
-
-        EnfermedadesCrear = new QLineEdit(formLayoutWidget_8);
-        EnfermedadesCrear->setObjectName("EnfermedadesCrear");
-        EnfermedadesCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(5, QFormLayout::FieldRole, EnfermedadesCrear);
-
-        EncabezadoCrear = new QLineEdit(formLayoutWidget_8);
-        EncabezadoCrear->setObjectName("EncabezadoCrear");
-        EncabezadoCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_10->setWidget(6, QFormLayout::FieldRole, EncabezadoCrear);
-
         formLayoutWidget_9 = new QWidget(NuevoExpediente);
         formLayoutWidget_9->setObjectName("formLayoutWidget_9");
-        formLayoutWidget_9->setGeometry(QRect(60, 410, 441, 136));
+        formLayoutWidget_9->setGeometry(QRect(460, 340, 411, 167));
         formLayout_11 = new QFormLayout(formLayoutWidget_9);
         formLayout_11->setObjectName("formLayout_11");
         formLayout_11->setContentsMargins(0, 0, 0, 0);
@@ -1344,15 +1338,9 @@ public:
 
         formLayout_11->setWidget(2, QFormLayout::FieldRole, EmailadionalCrear);
 
-        pushButton_34 = new QPushButton(formLayoutWidget_9);
-        pushButton_34->setObjectName("pushButton_34");
-        pushButton_34->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_11->setWidget(3, QFormLayout::FieldRole, pushButton_34);
-
         verticalLayoutWidget_31 = new QWidget(NuevoExpediente);
         verticalLayoutWidget_31->setObjectName("verticalLayoutWidget_31");
-        verticalLayoutWidget_31->setGeometry(QRect(60, 177, 361, 228));
+        verticalLayoutWidget_31->setGeometry(QRect(460, 90, 411, 231));
         verticalLayout_33 = new QVBoxLayout(verticalLayoutWidget_31);
         verticalLayout_33->setObjectName("verticalLayout_33");
         verticalLayout_33->setContentsMargins(0, 0, 0, 0);
@@ -1369,58 +1357,143 @@ public:
 
         verticalLayout_33->addWidget(calendarFechaNacimiento);
 
-        gridLayoutWidget_8 = new QWidget(NuevoExpediente);
-        gridLayoutWidget_8->setObjectName("gridLayoutWidget_8");
-        gridLayoutWidget_8->setGeometry(QRect(60, 66, 361, 101));
-        gridLayout_13 = new QGridLayout(gridLayoutWidget_8);
-        gridLayout_13->setObjectName("gridLayout_13");
-        gridLayout_13->setContentsMargins(0, 0, 0, 0);
-        label_36 = new QLabel(gridLayoutWidget_8);
-        label_36->setObjectName("label_36");
-        label_36->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        gridLayout_13->addWidget(label_36, 1, 0, 1, 1);
-
-        NamePacienteCrear = new QLineEdit(gridLayoutWidget_8);
-        NamePacienteCrear->setObjectName("NamePacienteCrear");
-        NamePacienteCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_13->addWidget(NamePacienteCrear, 1, 1, 1, 1);
-
-        IdentidadCrear = new QLineEdit(gridLayoutWidget_8);
-        IdentidadCrear->setObjectName("IdentidadCrear");
-        IdentidadCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_13->addWidget(IdentidadCrear, 2, 1, 1, 1);
-
-        label_38 = new QLabel(gridLayoutWidget_8);
+        verticalLayoutWidget_35 = new QWidget(NuevoExpediente);
+        verticalLayoutWidget_35->setObjectName("verticalLayoutWidget_35");
+        verticalLayoutWidget_35->setGeometry(QRect(50, 140, 381, 251));
+        verticalLayout_36 = new QVBoxLayout(verticalLayoutWidget_35);
+        verticalLayout_36->setObjectName("verticalLayout_36");
+        verticalLayout_36->setContentsMargins(0, 0, 0, 0);
+        formLayout_10 = new QFormLayout();
+        formLayout_10->setObjectName("formLayout_10");
+        label_38 = new QLabel(verticalLayoutWidget_35);
         label_38->setObjectName("label_38");
         label_38->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
-        gridLayout_13->addWidget(label_38, 0, 0, 1, 1);
+        formLayout_10->setWidget(1, QFormLayout::LabelRole, label_38);
 
-        label_37 = new QLabel(gridLayoutWidget_8);
-        label_37->setObjectName("label_37");
-        label_37->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        gridLayout_13->addWidget(label_37, 2, 0, 1, 1);
-
-        CodigoNextExpedienteLabel = new QLabel(gridLayoutWidget_8);
+        CodigoNextExpedienteLabel = new QLabel(verticalLayoutWidget_35);
         CodigoNextExpedienteLabel->setObjectName("CodigoNextExpedienteLabel");
         CodigoNextExpedienteLabel->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
-        gridLayout_13->addWidget(CodigoNextExpedienteLabel, 0, 1, 1, 1);
+        formLayout_10->setWidget(1, QFormLayout::FieldRole, CodigoNextExpedienteLabel);
+
+        label_36 = new QLabel(verticalLayoutWidget_35);
+        label_36->setObjectName("label_36");
+        label_36->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(2, QFormLayout::LabelRole, label_36);
+
+        NamePacienteCrear = new QLineEdit(verticalLayoutWidget_35);
+        NamePacienteCrear->setObjectName("NamePacienteCrear");
+        NamePacienteCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(2, QFormLayout::FieldRole, NamePacienteCrear);
+
+        label_37 = new QLabel(verticalLayoutWidget_35);
+        label_37->setObjectName("label_37");
+        label_37->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(3, QFormLayout::LabelRole, label_37);
+
+        IdentidadCrear = new QLineEdit(verticalLayoutWidget_35);
+        IdentidadCrear->setObjectName("IdentidadCrear");
+        IdentidadCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(3, QFormLayout::FieldRole, IdentidadCrear);
+
+        label_40 = new QLabel(verticalLayoutWidget_35);
+        label_40->setObjectName("label_40");
+        label_40->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(4, QFormLayout::LabelRole, label_40);
+
+        Telefonocrear = new QLineEdit(verticalLayoutWidget_35);
+        Telefonocrear->setObjectName("Telefonocrear");
+        Telefonocrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(4, QFormLayout::FieldRole, Telefonocrear);
+
+        label_42 = new QLabel(verticalLayoutWidget_35);
+        label_42->setObjectName("label_42");
+        label_42->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(5, QFormLayout::LabelRole, label_42);
+
+        EmailCrear = new QLineEdit(verticalLayoutWidget_35);
+        EmailCrear->setObjectName("EmailCrear");
+        EmailCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(5, QFormLayout::FieldRole, EmailCrear);
+
+        label_44 = new QLabel(verticalLayoutWidget_35);
+        label_44->setObjectName("label_44");
+        label_44->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(6, QFormLayout::LabelRole, label_44);
+
+        TipodeSangreCrear = new QComboBox(verticalLayoutWidget_35);
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->addItem(QString());
+        TipodeSangreCrear->setObjectName("TipodeSangreCrear");
+        TipodeSangreCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(6, QFormLayout::FieldRole, TipodeSangreCrear);
+
+        label_45 = new QLabel(verticalLayoutWidget_35);
+        label_45->setObjectName("label_45");
+        label_45->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(7, QFormLayout::LabelRole, label_45);
+
+        AlergiasCrear = new QLineEdit(verticalLayoutWidget_35);
+        AlergiasCrear->setObjectName("AlergiasCrear");
+        AlergiasCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(7, QFormLayout::FieldRole, AlergiasCrear);
+
+        label_46 = new QLabel(verticalLayoutWidget_35);
+        label_46->setObjectName("label_46");
+        label_46->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        formLayout_10->setWidget(8, QFormLayout::LabelRole, label_46);
+
+        EnfermedadesCrear = new QLineEdit(verticalLayoutWidget_35);
+        EnfermedadesCrear->setObjectName("EnfermedadesCrear");
+        EnfermedadesCrear->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        formLayout_10->setWidget(8, QFormLayout::FieldRole, EnfermedadesCrear);
+
+
+        verticalLayout_36->addLayout(formLayout_10);
+
+        pushButton_34 = new QPushButton(verticalLayoutWidget_35);
+        pushButton_34->setObjectName("pushButton_34");
+        pushButton_34->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout_36->addWidget(pushButton_34);
 
         stackedWidget->addWidget(NuevoExpediente);
         AgregardataExp = new QWidget();
         AgregardataExp->setObjectName("AgregardataExp");
         pushButton_37 = new QPushButton(AgregardataExp);
         pushButton_37->setObjectName("pushButton_37");
-        pushButton_37->setGeometry(QRect(40, 510, 111, 41));
+        pushButton_37->setGeometry(QRect(30, 540, 111, 41));
         pushButton_37->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         verticalLayoutWidget_8 = new QWidget(AgregardataExp);
         verticalLayoutWidget_8->setObjectName("verticalLayoutWidget_8");
@@ -1457,7 +1530,7 @@ public:
 
         verticalLayoutWidget_9 = new QWidget(AgregardataExp);
         verticalLayoutWidget_9->setObjectName("verticalLayoutWidget_9");
-        verticalLayoutWidget_9->setGeometry(QRect(80, 50, 451, 391));
+        verticalLayoutWidget_9->setGeometry(QRect(50, 20, 461, 610));
         verticalLayout_11 = new QVBoxLayout(verticalLayoutWidget_9);
         verticalLayout_11->setObjectName("verticalLayout_11");
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
@@ -1470,24 +1543,30 @@ public:
 
         gridLayout_8 = new QGridLayout();
         gridLayout_8->setObjectName("gridLayout_8");
-        NamePaciente = new QLineEdit(verticalLayoutWidget_9);
-        NamePaciente->setObjectName("NamePaciente");
-        NamePaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        Observacionepaci = new QTextEdit(verticalLayoutWidget_9);
+        Observacionepaci->setObjectName("Observacionepaci");
+        Observacionepaci->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        gridLayout_8->addWidget(NamePaciente, 0, 1, 1, 1);
+        gridLayout_8->addWidget(Observacionepaci, 3, 1, 1, 1);
 
-        label_105 = new QLabel(verticalLayoutWidget_9);
-        label_105->setObjectName("label_105");
-        label_105->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+        labelDiagnostico = new QTextEdit(verticalLayoutWidget_9);
+        labelDiagnostico->setObjectName("labelDiagnostico");
+        labelDiagnostico->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(labelDiagnostico, 6, 1, 1, 1);
+
+        IdentidadPaciente = new QLineEdit(verticalLayoutWidget_9);
+        IdentidadPaciente->setObjectName("IdentidadPaciente");
+        IdentidadPaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(IdentidadPaciente, 1, 1, 1, 1);
+
+        label_54 = new QLabel(verticalLayoutWidget_9);
+        label_54->setObjectName("label_54");
+        label_54->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
-        gridLayout_8->addWidget(label_105, 0, 0, 1, 1);
-
-        Sintomaspresen = new QLineEdit(verticalLayoutWidget_9);
-        Sintomaspresen->setObjectName("Sintomaspresen");
-        Sintomaspresen->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(Sintomaspresen, 2, 1, 1, 1);
+        gridLayout_8->addWidget(label_54, 5, 0, 1, 1);
 
         label_52 = new QLabel(verticalLayoutWidget_9);
         label_52->setObjectName("label_52");
@@ -1503,43 +1582,37 @@ public:
 
         gridLayout_8->addWidget(label_50, 2, 0, 1, 1);
 
+        NamePaciente = new QLineEdit(verticalLayoutWidget_9);
+        NamePaciente->setObjectName("NamePaciente");
+        NamePaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(NamePaciente, 0, 1, 1, 1);
+
+        label_105 = new QLabel(verticalLayoutWidget_9);
+        label_105->setObjectName("label_105");
+        label_105->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 700 11pt \"Segoe UI\";"));
+
+        gridLayout_8->addWidget(label_105, 0, 0, 1, 1);
+
+        RecomendacionesParaPaciente = new QTextEdit(verticalLayoutWidget_9);
+        RecomendacionesParaPaciente->setObjectName("RecomendacionesParaPaciente");
+        RecomendacionesParaPaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(RecomendacionesParaPaciente, 4, 1, 1, 1);
+
+        AdicionalComents = new QTextEdit(verticalLayoutWidget_9);
+        AdicionalComents->setObjectName("AdicionalComents");
+        AdicionalComents->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_8->addWidget(AdicionalComents, 5, 1, 1, 1);
+
         label_51 = new QLabel(verticalLayoutWidget_9);
         label_51->setObjectName("label_51");
         label_51->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 700 11pt \"Segoe UI\";"));
 
         gridLayout_8->addWidget(label_51, 3, 0, 1, 1);
-
-        Observacionepaci = new QLineEdit(verticalLayoutWidget_9);
-        Observacionepaci->setObjectName("Observacionepaci");
-        Observacionepaci->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(Observacionepaci, 3, 1, 1, 1);
-
-        IdentidadPaciente = new QLineEdit(verticalLayoutWidget_9);
-        IdentidadPaciente->setObjectName("IdentidadPaciente");
-        IdentidadPaciente->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(IdentidadPaciente, 1, 1, 1, 1);
-
-        label_54 = new QLabel(verticalLayoutWidget_9);
-        label_54->setObjectName("label_54");
-        label_54->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 700 11pt \"Segoe UI\";"));
-
-        gridLayout_8->addWidget(label_54, 5, 0, 1, 1);
-
-        AdicionalComents = new QLineEdit(verticalLayoutWidget_9);
-        AdicionalComents->setObjectName("AdicionalComents");
-        AdicionalComents->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(AdicionalComents, 5, 1, 1, 1);
-
-        RecomendacionesPaci = new QLineEdit(verticalLayoutWidget_9);
-        RecomendacionesPaci->setObjectName("RecomendacionesPaci");
-        RecomendacionesPaci->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_8->addWidget(RecomendacionesPaci, 4, 1, 1, 1);
 
         label_106 = new QLabel(verticalLayoutWidget_9);
         label_106->setObjectName("label_106");
@@ -1555,11 +1628,11 @@ public:
 
         gridLayout_8->addWidget(label_107, 6, 0, 1, 1);
 
-        labelDiagnostico = new QLineEdit(verticalLayoutWidget_9);
-        labelDiagnostico->setObjectName("labelDiagnostico");
-        labelDiagnostico->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        Sintomaspresen = new QTextEdit(verticalLayoutWidget_9);
+        Sintomaspresen->setObjectName("Sintomaspresen");
+        Sintomaspresen->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        gridLayout_8->addWidget(labelDiagnostico, 6, 1, 1, 1);
+        gridLayout_8->addWidget(Sintomaspresen, 2, 1, 1, 1);
 
 
         verticalLayout_11->addLayout(gridLayout_8);
@@ -1617,7 +1690,7 @@ public:
         pushButton_41->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         verticalLayoutWidget_25 = new QWidget(NuevaReceta);
         verticalLayoutWidget_25->setObjectName("verticalLayoutWidget_25");
-        verticalLayoutWidget_25->setGeometry(QRect(260, 70, 381, 271));
+        verticalLayoutWidget_25->setGeometry(QRect(300, 70, 341, 271));
         verticalLayout_27 = new QVBoxLayout(verticalLayoutWidget_25);
         verticalLayout_27->setObjectName("verticalLayout_27");
         verticalLayout_27->setContentsMargins(0, 0, 0, 0);
@@ -1630,27 +1703,6 @@ public:
 
         gridLayout_10 = new QGridLayout();
         gridLayout_10->setObjectName("gridLayout_10");
-        label_60 = new QLabel(verticalLayoutWidget_25);
-        label_60->setObjectName("label_60");
-
-        gridLayout_10->addWidget(label_60, 3, 0, 1, 1);
-
-        label_59 = new QLabel(verticalLayoutWidget_25);
-        label_59->setObjectName("label_59");
-
-        gridLayout_10->addWidget(label_59, 2, 0, 1, 1);
-
-        paciente_cb = new QComboBox(verticalLayoutWidget_25);
-        paciente_cb->setObjectName("paciente_cb");
-        paciente_cb->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout_10->addWidget(paciente_cb, 1, 1, 1, 1);
-
-        label_58 = new QLabel(verticalLayoutWidget_25);
-        label_58->setObjectName("label_58");
-
-        gridLayout_10->addWidget(label_58, 1, 0, 1, 1);
-
         medicamento_cb = new QComboBox(verticalLayoutWidget_25);
         medicamento_cb->addItem(QString());
         medicamento_cb->addItem(QString());
@@ -1665,7 +1717,28 @@ public:
         medicamento_cb->setObjectName("medicamento_cb");
         medicamento_cb->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        gridLayout_10->addWidget(medicamento_cb, 2, 1, 1, 1);
+        gridLayout_10->addWidget(medicamento_cb, 1, 1, 1, 1);
+
+        label_59 = new QLabel(verticalLayoutWidget_25);
+        label_59->setObjectName("label_59");
+
+        gridLayout_10->addWidget(label_59, 1, 0, 1, 1);
+
+        label_60 = new QLabel(verticalLayoutWidget_25);
+        label_60->setObjectName("label_60");
+
+        gridLayout_10->addWidget(label_60, 2, 0, 1, 1);
+
+        label_58 = new QLabel(verticalLayoutWidget_25);
+        label_58->setObjectName("label_58");
+
+        gridLayout_10->addWidget(label_58, 0, 0, 1, 1);
+
+        paciente_cb = new QComboBox(verticalLayoutWidget_25);
+        paciente_cb->setObjectName("paciente_cb");
+        paciente_cb->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout_10->addWidget(paciente_cb, 0, 1, 1, 1);
 
         dosis_cb = new QComboBox(verticalLayoutWidget_25);
         dosis_cb->addItem(QString());
@@ -1680,12 +1753,7 @@ public:
         dosis_cb->setObjectName("dosis_cb");
         dosis_cb->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        gridLayout_10->addWidget(dosis_cb, 3, 1, 1, 1);
-
-        label_57 = new QLabel(verticalLayoutWidget_25);
-        label_57->setObjectName("label_57");
-
-        gridLayout_10->addWidget(label_57, 0, 0, 1, 1);
+        gridLayout_10->addWidget(dosis_cb, 2, 1, 1, 1);
 
 
         verticalLayout_27->addLayout(gridLayout_10);
@@ -2305,6 +2373,7 @@ public:
 
         txtnameMDCita = new QLineEdit(verticalLayoutWidget_22);
         txtnameMDCita->setObjectName("txtnameMDCita");
+        txtnameMDCita->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         formLayout_6->setWidget(1, QFormLayout::FieldRole, txtnameMDCita);
 
@@ -2400,7 +2469,7 @@ public:
         fechaConsulta = new QDateEdit(verticalLayoutWidget_13);
         fechaConsulta->setObjectName("fechaConsulta");
         fechaConsulta->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        fechaConsulta->setDateTime(QDateTime(QDate(2024, 4, 2), QTime(11, 0, 0)));
+        fechaConsulta->setDateTime(QDateTime(QDate(2024, 4, 3), QTime(12, 0, 0)));
         fechaConsulta->setMinimumDate(QDate(2015, 9, 14));
 
         horizontalLayout_3->addWidget(fechaConsulta);
@@ -2536,6 +2605,12 @@ public:
 
         verticalLayout_4->addWidget(pushButton_72);
 
+        pushButton_29 = new QPushButton(verticalLayoutWidget_3);
+        pushButton_29->setObjectName("pushButton_29");
+        pushButton_29->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout_4->addWidget(pushButton_29);
+
         pushButton_73 = new QPushButton(verticalLayoutWidget_3);
         pushButton_73->setObjectName("pushButton_73");
         pushButton_73->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -2668,6 +2743,55 @@ public:
         verticalLayout_3->addWidget(pushButton_76);
 
         stackedWidget->addWidget(ReporteCitas);
+        page = new QWidget();
+        page->setObjectName("page");
+        pushButton_82 = new QPushButton(page);
+        pushButton_82->setObjectName("pushButton_82");
+        pushButton_82->setGeometry(QRect(40, 550, 80, 24));
+        pushButton_82->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        verticalLayoutWidget_36 = new QWidget(page);
+        verticalLayoutWidget_36->setObjectName("verticalLayoutWidget_36");
+        verticalLayoutWidget_36->setGeometry(QRect(310, 80, 261, 351));
+        verticalLayout_37 = new QVBoxLayout(verticalLayoutWidget_36);
+        verticalLayout_37->setObjectName("verticalLayout_37");
+        verticalLayout_37->setContentsMargins(0, 0, 0, 0);
+        label_122 = new QLabel(verticalLayoutWidget_36);
+        label_122->setObjectName("label_122");
+        label_122->setFont(font2);
+        label_122->setLayoutDirection(Qt::RightToLeft);
+        label_122->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_37->addWidget(label_122);
+
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName("horizontalLayout_7");
+        label_57 = new QLabel(verticalLayoutWidget_36);
+        label_57->setObjectName("label_57");
+
+        horizontalLayout_7->addWidget(label_57);
+
+        identidadrepo = new QLineEdit(verticalLayoutWidget_36);
+        identidadrepo->setObjectName("identidadrepo");
+        identidadrepo->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        horizontalLayout_7->addWidget(identidadrepo);
+
+
+        verticalLayout_37->addLayout(horizontalLayout_7);
+
+        txtreppacientes = new QTextBrowser(verticalLayoutWidget_36);
+        txtreppacientes->setObjectName("txtreppacientes");
+        txtreppacientes->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout_37->addWidget(txtreppacientes);
+
+        pushButton_81 = new QPushButton(verticalLayoutWidget_36);
+        pushButton_81->setObjectName("pushButton_81");
+        pushButton_81->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        verticalLayout_37->addWidget(pushButton_81);
+
+        stackedWidget->addWidget(page);
         AgregarRoll = new QWidget();
         AgregarRoll->setObjectName("AgregarRoll");
         verticalLayoutWidget_7 = new QWidget(AgregarRoll);
@@ -2792,7 +2916,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(29);
+        stackedWidget->setCurrentIndex(8);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2843,24 +2967,24 @@ public:
         pushButton_20->setText(QCoreApplication::translate("MainWindow", "Crear nueva sala", nullptr));
         pushButton_23->setText(QCoreApplication::translate("MainWindow", "Regresar ", nullptr));
         label_19->setText(QCoreApplication::translate("MainWindow", "Crear Nueva Sala", nullptr));
-        label_20->setText(QCoreApplication::translate("MainWindow", "C\303\263digo:", nullptr));
-        label_21->setText(QCoreApplication::translate("MainWindow", "Descripci\303\263n:", nullptr));
-        label_22->setText(QCoreApplication::translate("MainWindow", "Status:", nullptr));
-        label_23->setText(QCoreApplication::translate("MainWindow", "Fecha de Inicio:", nullptr));
-        label_24->setText(QCoreApplication::translate("MainWindow", "Fin de Disponibilidad:", nullptr));
-        pushButton_24->setText(QCoreApplication::translate("MainWindow", "Crear", nullptr));
         pushButton_25->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        label_20->setText(QCoreApplication::translate("MainWindow", "C\303\263digo:", nullptr));
         lbcodesala->setText(QString());
-        label_113->setText(QCoreApplication::translate("MainWindow", "Hora de disponibilidad:", nullptr));
-        label_114->setText(QCoreApplication::translate("MainWindow", "Hora final de disponibilidad:", nullptr));
+        label_22->setText(QCoreApplication::translate("MainWindow", "Status:", nullptr));
         lb_status->setText(QString());
+        label_21->setText(QCoreApplication::translate("MainWindow", "Descripci\303\263n:", nullptr));
+        pushButton_24->setText(QCoreApplication::translate("MainWindow", "Crear", nullptr));
+        label_23->setText(QCoreApplication::translate("MainWindow", "Fecha de Inicio:", nullptr));
+        label_113->setText(QCoreApplication::translate("MainWindow", "Hora de disponibilidad:", nullptr));
+        label_24->setText(QCoreApplication::translate("MainWindow", "Fin de Disponibilidad:", nullptr));
+        label_114->setText(QCoreApplication::translate("MainWindow", "Hora final de disponibilidad:", nullptr));
         pushButton_27->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         buscar_sala->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
         label_26->setText(QCoreApplication::translate("MainWindow", "Codigo:", nullptr));
         label_27->setText(QCoreApplication::translate("MainWindow", "Descripci\303\263n:", nullptr));
         label_28->setText(QCoreApplication::translate("MainWindow", "Status:", nullptr));
-        pushButton_26->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
         label_117->setText(QCoreApplication::translate("MainWindow", "Informaci\303\263n de la Sala:", nullptr));
+        pushButton_26->setText(QCoreApplication::translate("MainWindow", "Modificar", nullptr));
         label_29->setText(QCoreApplication::translate("MainWindow", "Fecha de Inicio:", nullptr));
         label_115->setText(QCoreApplication::translate("MainWindow", "Hora de disponibilidad:", nullptr));
         label_30->setText(QCoreApplication::translate("MainWindow", "Fin de Disponibilidad:", nullptr));
@@ -2878,12 +3002,17 @@ public:
         pushButton_33->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_35->setText(QCoreApplication::translate("MainWindow", "Nuevo Expediente", nullptr));
         pushButton_35->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        label_41->setText(QCoreApplication::translate("MainWindow", "Nombre del contacto adicional:", nullptr));
+        label_43->setText(QCoreApplication::translate("MainWindow", "Telefono contacto adicional:", nullptr));
+        label_102->setText(QCoreApplication::translate("MainWindow", "Email de contacto adicional:", nullptr));
+        label_39->setText(QCoreApplication::translate("MainWindow", "Fecha de nacimiento:", nullptr));
+        label_38->setText(QCoreApplication::translate("MainWindow", "C\303\263digo:", nullptr));
+        CodigoNextExpedienteLabel->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
+        label_36->setText(QCoreApplication::translate("MainWindow", "Nombre del paciente:", nullptr));
+        label_37->setText(QCoreApplication::translate("MainWindow", "Identidad:", nullptr));
         label_40->setText(QCoreApplication::translate("MainWindow", "Telefono 1:", nullptr));
         label_42->setText(QCoreApplication::translate("MainWindow", "Email:", nullptr));
         label_44->setText(QCoreApplication::translate("MainWindow", "Tipo de sangre:", nullptr));
-        label_45->setText(QCoreApplication::translate("MainWindow", "Alegrias conocidas:", nullptr));
-        label_46->setText(QCoreApplication::translate("MainWindow", "Enfermedades base:", nullptr));
-        label_14->setText(QCoreApplication::translate("MainWindow", "Encabezado:", nullptr));
         TipodeSangreCrear->setItemText(0, QString());
         TipodeSangreCrear->setItemText(1, QCoreApplication::translate("MainWindow", "A+", nullptr));
         TipodeSangreCrear->setItemText(2, QCoreApplication::translate("MainWindow", "A-", nullptr));
@@ -2894,24 +3023,18 @@ public:
         TipodeSangreCrear->setItemText(7, QCoreApplication::translate("MainWindow", "O+", nullptr));
         TipodeSangreCrear->setItemText(8, QCoreApplication::translate("MainWindow", "O-", nullptr));
 
-        label_41->setText(QCoreApplication::translate("MainWindow", "Nombre del contacto adicional:", nullptr));
-        label_43->setText(QCoreApplication::translate("MainWindow", "Telefono contacto adicional:", nullptr));
-        label_102->setText(QCoreApplication::translate("MainWindow", "Email de contacto adicional:", nullptr));
+        label_45->setText(QCoreApplication::translate("MainWindow", "Alegrias conocidas:", nullptr));
+        label_46->setText(QCoreApplication::translate("MainWindow", "Enfermedades base:", nullptr));
         pushButton_34->setText(QCoreApplication::translate("MainWindow", "Crear ", nullptr));
-        label_39->setText(QCoreApplication::translate("MainWindow", "Fecha de nacimiento:", nullptr));
-        label_36->setText(QCoreApplication::translate("MainWindow", "Nombre del paciente:", nullptr));
-        label_38->setText(QCoreApplication::translate("MainWindow", "C\303\263digo:", nullptr));
-        label_37->setText(QCoreApplication::translate("MainWindow", "Identidad:", nullptr));
-        CodigoNextExpedienteLabel->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
         pushButton_37->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_49->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
         label_53->setText(QCoreApplication::translate("MainWindow", "Proxima cita recomendada:", nullptr));
         label_48->setText(QCoreApplication::translate("MainWindow", "Agregar Datos al Expediente", nullptr));
-        label_105->setText(QCoreApplication::translate("MainWindow", "Nombre del Paciente:", nullptr));
+        label_54->setText(QCoreApplication::translate("MainWindow", "Comentarios adicionales:", nullptr));
         label_52->setText(QCoreApplication::translate("MainWindow", "Recomendaciones:", nullptr));
         label_50->setText(QCoreApplication::translate("MainWindow", "Sintomas presentados:", nullptr));
+        label_105->setText(QCoreApplication::translate("MainWindow", "Nombre del Paciente:", nullptr));
         label_51->setText(QCoreApplication::translate("MainWindow", "Observaciones:", nullptr));
-        label_54->setText(QCoreApplication::translate("MainWindow", "Comentarios adicionales:", nullptr));
         label_106->setText(QCoreApplication::translate("MainWindow", "Identidad del Paciente:", nullptr));
         label_107->setText(QCoreApplication::translate("MainWindow", "Diagnositico:", nullptr));
         pushButton_36->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
@@ -2922,9 +3045,6 @@ public:
         lb_fecha_actual->setText(QString());
         pushButton_41->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_56->setText(QCoreApplication::translate("MainWindow", "Nueva Receta", nullptr));
-        label_60->setText(QCoreApplication::translate("MainWindow", "Dosis:", nullptr));
-        label_59->setText(QCoreApplication::translate("MainWindow", "Medicamento:", nullptr));
-        label_58->setText(QCoreApplication::translate("MainWindow", "Paciente:", nullptr));
         medicamento_cb->setItemText(0, QCoreApplication::translate("MainWindow", "AMIODARONA", nullptr));
         medicamento_cb->setItemText(1, QCoreApplication::translate("MainWindow", "AMOXICILINA", nullptr));
         medicamento_cb->setItemText(2, QCoreApplication::translate("MainWindow", "BETAMETASONA", nullptr));
@@ -2936,6 +3056,9 @@ public:
         medicamento_cb->setItemText(8, QCoreApplication::translate("MainWindow", "POLIVITAM\303\215NICO", nullptr));
         medicamento_cb->setItemText(9, QCoreApplication::translate("MainWindow", "VITAMINA D", nullptr));
 
+        label_59->setText(QCoreApplication::translate("MainWindow", "Medicamento:", nullptr));
+        label_60->setText(QCoreApplication::translate("MainWindow", "Dosis:", nullptr));
+        label_58->setText(QCoreApplication::translate("MainWindow", "Paciente:", nullptr));
         dosis_cb->setItemText(0, QCoreApplication::translate("MainWindow", "1 /kg al dia ", nullptr));
         dosis_cb->setItemText(1, QCoreApplication::translate("MainWindow", "2/kg al dia", nullptr));
         dosis_cb->setItemText(2, QCoreApplication::translate("MainWindow", "2 capsulas al dia", nullptr));
@@ -2946,7 +3069,6 @@ public:
         dosis_cb->setItemText(7, QCoreApplication::translate("MainWindow", "4 capsulas cada 8 horas", nullptr));
         dosis_cb->setItemText(8, QString());
 
-        label_57->setText(QCoreApplication::translate("MainWindow", "Fecha:", nullptr));
         new_recipe->setText(QCoreApplication::translate("MainWindow", "Crear", nullptr));
         pushButton_44->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_61->setText(QCoreApplication::translate("MainWindow", "Buscar Receta", nullptr));
@@ -3028,7 +3150,8 @@ public:
         label_96->setText(QCoreApplication::translate("MainWindow", "Nueva Contrase\303\261a:", nullptr));
         pushButton_70->setText(QCoreApplication::translate("MainWindow", "Cambiar", nullptr));
         label_97->setText(QCoreApplication::translate("MainWindow", "Reportes", nullptr));
-        pushButton_72->setText(QCoreApplication::translate("MainWindow", "Pacientes", nullptr));
+        pushButton_72->setText(QCoreApplication::translate("MainWindow", "Expedientes de Pacientes", nullptr));
+        pushButton_29->setText(QCoreApplication::translate("MainWindow", "Paciente", nullptr));
         pushButton_73->setText(QCoreApplication::translate("MainWindow", "Citas", nullptr));
         pushButton_78->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         pushButton_75->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
@@ -3041,6 +3164,10 @@ public:
         label_119->setText(QCoreApplication::translate("MainWindow", "Fecha Final:", nullptr));
         label_101->setText(QCoreApplication::translate("MainWindow", "Fecha Inicial:", nullptr));
         pushButton_76->setText(QCoreApplication::translate("MainWindow", "Ver", nullptr));
+        pushButton_82->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
+        label_122->setText(QCoreApplication::translate("MainWindow", "Paciente", nullptr));
+        label_57->setText(QCoreApplication::translate("MainWindow", "Id", nullptr));
+        pushButton_81->setText(QCoreApplication::translate("MainWindow", "Ver", nullptr));
         label_103->setText(QCoreApplication::translate("MainWindow", "Agregar rol", nullptr));
         label_104->setText(QCoreApplication::translate("MainWindow", "Ingrese el nuevo rol:", nullptr));
         label_118->setText(QCoreApplication::translate("MainWindow", "Selecione los permisos que le otorgara al usuario:", nullptr));

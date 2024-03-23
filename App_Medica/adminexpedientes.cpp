@@ -125,7 +125,8 @@ QString AdminExpedientes::getExpedientesInRange(QString fechaInicio, QString fec
 
 QString AdminExpedientes::getExpedientesPaciente(QString Identidad)
 {
-     QString ExpedientePaciente=" "; ExpedientesAdmin.seek(0);
+     QString ExpedientePaciente=" ";
+     ExpedientesAdmin.seek(0);
      while (!ExpedientesAdmin.atEnd())
      {
          NewExpediente expe; write>>expe.Codigo>>expe.NombrePaciente>>expe.identidad>>expe.FechaNacimiento>>expe.numero1>>expe.mail1>>expe.AdiconalContact>>expe.AdiocionalPhone>>expe.Adicionalmail>>expe.tipoSangre>>expe.Alegias>>expe.enfermedadesBase>>expe.FechaCita>>expe.Sintomas>>expe.Observaciones>>expe.diagnostico>>expe.Recomendaciones>>expe.newCita>>expe.adicionalComents;

@@ -126,11 +126,15 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "checked",
     "on_radioButton_2_clicked",
     "on_pushButton_43_pressed",
-    "on_pushButton_76_pressed"
+    "on_pushButton_76_pressed",
+    "on_pushButton_43_clicked",
+    "on_pushButton_81_clicked",
+    "on_pushButton_82_clicked",
+    "on_pushButton_29_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[178];
+    uint offsetsAndSizes[186];
     char stringdata0[11];
     char stringdata1[22];
     char stringdata2[1];
@@ -220,6 +224,10 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata86[25];
     char stringdata87[25];
     char stringdata88[25];
+    char stringdata89[25];
+    char stringdata90[25];
+    char stringdata91[25];
+    char stringdata92[25];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -313,7 +321,11 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(2044, 7),  // "checked"
         QT_MOC_LITERAL(2052, 24),  // "on_radioButton_2_clicked"
         QT_MOC_LITERAL(2077, 24),  // "on_pushButton_43_pressed"
-        QT_MOC_LITERAL(2102, 24)   // "on_pushButton_76_pressed"
+        QT_MOC_LITERAL(2102, 24),  // "on_pushButton_76_pressed"
+        QT_MOC_LITERAL(2127, 24),  // "on_pushButton_43_clicked"
+        QT_MOC_LITERAL(2152, 24),  // "on_pushButton_81_clicked"
+        QT_MOC_LITERAL(2177, 24),  // "on_pushButton_82_clicked"
+        QT_MOC_LITERAL(2202, 24)   // "on_pushButton_29_clicked"
     },
     "MainWindow",
     "on_pushButton_pressed",
@@ -403,7 +415,11 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "checked",
     "on_radioButton_2_clicked",
     "on_pushButton_43_pressed",
-    "on_pushButton_76_pressed"
+    "on_pushButton_76_pressed",
+    "on_pushButton_43_clicked",
+    "on_pushButton_81_clicked",
+    "on_pushButton_82_clicked",
+    "on_pushButton_29_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -415,7 +431,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      85,   14, // methods
+      89,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -423,91 +439,95 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  524,    2, 0x08,    1 /* Private */,
-       3,    0,  525,    2, 0x08,    2 /* Private */,
-       4,    0,  526,    2, 0x08,    3 /* Private */,
-       5,    0,  527,    2, 0x08,    4 /* Private */,
-       6,    0,  528,    2, 0x08,    5 /* Private */,
-       7,    0,  529,    2, 0x08,    6 /* Private */,
-       8,    0,  530,    2, 0x08,    7 /* Private */,
-       9,    0,  531,    2, 0x08,    8 /* Private */,
-      10,    0,  532,    2, 0x08,    9 /* Private */,
-      11,    0,  533,    2, 0x08,   10 /* Private */,
-      12,    0,  534,    2, 0x08,   11 /* Private */,
-      13,    0,  535,    2, 0x08,   12 /* Private */,
-      14,    0,  536,    2, 0x08,   13 /* Private */,
-      15,    0,  537,    2, 0x08,   14 /* Private */,
-      16,    0,  538,    2, 0x08,   15 /* Private */,
-      17,    0,  539,    2, 0x08,   16 /* Private */,
-      18,    0,  540,    2, 0x08,   17 /* Private */,
-      19,    0,  541,    2, 0x08,   18 /* Private */,
-      20,    0,  542,    2, 0x08,   19 /* Private */,
-      21,    0,  543,    2, 0x08,   20 /* Private */,
-      22,    0,  544,    2, 0x08,   21 /* Private */,
-      23,    0,  545,    2, 0x08,   22 /* Private */,
-      24,    0,  546,    2, 0x08,   23 /* Private */,
-      25,    0,  547,    2, 0x08,   24 /* Private */,
-      26,    0,  548,    2, 0x08,   25 /* Private */,
-      27,    0,  549,    2, 0x08,   26 /* Private */,
-      28,    0,  550,    2, 0x08,   27 /* Private */,
-      29,    0,  551,    2, 0x08,   28 /* Private */,
-      30,    0,  552,    2, 0x08,   29 /* Private */,
-      31,    0,  553,    2, 0x08,   30 /* Private */,
-      32,    0,  554,    2, 0x08,   31 /* Private */,
-      33,    0,  555,    2, 0x08,   32 /* Private */,
-      34,    0,  556,    2, 0x08,   33 /* Private */,
-      35,    0,  557,    2, 0x08,   34 /* Private */,
-      36,    0,  558,    2, 0x08,   35 /* Private */,
-      37,    0,  559,    2, 0x08,   36 /* Private */,
-      38,    0,  560,    2, 0x08,   37 /* Private */,
-      39,    0,  561,    2, 0x08,   38 /* Private */,
-      40,    0,  562,    2, 0x08,   39 /* Private */,
-      41,    0,  563,    2, 0x08,   40 /* Private */,
-      42,    0,  564,    2, 0x08,   41 /* Private */,
-      43,    0,  565,    2, 0x08,   42 /* Private */,
-      44,    0,  566,    2, 0x08,   43 /* Private */,
-      45,    0,  567,    2, 0x08,   44 /* Private */,
-      46,    0,  568,    2, 0x08,   45 /* Private */,
-      47,    0,  569,    2, 0x08,   46 /* Private */,
-      48,    0,  570,    2, 0x08,   47 /* Private */,
-      49,    0,  571,    2, 0x08,   48 /* Private */,
-      50,    0,  572,    2, 0x08,   49 /* Private */,
-      51,    0,  573,    2, 0x08,   50 /* Private */,
-      52,    0,  574,    2, 0x08,   51 /* Private */,
-      53,    0,  575,    2, 0x08,   52 /* Private */,
-      54,    0,  576,    2, 0x08,   53 /* Private */,
-      55,    0,  577,    2, 0x08,   54 /* Private */,
-      56,    0,  578,    2, 0x08,   55 /* Private */,
-      57,    0,  579,    2, 0x08,   56 /* Private */,
-      58,    0,  580,    2, 0x08,   57 /* Private */,
-      59,    0,  581,    2, 0x08,   58 /* Private */,
-      60,    0,  582,    2, 0x08,   59 /* Private */,
-      61,    0,  583,    2, 0x08,   60 /* Private */,
-      62,    0,  584,    2, 0x08,   61 /* Private */,
-      63,    0,  585,    2, 0x08,   62 /* Private */,
-      64,    0,  586,    2, 0x08,   63 /* Private */,
-      65,    0,  587,    2, 0x08,   64 /* Private */,
-      66,    0,  588,    2, 0x08,   65 /* Private */,
-      67,    0,  589,    2, 0x08,   66 /* Private */,
-      68,    0,  590,    2, 0x08,   67 /* Private */,
-      69,    0,  591,    2, 0x08,   68 /* Private */,
-      70,    0,  592,    2, 0x08,   69 /* Private */,
-      71,    0,  593,    2, 0x08,   70 /* Private */,
-      72,    0,  594,    2, 0x08,   71 /* Private */,
-      73,    0,  595,    2, 0x08,   72 /* Private */,
-      74,    0,  596,    2, 0x08,   73 /* Private */,
-      75,    0,  597,    2, 0x08,   74 /* Private */,
-      76,    0,  598,    2, 0x08,   75 /* Private */,
-      77,    0,  599,    2, 0x08,   76 /* Private */,
-      78,    0,  600,    2, 0x08,   77 /* Private */,
-      79,    1,  601,    2, 0x08,   78 /* Private */,
-      81,    0,  604,    2, 0x08,   80 /* Private */,
-      82,    0,  605,    2, 0x08,   81 /* Private */,
-      83,    0,  606,    2, 0x08,   82 /* Private */,
-      84,    1,  607,    2, 0x08,   83 /* Private */,
-      86,    1,  610,    2, 0x08,   85 /* Private */,
-      87,    0,  613,    2, 0x08,   87 /* Private */,
-      88,    0,  614,    2, 0x08,   88 /* Private */,
+       1,    0,  548,    2, 0x08,    1 /* Private */,
+       3,    0,  549,    2, 0x08,    2 /* Private */,
+       4,    0,  550,    2, 0x08,    3 /* Private */,
+       5,    0,  551,    2, 0x08,    4 /* Private */,
+       6,    0,  552,    2, 0x08,    5 /* Private */,
+       7,    0,  553,    2, 0x08,    6 /* Private */,
+       8,    0,  554,    2, 0x08,    7 /* Private */,
+       9,    0,  555,    2, 0x08,    8 /* Private */,
+      10,    0,  556,    2, 0x08,    9 /* Private */,
+      11,    0,  557,    2, 0x08,   10 /* Private */,
+      12,    0,  558,    2, 0x08,   11 /* Private */,
+      13,    0,  559,    2, 0x08,   12 /* Private */,
+      14,    0,  560,    2, 0x08,   13 /* Private */,
+      15,    0,  561,    2, 0x08,   14 /* Private */,
+      16,    0,  562,    2, 0x08,   15 /* Private */,
+      17,    0,  563,    2, 0x08,   16 /* Private */,
+      18,    0,  564,    2, 0x08,   17 /* Private */,
+      19,    0,  565,    2, 0x08,   18 /* Private */,
+      20,    0,  566,    2, 0x08,   19 /* Private */,
+      21,    0,  567,    2, 0x08,   20 /* Private */,
+      22,    0,  568,    2, 0x08,   21 /* Private */,
+      23,    0,  569,    2, 0x08,   22 /* Private */,
+      24,    0,  570,    2, 0x08,   23 /* Private */,
+      25,    0,  571,    2, 0x08,   24 /* Private */,
+      26,    0,  572,    2, 0x08,   25 /* Private */,
+      27,    0,  573,    2, 0x08,   26 /* Private */,
+      28,    0,  574,    2, 0x08,   27 /* Private */,
+      29,    0,  575,    2, 0x08,   28 /* Private */,
+      30,    0,  576,    2, 0x08,   29 /* Private */,
+      31,    0,  577,    2, 0x08,   30 /* Private */,
+      32,    0,  578,    2, 0x08,   31 /* Private */,
+      33,    0,  579,    2, 0x08,   32 /* Private */,
+      34,    0,  580,    2, 0x08,   33 /* Private */,
+      35,    0,  581,    2, 0x08,   34 /* Private */,
+      36,    0,  582,    2, 0x08,   35 /* Private */,
+      37,    0,  583,    2, 0x08,   36 /* Private */,
+      38,    0,  584,    2, 0x08,   37 /* Private */,
+      39,    0,  585,    2, 0x08,   38 /* Private */,
+      40,    0,  586,    2, 0x08,   39 /* Private */,
+      41,    0,  587,    2, 0x08,   40 /* Private */,
+      42,    0,  588,    2, 0x08,   41 /* Private */,
+      43,    0,  589,    2, 0x08,   42 /* Private */,
+      44,    0,  590,    2, 0x08,   43 /* Private */,
+      45,    0,  591,    2, 0x08,   44 /* Private */,
+      46,    0,  592,    2, 0x08,   45 /* Private */,
+      47,    0,  593,    2, 0x08,   46 /* Private */,
+      48,    0,  594,    2, 0x08,   47 /* Private */,
+      49,    0,  595,    2, 0x08,   48 /* Private */,
+      50,    0,  596,    2, 0x08,   49 /* Private */,
+      51,    0,  597,    2, 0x08,   50 /* Private */,
+      52,    0,  598,    2, 0x08,   51 /* Private */,
+      53,    0,  599,    2, 0x08,   52 /* Private */,
+      54,    0,  600,    2, 0x08,   53 /* Private */,
+      55,    0,  601,    2, 0x08,   54 /* Private */,
+      56,    0,  602,    2, 0x08,   55 /* Private */,
+      57,    0,  603,    2, 0x08,   56 /* Private */,
+      58,    0,  604,    2, 0x08,   57 /* Private */,
+      59,    0,  605,    2, 0x08,   58 /* Private */,
+      60,    0,  606,    2, 0x08,   59 /* Private */,
+      61,    0,  607,    2, 0x08,   60 /* Private */,
+      62,    0,  608,    2, 0x08,   61 /* Private */,
+      63,    0,  609,    2, 0x08,   62 /* Private */,
+      64,    0,  610,    2, 0x08,   63 /* Private */,
+      65,    0,  611,    2, 0x08,   64 /* Private */,
+      66,    0,  612,    2, 0x08,   65 /* Private */,
+      67,    0,  613,    2, 0x08,   66 /* Private */,
+      68,    0,  614,    2, 0x08,   67 /* Private */,
+      69,    0,  615,    2, 0x08,   68 /* Private */,
+      70,    0,  616,    2, 0x08,   69 /* Private */,
+      71,    0,  617,    2, 0x08,   70 /* Private */,
+      72,    0,  618,    2, 0x08,   71 /* Private */,
+      73,    0,  619,    2, 0x08,   72 /* Private */,
+      74,    0,  620,    2, 0x08,   73 /* Private */,
+      75,    0,  621,    2, 0x08,   74 /* Private */,
+      76,    0,  622,    2, 0x08,   75 /* Private */,
+      77,    0,  623,    2, 0x08,   76 /* Private */,
+      78,    0,  624,    2, 0x08,   77 /* Private */,
+      79,    1,  625,    2, 0x08,   78 /* Private */,
+      81,    0,  628,    2, 0x08,   80 /* Private */,
+      82,    0,  629,    2, 0x08,   81 /* Private */,
+      83,    0,  630,    2, 0x08,   82 /* Private */,
+      84,    1,  631,    2, 0x08,   83 /* Private */,
+      86,    1,  634,    2, 0x08,   85 /* Private */,
+      87,    0,  637,    2, 0x08,   87 /* Private */,
+      88,    0,  638,    2, 0x08,   88 /* Private */,
+      89,    0,  639,    2, 0x08,   89 /* Private */,
+      90,    0,  640,    2, 0x08,   90 /* Private */,
+      91,    0,  641,    2, 0x08,   91 /* Private */,
+      92,    0,  642,    2, 0x08,   92 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -593,6 +613,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Bool,   85,
     QMetaType::Void, QMetaType::Bool,   85,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -780,6 +804,14 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_pushButton_43_pressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_76_pressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_43_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_81_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_82_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_29_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -876,6 +908,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 82: _t->on_radioButton_2_clicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 83: _t->on_pushButton_43_pressed(); break;
         case 84: _t->on_pushButton_76_pressed(); break;
+        case 85: _t->on_pushButton_43_clicked(); break;
+        case 86: _t->on_pushButton_81_clicked(); break;
+        case 87: _t->on_pushButton_82_clicked(); break;
+        case 88: _t->on_pushButton_29_clicked(); break;
         default: ;
         }
     }
@@ -900,13 +936,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 85)
+        if (_id < 89)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 85;
+        _id -= 89;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 85)
+        if (_id < 89)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 85;
+        _id -= 89;
     }
     return _id;
 }
