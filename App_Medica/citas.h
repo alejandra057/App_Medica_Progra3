@@ -26,6 +26,7 @@ class Citas
     Datoscitas Consultaporfecha(QString fecha);
     QString ConvertirDatosCitaAString(const Datoscitas& datos);
     long getCita_Actal();
+    QString getCitasEnRango(QString fechaInicio, QString fechaFin);
 
     Datoscitas obtenerCitas() const{
         return citass;
@@ -34,6 +35,8 @@ class Citas
    /* QString obtenertexto() const{
         return citass;
     }*/
+
+
     void ModificarCitas(const Datoscitas& nuevacita){
         citass=nuevacita;
     }

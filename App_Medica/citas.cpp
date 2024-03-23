@@ -200,3 +200,28 @@ long Citas::getCita_Actal()
     //return -1;
 
 }
+
+QString Citas::getCitasEnRango(QString fechaInicio, QString fechaFin)
+{
+    Datoscitas cita;
+    QDataStream leerr(&crearcitas);
+    QString citasEnRango = " ";
+    crearcitas.seek(0);
+    QDate inicio = QDate::fromString(fechaInicio, "dd/MM/yyyy");
+    QDate fin = QDate::fromString(fechaFin, "dd/MM/yyyy");
+    while (!crearcitas.atEnd()) {
+        leerr >> cita.code >> cita.nombre >> cita.fecha >> cita.hora;
+        QDate fechaCita = QDate::fromString(cita.fecha, "dd/MM/yyyy");
+        if (fechaCita >= inicio && fechaCita <= fin) {
+
+            citasEnRango += "Código: " + cita.code + "\n";
+            citasEnRango += "Nombre del Paciente: " + cita.nombre + "\n";
+            citasEnRango += "Fecha de la cita: " + cita.fecha + "\n";
+            citasEnRango += "Hora de la cita: " + cita.hora + "\n\n";
+        }
+    }
+    if (citasEnRango == " ") {
+        citasEnRango = "No se han encontrado citas en las fechas seleccionadas.";
+    }
+    return citasEnRango;
+}

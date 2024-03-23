@@ -918,11 +918,11 @@ void MainWindow::on_buscar_sala_pressed()
 void MainWindow::on_pushButton_76_clicked()
 {
 
-    AdminExpedientes Reportcitas;
+    Citas citas;
     QString fechain = ui->datein->date().toString("dd/MM/yyyy");
     QString fechaend = ui->dateend->date().toString("dd/MM/yyyy");
-    QString Reportecitas = Reportcitas.getExpedientesInRange(fechain,fechaend);
-    ui->txtreportcitas->setText(Reportecitas);
+    QString reportecitas = citas.getCitasEnRango(fechain,fechaend);
+    ui->txtreportcitas->setText(reportecitas);
 
 }
 
@@ -1032,6 +1032,14 @@ void MainWindow::on_pushButton_43_pressed()
 
 
 
+
+
+
+}
+
+
+void MainWindow::on_pushButton_76_pressed()
+{
 
 
 

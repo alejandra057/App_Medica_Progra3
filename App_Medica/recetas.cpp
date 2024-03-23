@@ -96,6 +96,7 @@ QString Recetas::searchRecetaPaciente(QString codigoPaciente)
     }
 
     if (!found) {
+
         result = "No se encontraron recetas para el código de paciente " + codigoPaciente;
     }
 
