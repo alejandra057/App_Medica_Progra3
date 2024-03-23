@@ -232,15 +232,15 @@ void MainWindow::on_pushButton_38_pressed()
 {
     adminRoles roles;
     if(roles.permisoEditarRecetas(role)){
-        ui->stackedWidget->setCurrentIndex(14);
+
         AdminCodes acode;
         long code = acode.GetActualCodeExpedientes();
         ui->recetas_cb->clear();
-        for (long var = 0; var < code; ++var) {
-            QString codepaciente = QString::number(code);
+        for (long var = 0; var < code; var++) {
+            QString codepaciente = QString::number(var);
             ui->recetas_cb->addItem(codepaciente);
         }
-
+        ui->stackedWidget->setCurrentIndex(14);
     }
     else
     {
@@ -253,15 +253,15 @@ void MainWindow::on_pushButton_39_pressed()
 {
     adminRoles roles;
     if(roles.permisoEditarRecetas(role)){
-     ui->stackedWidget->setCurrentIndex(15);
+
         AdminCodes acode;
         long code = acode.GetActualCodeExpedientes();
         ui->paciente_cb->clear();
         for (long var = 0; var < code; ++var) {
-            QString codepaciente = QString::number(code);
+            QString codepaciente = QString::number(var);
             ui->paciente_cb->addItem(codepaciente);
         }
-
+        ui->stackedWidget->setCurrentIndex(15);
     }
     else
     {
