@@ -186,6 +186,12 @@ private slots:
 
     void on_bt_consultar_pressed();
 
+    void on_radioButton_clicked(bool checked);
+
+    void on_radioButton_2_clicked(bool checked);
+
+    void on_pushButton_43_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

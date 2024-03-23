@@ -2,84 +2,89 @@
 #include "adminexpedientes.h"
 #include <QDateTime>
 #include <QMessageBox>
-#include "admincodes.h"
-/*QFile Recetas("Recetas.arc");
-//QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Reservas.itn");
-QDataStream escribir (&Recetas);
-Recetas::Recetas()
+
+bool Recetas::crearNuevaReceta(long code, QString medicamento, QString dosis)
 {
-    Recetas.open(QIODevice::ReadWrite);
-    if(!Recetas.isOpen())
-    {
-        exit(0);
-    }
-}
-*/
-/*bool Recetas::newRecipe(QString code,QString numsala, QString nombre, QString Fecha, QString horainicio, QString horafinal, QString namedoctor, QString observaciones)
-{
-    AdminCodes codes;
-    AdminExpedientes expedientes;
-    QFile Expedientes("Expedientes.itn");
-    if (!Expedientes.open(QIODevice::ReadOnly))
-    {
-        QMessageBox::information(nullptr, "Error", "No se pudo abrir el archivo de expedientes");
-        return false;
-    }
-    QDataStream leer(&Room);
-    while (!leer.atEnd())
-    {
-        AdminExpedientes::NewExpediente expedientes = expedientes
-                                                          leer >> ;
-        if (Expedientes.paciente == paciente);
-        {
-
-
-            if (fecha >= fechaInicio && fecha <= fechaFin)
-            {
-                STReservaciones reservar;
-                reservar.code = code;
-                reservar.nombre = nombre;
-                reservar.fecha = Fecha;
-                reservar.horainicio = horainicio;
-                reservar.horafinal = horafinal;
-                reservar.namedoctor = namedoctor;
-                reservar.observacion = observaciones;
-
-                Reservaciones.seek(Reservaciones.size());
-                writee << reservar.code << reservar.nombre << reservar.fecha << reservar.horainicio << reservar.horafinal << reservar.namedoctor << reservar.observacion;
-                Reservaciones.flush();
-                return true;
-            } else {
-                Room.close();
-                QMessageBox::information(nullptr, "Error", "Fecha no disponible");
-                return false;
-            }
-        }
-    }
-    QMessageBox::information(nullptr, "Error", "No se ");
-
-    return false;
-}
-*/
-
-bool Recetas::crearNuevaReceta(long code, const QStringList &medicamento, const QString &dosis)
-{
-    QFile file("Recetas.itn");
-    if (!file.open(QIODevice::Append)) {
+    QFile Recetas("Recetas.itn");
+    if (!Recetas.open(QIODevice::Append)) {
         exit(0);
         return false;
     }
 
-    QDataStream out(&file);
+    QDataStream out(&Recetas);
     out.setVersion(QDataStream::Qt_5_0);
 
     out << static_cast<qint64>(code);
     out << medicamento;
     out << dosis;
     out << QDate::currentDate();
-    file.flush();
+    Recetas.flush();
 
     return true;
-
-
 }
+
+QString Recetas::searchRecetaFecha(QString fechaB)
+{
+    QFile Recetas("Recetas.itn");
+    QDataStream in(&Recetas);
+    in.setVersion(QDataStream::Qt_5_0);
+
+    QString result;
+    bool found = false;
+
+    while (!in.atEnd()) {
+        qint64 code;
+        QStringList medicamento;
+        QString dosis;
+        QDate fecha;
+
+        in >> code >> medicamento >> dosis >> fecha;
+
+        if (fecha.toString("yyyy-MM-dd") == fechaB) {
+            found = true;
+            result += "Código: " + QString::number(code) + "\n";
+            result += "Medicamento: " + medicamento.join(", ") + "\n";
+            result += "Dosis: " + dosis + "\n";
+            result += "Fecha: " + fecha.toString("yyyy-MM-dd") + "\n\n";
+        }
+    }
+
+    if (!found) {
+        result = "No se encontraron recetas para la fecha " + fechaB;
+    }
+
+    return result;
+}
+
+QString Recetas::searchRecetaPaciente(QString codigoPaciente)
+{
+    QFile file("Recetas.itn");
+    QDataStream in(&file);
+    in.setVersion(QDataStream::Qt_5_0);
+
+    QString result;
+    bool found = false;
+
+    while (!in.atEnd()) {
+        qint64 code;
+        QStringList medicamento;
+        QString dosis;
+        QString paciente;
+
+        in >> code >> medicamento >> dosis >> paciente;
+
+        if (paciente == codigoPaciente) {
+            found = true;
+            result += "Código: " + QString::number(code) + "\n";
+            result += "Medicamento: " + medicamento.join(", ") + "\n";
+            result += "Dosis: " + dosis + "\n";
+        }
+    }
+
+    if (!found) {
+        result = "No se encontraron recetas para el código de paciente " + codigoPaciente;
+    }
+
+    return result;
+}
+

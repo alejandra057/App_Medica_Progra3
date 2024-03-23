@@ -22,7 +22,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStackedWidget>
@@ -275,15 +274,15 @@ public:
     QVBoxLayout *verticalLayout_13;
     QLabel *label_61;
     QHBoxLayout *horizontalLayout_2;
-    QRadioButton *radioButton;
-    QComboBox *comboBox_4;
+    QRadioButton *radio_paciente;
+    QComboBox *recetas_cb;
     QPushButton *pushButton_43;
     QLabel *label_62;
     QTextBrowser *textBrowser;
     QWidget *verticalLayoutWidget_12;
     QVBoxLayout *verticalLayout_14;
-    QRadioButton *radioButton_2;
-    QCalendarWidget *calendarWidget_6;
+    QRadioButton *radio_fecha;
+    QCalendarWidget *fecha_receta;
     QWidget *Reservaciones;
     QWidget *verticalLayoutWidget_30;
     QVBoxLayout *verticalLayout_32;
@@ -478,7 +477,6 @@ public:
     QCheckBox *DesaSala;
     QCheckBox *convencional;
     QPushButton *pushButton_80;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -908,16 +906,16 @@ public:
         label_20->setGeometry(QRect(60, 60, 49, 16));
         label_21 = new QLabel(CrearNuevaSala);
         label_21->setObjectName("label_21");
-        label_21->setGeometry(QRect(300, 60, 71, 16));
+        label_21->setGeometry(QRect(290, 60, 91, 21));
         label_22 = new QLabel(CrearNuevaSala);
         label_22->setObjectName("label_22");
         label_22->setGeometry(QRect(550, 60, 71, 16));
         label_23 = new QLabel(CrearNuevaSala);
         label_23->setObjectName("label_23");
-        label_23->setGeometry(QRect(40, 130, 91, 16));
+        label_23->setGeometry(QRect(40, 130, 121, 16));
         label_24 = new QLabel(CrearNuevaSala);
         label_24->setObjectName("label_24");
-        label_24->setGeometry(QRect(480, 130, 121, 16));
+        label_24->setGeometry(QRect(480, 130, 151, 16));
         FechaStart = new QCalendarWidget(CrearNuevaSala);
         FechaStart->setObjectName("FechaStart");
         FechaStart->setGeometry(QRect(40, 160, 291, 211));
@@ -943,17 +941,17 @@ public:
         lbcodesala->setGeometry(QRect(110, 60, 63, 20));
         label_113 = new QLabel(CrearNuevaSala);
         label_113->setObjectName("label_113");
-        label_113->setGeometry(QRect(50, 390, 131, 16));
+        label_113->setGeometry(QRect(50, 390, 161, 31));
         horafinal_crearSala = new QTimeEdit(CrearNuevaSala);
         horafinal_crearSala->setObjectName("horafinal_crearSala");
-        horafinal_crearSala->setGeometry(QRect(660, 390, 118, 25));
+        horafinal_crearSala->setGeometry(QRect(700, 380, 118, 25));
         horafinal_crearSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label_114 = new QLabel(CrearNuevaSala);
         label_114->setObjectName("label_114");
-        label_114->setGeometry(QRect(490, 390, 161, 21));
+        label_114->setGeometry(QRect(480, 380, 201, 21));
         horainicio_crearSala = new QTimeEdit(CrearNuevaSala);
         horainicio_crearSala->setObjectName("horainicio_crearSala");
-        horainicio_crearSala->setGeometry(QRect(180, 390, 118, 25));
+        horainicio_crearSala->setGeometry(QRect(210, 390, 118, 25));
         horainicio_crearSala->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         lb_status = new QLabel(CrearNuevaSala);
         lb_status->setObjectName("lb_status");
@@ -1720,16 +1718,16 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        radioButton = new QRadioButton(verticalLayoutWidget_11);
-        radioButton->setObjectName("radioButton");
+        radio_paciente = new QRadioButton(verticalLayoutWidget_11);
+        radio_paciente->setObjectName("radio_paciente");
 
-        horizontalLayout_2->addWidget(radioButton);
+        horizontalLayout_2->addWidget(radio_paciente);
 
-        comboBox_4 = new QComboBox(verticalLayoutWidget_11);
-        comboBox_4->setObjectName("comboBox_4");
-        comboBox_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        recetas_cb = new QComboBox(verticalLayoutWidget_11);
+        recetas_cb->setObjectName("recetas_cb");
+        recetas_cb->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_2->addWidget(comboBox_4);
+        horizontalLayout_2->addWidget(recetas_cb);
 
         pushButton_43 = new QPushButton(verticalLayoutWidget_11);
         pushButton_43->setObjectName("pushButton_43");
@@ -1757,16 +1755,16 @@ public:
         verticalLayout_14 = new QVBoxLayout(verticalLayoutWidget_12);
         verticalLayout_14->setObjectName("verticalLayout_14");
         verticalLayout_14->setContentsMargins(0, 0, 0, 0);
-        radioButton_2 = new QRadioButton(verticalLayoutWidget_12);
-        radioButton_2->setObjectName("radioButton_2");
+        radio_fecha = new QRadioButton(verticalLayoutWidget_12);
+        radio_fecha->setObjectName("radio_fecha");
 
-        verticalLayout_14->addWidget(radioButton_2);
+        verticalLayout_14->addWidget(radio_fecha);
 
-        calendarWidget_6 = new QCalendarWidget(verticalLayoutWidget_12);
-        calendarWidget_6->setObjectName("calendarWidget_6");
-        calendarWidget_6->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
+        fecha_receta = new QCalendarWidget(verticalLayoutWidget_12);
+        fecha_receta->setObjectName("fecha_receta");
+        fecha_receta->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
 
-        verticalLayout_14->addWidget(calendarWidget_6);
+        verticalLayout_14->addWidget(fecha_receta);
 
         stackedWidget->addWidget(BuscarReceta);
         Reservaciones = new QWidget();
@@ -2402,7 +2400,7 @@ public:
         fechaConsulta = new QDateEdit(verticalLayoutWidget_13);
         fechaConsulta->setObjectName("fechaConsulta");
         fechaConsulta->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        fechaConsulta->setDateTime(QDateTime(QDate(2024, 4, 1), QTime(0, 0, 0)));
+        fechaConsulta->setDateTime(QDateTime(QDate(2024, 4, 2), QTime(4, 0, 0)));
         fechaConsulta->setMinimumDate(QDate(2015, 9, 14));
 
         horizontalLayout_3->addWidget(fechaConsulta);
@@ -2788,17 +2786,13 @@ public:
 
         stackedWidget->addWidget(AgregarRoll);
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 875, 25));
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(14);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2956,10 +2950,10 @@ public:
         new_recipe->setText(QCoreApplication::translate("MainWindow", "Crear", nullptr));
         pushButton_44->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_61->setText(QCoreApplication::translate("MainWindow", "Buscar Receta", nullptr));
-        radioButton->setText(QCoreApplication::translate("MainWindow", "Paciente", nullptr));
+        radio_paciente->setText(QCoreApplication::translate("MainWindow", "Paciente", nullptr));
         pushButton_43->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
         label_62->setText(QCoreApplication::translate("MainWindow", "Receta", nullptr));
-        radioButton_2->setText(QCoreApplication::translate("MainWindow", "Fecha", nullptr));
+        radio_fecha->setText(QCoreApplication::translate("MainWindow", "Fecha", nullptr));
         label_63->setText(QCoreApplication::translate("MainWindow", "Reservaciones", nullptr));
         pushButton_45->setText(QCoreApplication::translate("MainWindow", "Nueva Reservaci\303\263n", nullptr));
         pushButton_47->setText(QCoreApplication::translate("MainWindow", "Eliminar Reservaci\303\263n", nullptr));
@@ -3045,7 +3039,7 @@ public:
         pushButton_77->setText(QCoreApplication::translate("MainWindow", "Regresar", nullptr));
         label_100->setText(QCoreApplication::translate("MainWindow", "Citas", nullptr));
         label_119->setText(QCoreApplication::translate("MainWindow", "Fecha Final:", nullptr));
-        label_101->setText(QCoreApplication::translate("MainWindow", "Fecha Inical:", nullptr));
+        label_101->setText(QCoreApplication::translate("MainWindow", "Fecha Inicial:", nullptr));
         pushButton_76->setText(QCoreApplication::translate("MainWindow", "Ver", nullptr));
         label_103->setText(QCoreApplication::translate("MainWindow", "Agregar rol", nullptr));
         label_104->setText(QCoreApplication::translate("MainWindow", "Ingrese el nuevo rol:", nullptr));

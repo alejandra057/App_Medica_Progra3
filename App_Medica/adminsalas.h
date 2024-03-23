@@ -20,7 +20,7 @@ public:
     AdminSalas();
     bool createNewSala(QString code, QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad, QString horainicio, QString horafinal);
     bool modificateSala(QString code,QString descripcion, QString status, QString fechainicio, QString fechafindisponibilidad,QString horainicio, QString horafinal);
-    bool eliminarSala(QString code);
+    bool eliminarSala(QString code, QString usuarioActual);
     long getSala_Actal();
     bool BuscarCodigo(QString code);
     newSala obtenerSalaActual() const {

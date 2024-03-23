@@ -14,11 +14,12 @@ public:
 
     };
 
-    Recetas();
 
-    bool crearNuevaReceta(long code, const QStringList& medicamento, const QString& dosis);
-    bool searchRecetaFecha(QString fecha);
-    bool searchRecetaPaciente(QString paciente);
+public:
+    Recetas();
+    bool crearNuevaReceta(long code, QString medicamento, QString dosis);
+    QString searchRecetaFecha(QString fecha);
+    QString searchRecetaPaciente(QString paciente);
 
 
 private:
