@@ -9,7 +9,6 @@
 #include <QMessageBox>
 
 QFile Reservaciones("Reservas.itn");
-//QFile ExpedientesAdmin("/Users/Kenny/Documents/GitHub/App_Medica_Progra3/App_Medica/Reservas.itn");
 QDataStream writee (&Reservaciones);
 Reservas::Reservas()
 {

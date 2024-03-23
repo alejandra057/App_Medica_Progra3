@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "QtDesigner/QDesignerFormWindowInterface"
 #include <QGraphicsEffect>
+#include "recetas.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -194,5 +195,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H

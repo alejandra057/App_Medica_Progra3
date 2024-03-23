@@ -231,8 +231,16 @@ void MainWindow::on_pushButton_33_pressed()
 void MainWindow::on_pushButton_38_pressed()
 {
     adminRoles roles;
-    if(roles.permisoCrearRecetas(role)){
+    if(roles.permisoEditarRecetas(role)){
         ui->stackedWidget->setCurrentIndex(14);
+        AdminCodes acode;
+        long code = acode.GetActualCodeExpedientes();
+        ui->recetas_cb->clear();
+        for (long var = 0; var < code; ++var) {
+            QString codepaciente = QString::number(code);
+            ui->recetas_cb->addItem(codepaciente);
+        }
+
     }
     else
     {
@@ -246,6 +254,14 @@ void MainWindow::on_pushButton_39_pressed()
     adminRoles roles;
     if(roles.permisoEditarRecetas(role)){
      ui->stackedWidget->setCurrentIndex(15);
+        AdminCodes acode;
+        long code = acode.GetActualCodeExpedientes();
+        ui->paciente_cb->clear();
+        for (long var = 0; var < code; ++var) {
+            QString codepaciente = QString::number(code);
+            ui->paciente_cb->addItem(codepaciente);
+        }
+
     }
     else
     {
@@ -864,27 +880,16 @@ void MainWindow::on_pushButton_70_pressed()
 
 void MainWindow::on_new_recipe_pressed()
 {
-        /*Recetas recetas;
-        AdminCodes codes;
-        long codigo = codes.GetActualCodeExpedientes();
-
-        QDateTime fechaActual = QDateTime::currentDateTime();
-        QString fecha = fechaActual.toString("yyyy-MM-dd HH:mm:ss");
-
-        ui->lb_fecha_actual->setText(fecha);
-        QString paciente = ui->paciente_cb->currentText();
-        QString medicamentos = ui->medicamento_cb->currentText();
-        QString dosis = ui->dosis_cb->currentText();
-        if (recetas.crearNuevaReceta(codigo, medicamentos, dosis))
-        {
-            QMessageBox::information(this, "Listo", QString("Receta creada exitosamente."));
-        }
-        else
-        {
-            QMessageBox::information(this, "Error", QString("No se pudo crear la receta."));
-        }
-*/
-
+    Recetas recetas;
+    QString code = ui->paciente_cb->currentText();
+    bool ok; long selectedcode = code.toLong(&ok);
+    QString Medicamento = ui->medicamento_cb->currentText();
+    QString dosis = ui->dosis_cb->currentText();
+    if(recetas.crearNuevaReceta(selectedcode,Medicamento,dosis)) {
+        QMessageBox::information(this, "info", QString("Se ha agregado su receta correctamente."));
+    }else {
+        QMessageBox::information(this, "info", QString("A ocurrido un error. Intentelo de nuevamente."));
+    }
 }
 
 
@@ -1008,21 +1013,27 @@ void MainWindow::on_radioButton_2_clicked(bool checked)
 
 void MainWindow::on_pushButton_43_pressed()
 {
-    /*Recetas recetas;
-    QDate fechass = ui->fecha_receta->selectedDate();
-    QString fecha= fechass.toString("dd/MM/yyyy");
 
-    int selectedIndex = ui->recetas_cb->currentIndex();
-    QString pacientes = QString::number(selectedIndex);
-    if (ui->radio_fecha->isChecked()) {
-        recetas.searchRecetaFecha(fecha);
-    QMessageBox::information(this, "listo", QString("Receta encontrada"));
-    } else if (ui->radio_paciente->isChecked()) {
-        recetas.searchRecetaPaciente(pacientes);
-     QMessageBox::information(this, "listo", QString("Receta encontrada"));
-    } else {
-          QMessageBox::information(this, "info", QString("no selecciono ningun tipo de busqueda"));
 
-    }*/
+    Recetas recetas;
+
+    QString codeReceta = ui->recetas_cb->currentText();
+
+    QDate selectedDate = ui->fecha_receta->selectedDate();
+    QString dateString = selectedDate.toString("yyyy-MM-dd");
+
+    if(codeReceta!=" "){
+        ui->textBrowser->clear();
+        ui->textBrowser->insertPlainText(recetas.searchRecetaPaciente(codeReceta));
+    }else if (dateString!=""){
+        ui->textBrowser->clear();
+        ui->textBrowser->insertPlainText(recetas.searchRecetaFecha(dateString));
+    }
+
+
+
+
+
+
 }
 

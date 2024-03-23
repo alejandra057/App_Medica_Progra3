@@ -16,7 +16,7 @@ public:
 
 
 public:
-    Recetas();
+    //Recetas();
     bool crearNuevaReceta(long code, QString medicamento, QString dosis);
     QString searchRecetaFecha(QString fecha);
     QString searchRecetaPaciente(QString paciente);
